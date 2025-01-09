@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plot Perfect Studios</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <!-- Intro Section -->
+    <div id="intro">
+        <video id="introVideo" autoplay loop muted playsinline>
+            <source src="assets/videos/IntroPageVideo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button id="enterButton" onclick="goToHome()">Enter</button>
+    </div>
+
+    <!-- Home Page -->
+    <div id="home" style="display: none;">
+        <!-- Background Video -->
+        <div class="sharedBackground">
+            <video autoplay loop muted playsinline>
+                <source src="assets/videos/HomePageBGV2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Logo and Buttons Section -->
+        <div id="homeContent">
+            <img src="assets/images/PlotPerfectLogo.png" alt="Plot Perfect Studios Logo" id="homeLogo">
+            <div id="homeButtons">
+                <button onclick="openAboutUs()">About Us</button>
+                <button onclick="openPortfolio()">Portfolio</button>
+                <button onclick="openContactUs()">Contact Us</button>
+                <button onclick="openOurGame()">Our Game</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Carousel -->
+    <div id="portfolioCarousel" style="display: none;">
+        <div class="sharedBackground">
+            <video autoplay loop muted playsinline>
+                <source src="assets/videos/HomePageBGV2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="carousel-container">
+            <button class="carousel-nav left" onclick="navigateCarousel(-1)">&#10094;</button>
+            <div class="carousel">
+                <div class="carousel-item" data-caption="Modern Architecture">
+                    <img src="assets/images/Kitchen.png" alt="Modern Architecture">
+                </div>
+                <div class="carousel-item" data-caption="Elegant Interior Design">
+                    <img src="assets/images/Bathroom.jpg" alt="Elegant Interior Design">
+                </div>
+                <div class="carousel-item" data-caption="Urban Skyline Design">
+                    <img src="assets/images/LivingRoom.jpg" alt="Urban Skyline Design">
+                </div>
+                <div class="carousel-item" data-caption="New Gym Space">
+                    <img src="assets/images/GymSpace.png" alt="New Gym Space">
+                </div>
+            </div>
+            <button class="carousel-nav right" onclick="navigateCarousel(1)">&#10095;</button>
+        </div>
+        <button class="close-portfolio" onclick="closePortfolio()">Close</button>
+    </div>
+
+<!-- Our Game Page -->
+<div id="ourGamePage" style="display: none;">
+    <div class="sharedBackground">
+        <video autoplay loop muted playsinline>
+            <source src="assets/videos/HomePageBGV2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="ourGamePanel">
+        <h1>Our Game</h1>
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        <div>
+            <button onclick="startGame()">Play Game</button>
+            <button onclick="closeOurGame()">Back to Home</button>
+        </div>
+    </div>
+</div>
+
+    <!-- Contact Us Form -->
+    <div id="contactUs" style="display: none;">
+        <div class="sharedBackground">
+            <video autoplay loop muted playsinline>
+                <source src="assets/videos/HomePageBGV2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="form-container">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required>
+
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required>
+
+                <label for="company">Company (if applicable):</label>
+                <input type="text" id="company" name="company">
+
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" maxlength="200" required></textarea>
+
+                <button type="submit">Submit</button>
+                <button type="button" onclick="goToHome()">Back to Home</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="aboutUs" style="display: none;">
+        <div class="sharedBackground">
+            <video autoplay loop muted playsinline>
+                <source src="assets/videos/HomePageBGV2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="aboutUsContent">
+            <h1>About Us</h1>
+            <div class="aboutUsText">
+                <p>
+                    At Plot Perfect Studios Ltd., we are passionate about bringing architectural visions to life. With years of experience in 3D architectural visualization and 2D planning, we specialize in transforming ideas into stunning, immersive visual experiences. Our mission is to empower architects, builders, and property developers by providing them with precise and detailed renderings that capture the essence of their projects.
+                </p>
+                <p>
+                    Our team of skilled designers and technicians combines cutting-edge technology with artistic expertise to deliver visualizations that not only meet but exceed expectations. Whether it's a modern home, a commercial building, or an ambitious urban development, we are committed to showcasing your vision with clarity and elegance.
+                </p>
+                <h2>What We Do</h2>
+                <ul>
+                    <li><strong>3D Architectural Visualizations:</strong> Experience your projects like never before with lifelike 3D renderings.</li>
+                    <li><strong>2D Plan Drawings:</strong> We create detailed and accurate 2D floor plans and elevations.</li>
+                    <li><strong>Conceptual Design Presentations:</strong> Perfect for securing approvals and visualizing the next big project.</li>
+                    <li><strong>Custom Visualization Packages:</strong> Tailor-made solutions to suit your project requirements.</li>
+                </ul>
+                <h2>Why Choose Us?</h2>
+                <ul>
+                    <li><strong>Unmatched Quality:</strong> We use cutting-edge tools to create stunning renderings.</li>
+                    <li><strong>Timely Delivery:</strong> Deadlines are a priority, and we ensure on-time delivery.</li>
+                    <li><strong>Client-Centric Approach:</strong> Your vision guides our process.</li>
+                    <li><strong>Affordable Solutions:</strong> High-quality services at competitive prices.</li>
+                </ul>
+                <p>
+                    At Plot Perfect Studios Ltd., we are here to help you turn ideas into reality. Let us take your architectural projects to the next level!
+                </p>
+            </div>
+            <button onclick="closeAboutUs()">Back to Home</button>
+        </div>
+    </div>
+
+    <!-- Footer (Always Visible) -->
+    <footer>
+        Website Designed & Developed by Plot Perfect Studios Ltd. &copy; 2025
+    </footer>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
