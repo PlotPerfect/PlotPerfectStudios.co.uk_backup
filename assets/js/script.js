@@ -13,12 +13,43 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function updateCarousel() {
         carouselItems.forEach((item, index) => {
-            item.classList.remove("active");
+            item.classList.remove("active", "previous", "next");
+
             if (index === currentSlide) {
                 item.classList.add("active");
+            } else if (index === (currentSlide - 1 + totalSlides) % totalSlides) {
+                item.classList.add("previous");
+            } else if (index === (currentSlide + 1) % totalSlides) {
+                item.classList.add("next");
             }
         });
     }
+
+    function openVideoModal(videoSrc) {
+        const modal = document.getElementById("videoModal");
+        const video = document.getElementById("modalVideo");
+    
+        video.src = videoSrc; // Set the video source
+        modal.style.display = "flex"; // Show the modal
+        video.play(); // Auto-play the video
+    }
+    
+    function closeVideoModal() {
+        const modal = document.getElementById("videoModal");
+        const video = document.getElementById("modalVideo");
+    
+        video.pause(); // Pause the video
+        video.src = ""; // Clear the video source
+        modal.style.display = "none"; // Hide the modal
+    }
+    
+    // Close the modal when clicking outside of the content
+    window.addEventListener("click", function (e) {
+        const modal = document.getElementById("videoModal");
+        if (e.target === modal) {
+            closeVideoModal();
+        }
+    });
 
     window.navigateCarousel = function (direction) {
         currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
@@ -222,12 +253,11 @@ function goToHome() {
     const intro = document.getElementById("intro");
     const home = document.getElementById("home");
 
-    // Hide all other sections
-    intro.style.display = "none"; // Hide the intro section
-    home.style.display = "block"; // Show the home section
-    document.getElementById("portfolioCarousel").style.display = "none"; // Hide portfolio
+    intro.style.display = "none";
+    home.style.display = "block";
+    document.getElementById("portfolioCarousel").style.display = "none";
     const contactUs = document.getElementById("contactUs");
     if (contactUs) {
-        contactUs.style.display = "none"; // Hide contact us form if it exists
+        contactUs.style.display = "none";
     }
 }

@@ -61,10 +61,93 @@
                 <div class="carousel-item" data-caption="New Gym Space">
                     <img src="assets/images/GymSpace.png" alt="New Gym Space">
                 </div>
+                <div class="carousel-item" data-caption="Refurbishment of a Male Change Area">
+                    <img src="assets/images/MaleChange1.png" alt="Refurbishment of a Male Change Area">
+                </div>
+                <div class="carousel-item" data-caption="Refurbishment of a Male Change Area">
+                    <img src="assets/images/MaleChange2.png" alt="Refurbishment of a Male Change Area">
+                </div>
+                <div class="carousel-item" data-caption="Refurbishment of a Male Change Area">
+                    <img src="assets/images/MaleChange3.png" alt="Refurbishment of a Male Change Area">
+                </div>
+                <div class="carousel-item" data-caption="Refurbishment of a Female Change Area">
+                    <img src="assets/images/Female Proposed 1.png" alt="Refurbishment of a Female Change Area">
+                </div>
+                <div class="carousel-item" data-caption="Refurbishment of a Female Change Area">
+                    <img src="assets/images/Female Proposed 2.png" alt="Refurbishment of a Female Change Area">
+                </div>
+                <div class="carousel-item" data-caption="Refurbishment of a Female Change Area">
+                    <img src="assets/images/Female Proposed 3.png" alt="Refurbishment of a Female Change Area">
+                </div>
+                <div class="carousel-item" data-caption="Refurbishment of a Female Change Area">
+                    <img src="assets/images/Female Proposed 4.png" alt="Refurbishment of a Female Change Area">
+                </div>
+                <div class="carousel-item" data-caption="Refurbishment of a Female Change Area">
+                    <img src="assets/images/ToiletsImage1.png" alt="Refurbishment of a Female Change Area">
+                </div>
+                <div class="carousel-item" data-caption="Refurbishment of a Female Change Area">
+                    <img src="assets/images/ToiletsImage2.png" alt="Refurbishment of a Female Change Area">
+                </div>
+                <div class="carousel-item" data-caption="Refurbishment of a Female Change Area">
+                    <img src="assets/images/ToiletsImage4.png" alt="Refurbishment of a Female Change Area">
+                </div>
+                <div class="carousel-item" data-caption="Refurbishment of a Female Change Area">
+                    <img src="assets/images/ToiletsImage5.png" alt="Refurbishment of a Female Change Area">
+                </div>
+                <div class="carousel-item" data-caption="Refurbishment of a Female Change Area">
+                    <img src="assets/images/ToiletsImage6.png" alt="Refurbishment of a Female Change Area">
+                </div>
+                <div class="carousel-item" data-caption="Refurbishment of a Female Change Area">
+                    <img src="assets/images/FmealeChange2DDraft.jpg" alt="Refurbishment of a Female Change Area">
+                </div>
+                <div class="carousel-item" data-caption="Refurbishment of a Male Change Area">
+                    <img src="assets/images/MaleChange2DDraft.jpg" alt="Refurbishment of a Male Change Area">
+                </div>
             </div>
             <button class="carousel-nav right" onclick="navigateCarousel(1)">&#10095;</button>
         </div>
         <button class="close-portfolio" onclick="closePortfolio()">Close</button>
+            <!-- Video Cards Section -->
+    <div id="videoCards" style="display: block;"> <!-- Set to "block" to ensure visibility -->
+        <div class="video-cards-container">
+            <!-- Card 1 -->
+            <div class="video-card">
+                <div class="video-card-inner">
+                    <div class="video-card-front">
+                        <img src="assets/images/Female Proposed 1.png" alt="Video Thumbnail">
+                    </div>
+                    <div class="video-card-back">
+                        <h3>Project Walkthrough 1</h3>
+                        <button onclick="openVideoModal('assets/Videos/FemaleProposedVideo.mp4')">Play Walkthrough</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="video-card">
+                <div class="video-card-inner">
+                    <div class="video-card-front">
+                        <img src="assets/images/MaleChange1.png" alt="Video Thumbnail">
+                    </div>
+                    <div class="video-card-back">
+                        <h3>Project Walkthrough 2</h3>
+                        <button onclick="openVideoModal('assets/Videos/MaleChangeVideo.mp4')">Play Walkthrough</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Video Modal -->
+<div id="videoModal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <span class="close" onclick="closeVideoModal()">&times;</span>
+        <video id="modalVideo" controls>
+            <source src="" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</div>
     </div>
 
 <!-- Our Game Page -->
