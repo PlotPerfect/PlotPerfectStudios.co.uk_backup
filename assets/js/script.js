@@ -25,28 +25,47 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    // Add event listeners to buttons in video cards
+    const playButtons = document.querySelectorAll(".play-video-btn");
+
+    playButtons.forEach((button) => {
+        button.addEventListener("click", (event) => {
+            const videoCard = event.target.closest(".video-card");
+            if (videoCard) {
+                const videoSrc = videoCard.getAttribute("data-video-src");
+                if (videoSrc) {
+                    openVideoModal(videoSrc);
+                }
+            }
+        });
+    });
+
+    // Function to open the video modal
     function openVideoModal(videoSrc) {
         const modal = document.getElementById("videoModal");
         const video = document.getElementById("modalVideo");
-    
+
         video.src = videoSrc; // Set the video source
         modal.style.display = "flex"; // Show the modal
-        video.play(); // Auto-play the video
+        video.play().catch((error) => {
+            console.error("Video play error:", error);
+        }); // Auto-play the video
     }
-    
+
+    // Function to close the video modal
     function closeVideoModal() {
         const modal = document.getElementById("videoModal");
         const video = document.getElementById("modalVideo");
-    
+
         video.pause(); // Pause the video
         video.src = ""; // Clear the video source
         modal.style.display = "none"; // Hide the modal
     }
-    
-    // Close the modal when clicking outside of the content
-    window.addEventListener("click", function (e) {
+
+    // Close modal when clicking outside the content
+    window.addEventListener("click", (event) => {
         const modal = document.getElementById("videoModal");
-        if (e.target === modal) {
+        if (event.target === modal) {
             closeVideoModal();
         }
     });

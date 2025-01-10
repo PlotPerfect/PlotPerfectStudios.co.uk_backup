@@ -107,31 +107,30 @@
             <button class="carousel-nav right" onclick="navigateCarousel(1)">&#10095;</button>
         </div>
         <button class="close-portfolio" onclick="closePortfolio()">Close</button>
-            <!-- Video Cards Section -->
-    <div id="videoCards" style="display: block;"> <!-- Set to "block" to ensure visibility -->
-        <div class="video-cards-container">
-            <!-- Card 1 -->
-            <div class="video-card">
-                <div class="video-card-inner">
-                    <div class="video-card-front">
-                        <img src="assets/images/Female Proposed 1.png" alt="Video Thumbnail">
-                    </div>
-                    <div class="video-card-back">
-                        <h3>Project Walkthrough 1</h3>
-                        <button onclick="openVideoModal('assets/Videos/')">Play Walkthrough</button>
-                    </div>
+<!-- Video Cards Section -->
+<div id="videoCards" style="display: block;">
+    <div class="video-cards-container">
+        <!-- Card 1 -->
+        <div class="video-card" data-video-src="assets/Videos/FemaleChange.mp4">
+            <div class="video-card-inner">
+                <div class="video-card-front">
+                    <img src="assets/images/Female Proposed 1.png" alt="Video Thumbnail">
+                </div>
+                <div class="video-card-back">
+                    <h3>Female Change Walkthrough</h3>
+                    <button class="play-video-btn">Play Walkthrough</button>
                 </div>
             </div>
-            <!-- Card 2 -->
-            <div class="video-card">
-                <div class="video-card-inner">
-                    <div class="video-card-front">
-                        <img src="assets/images/MaleChange1.png" alt="Video Thumbnail">
-                    </div>
-                    <div class="video-card-back">
-                        <h3>Project Walkthrough 2</h3>
-                        <button onclick="openVideoModal('assets/Videos/')">Play Walkthrough</button>
-                    </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="video-card" data-video-src="assets/Videos/MaleChange.mp4">
+            <div class="video-card-inner">
+                <div class="video-card-front">
+                    <img src="assets/images/MaleChange1.png" alt="Video Thumbnail">
+                </div>
+                <div class="video-card-back">
+                    <h3>Male Change Walkthrough</h3>
+                    <button class="play-video-btn">Play Walkthrough</button>
                 </div>
             </div>
         </div>
@@ -139,16 +138,15 @@
 </div>
 
 <!-- Video Modal -->
-<div id="videoModal" class="modal" style="display: none;">
-    <div class="modal-content">
-        <span class="close" onclick="closeVideoModal()">&times;</span>
-        <video id="modalVideo" controls>
-            <source src="" type="video/mp4">
+<div id="videoModal" class="modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); justify-content: center; align-items: center; z-index: 1000;">
+    <div class="modal-content" style="position: relative; max-width: 90%; max-height: 90%; text-align: center;">
+        <span class="close" onclick="closeVideoModal()" style="position: absolute; top: 10px; right: 10px; background-color: red; color: white; padding: 5px 10px; cursor: pointer;">&times;</span>
+        <video id="modalVideo" controls style="width: 100%; max-height: 90%; background-color: black;">
             Your browser does not support the video tag.
         </video>
     </div>
+  </div>
 </div>
-    </div>
 
 <!-- Our Game Page -->
 <div id="ourGamePage" style="display: none;">
