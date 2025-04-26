@@ -2,241 +2,97 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Plot Perfect Studios - Creative Solutions for 3D Rendering & Web Development</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plot Perfect Studios</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <meta name="description" content="Plot Perfect Studios specializes in 3D rendering and web development. Explore our portfolio and contact us for creative solutions tailored to your needs.">
+    <meta name="keywords" content="3D rendering, web development, creative solutions, portfolio, Plot Perfect Studios, architectural visualization, product rendering, interactive design, responsive web design, e-commerce development, UI/UX design, branding, graphic design, photorealistic rendering, custom websites, digital marketing, SEO optimization, creative agency">
+    <meta name="author" content="Plot Perfect Studios">
+    <link rel="stylesheet" href="Assets/css/index.css">
+    <link rel="icon" type="image/svg+xml" href="Assets/Images/LogoV2.svg" sizes="any">
+    <meta property="og:title" content="Plot Perfect Studios - Creative Solutions for 3D Rendering & Web Development">
+    <meta property="og:description" content="Explore our portfolio of 3D rendering and web development projects. Contact Plot Perfect Studios for innovative and tailored solutions.">
+    <meta property="og:image" content="Assets/Images/LogoV2.svg">
+    <meta property="og:url" content="https://www.plotperfectstudios.co.uk">
+    <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
-    <!-- Intro Section -->
+
     <div id="intro">
         <video id="introVideo" autoplay loop muted playsinline>
-            <source src="assets/Videos/IntroPageVideo.mp4" type="video/mp4">
+            <source src="Assets/Videos/WebsiteBGVideo.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <button id="enterButton" onclick="goToHome()">Enter</button>
-    </div>
+        
+        <header id="mainHeader">
+            <!-- Left: Logo -->
+            <a href="index.html" class="logo-wrapper">
+                <img src="assets/images/LogoV2.svg" alt="Logo" id="headerLogo">
+            </a>
+        
+            <!-- Center: Nav Button -->
+            <nav class="header-center-nav">
+                <button class="nav-button">About Us</button>
+                <button class="nav-button">3D Render Portfolio</button>
+                <button class="nav-button">Web Development Portfolio</button>
+                <button class="nav-button">FAQ</button>
+                <button class="nav-button">Contact Us</button>
+            </nav>
+        
+            <!-- Right: Menu Icon -->
+            <button id="menuToggle">
+                <img src="Assets/Icons/MenuIconClosed.svg" alt="Menu Icon" id="menuIcon">
+            </button>
+        </header>
 
-    <!-- Home Page -->
-    <div id="home" style="display: none;">
-        <!-- Background Video -->
-        <div class="sharedBackground">
-            <video autoplay loop muted playsinline>
-                <source src="assets/Videos/HomePageBGV2.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+        <!-- Info Panel -->
+        <div id="infoPanel">
+            <button id="closePanel">
+                <img src="Assets/Icons/CloseButtonIcon.svg" alt="Close Panel">
+            </button>
+            <div id="panelContent"></div>
+        </div>
+        
+        <!-- Menu Overlay -->
+        <div id="menuOverlay">
+            <button id="closeMenuOverlay">
+                <img src="Assets/Icons/CloseButtonIcon.svg" alt="Close Icon">
+            </button>
+            <nav class="menu-overlay-nav">
+                <button class="overlay-nav-button">About Us</button>
+                <button class="overlay-nav-button">3D Render Portfolio</button>
+                <button class="overlay-nav-button">Web Development Portfolio</button>
+                <button class="overlay-nav-button">FAQ</button>
+                <button class="overlay-nav-button">Contact Us</button>
+            </nav>
         </div>
 
-        <!-- Logo and Buttons Section -->
-        <div id="homeContent">
-            <img src="assets/images/PlotPerfectLogo.png" alt="Plot Perfect Studios Logo" id="homeLogo">
-            <div id="homeButtons">
-                <button onclick="openAboutUs()">About Us</button>
-                <button onclick="openPortfolio()">Portfolio</button>
-                <button onclick="openContactUs()">Contact Us</button>
-                <button onclick="openOurGame()">Our Game</button>
+        <!-- Development Notice Popup -->
+        <div id="devNoticePopup">
+            <div id="devNoticeContent">
+                <h2>Website Under Development</h2>
+                <p>This website is currently under development. Some sections and features may not be fully finished yet. Thank you for your patience!</p>
+                <button id="devNoticeButton">Got It</button>
             </div>
         </div>
-    </div>
 
-    <!-- Portfolio Carousel -->
-    <div id="portfolioCarousel" style="display: none;">
-        <div class="sharedBackground">
-            <video autoplay loop muted playsinline>
-                <source src="assets/Videos/HomePageBGV2.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-        <div class="carousel-container">
-            <button class="carousel-nav left" onclick="navigateCarousel(-1)">&#10094;</button>
-            <div class="carousel">
-                <div class="carousel-item" data-caption="Modern Architecture">
-                    <img src="assets/images/Kitchen.png" alt="Modern Architecture">
+
+        <footer id="mainFooter">
+            <p>© 2025 Plot Perfect Studios Ltd. All rights reserved.</p>
+            <p>info@plotperfectstudios.co.uk</p>
+        
+            <div class="social-icons">
+                <div class="icon-wrapper">
+                    <img src="Assets/Icons/InstaIcon.svg" alt="Instagram" class="social-icon" />
+                    <img src="Assets/Icons/InstaQRCode.svg" alt="Instagram QR" class="qr-popup" />
                 </div>
-                <div class="carousel-item" data-caption="Elegant Interior Design">
-                    <img src="assets/images/Bathroom.jpg" alt="Elegant Interior Design">
-                </div>
-                <div class="carousel-item" data-caption="Urban Skyline Design">
-                    <img src="assets/images/LivingRoom.jpg" alt="Urban Skyline Design">
-                </div>
-                <div class="carousel-item" data-caption="New Gym Space">
-                    <img src="assets/images/GymSpace.png" alt="New Gym Space">
-                </div>
-                <div class="carousel-item" data-caption="Refurbishment of a Male Change Area">
-                    <img src="assets/images/MaleChange1.png" alt="Refurbishment of a Male Change Area">
-                </div>
-                <div class="carousel-item" data-caption="Refurbishment of a Male Change Area">
-                    <img src="assets/images/MaleChange2.png" alt="Refurbishment of a Male Change Area">
-                </div>
-                <div class="carousel-item" data-caption="Refurbishment of a Male Change Area">
-                    <img src="assets/images/MaleChange3.png" alt="Refurbishment of a Male Change Area">
-                </div>
-                <div class="carousel-item" data-caption="Refurbishment of a Female Change Area">
-                    <img src="assets/images/Female Proposed 1.png" alt="Refurbishment of a Female Change Area">
-                </div>
-                <div class="carousel-item" data-caption="Refurbishment of a Female Change Area">
-                    <img src="assets/images/Female Proposed 2.png" alt="Refurbishment of a Female Change Area">
-                </div>
-                <div class="carousel-item" data-caption="Refurbishment of a Female Change Area">
-                    <img src="assets/images/Female Proposed 3.png" alt="Refurbishment of a Female Change Area">
-                </div>
-                <div class="carousel-item" data-caption="Refurbishment of a Female Change Area">
-                    <img src="assets/images/Female Proposed 4.png" alt="Refurbishment of a Female Change Area">
-                </div>
-                <div class="carousel-item" data-caption="Refurbishment of a Female Change Area">
-                    <img src="assets/images/ToiletsImage1.png" alt="Refurbishment of a Female Change Area">
-                </div>
-                <div class="carousel-item" data-caption="Refurbishment of a Female Change Area">
-                    <img src="assets/images/ToiletsImage2.png" alt="Refurbishment of a Female Change Area">
-                </div>
-                <div class="carousel-item" data-caption="Refurbishment of a Female Change Area">
-                    <img src="assets/images/ToiletsImage4.png" alt="Refurbishment of a Female Change Area">
-                </div>
-                <div class="carousel-item" data-caption="Refurbishment of a Female Change Area">
-                    <img src="assets/images/ToiletsImage5.png" alt="Refurbishment of a Female Change Area">
-                </div>
-                <div class="carousel-item" data-caption="Refurbishment of a Female Change Area">
-                    <img src="assets/images/ToiletsImage6.png" alt="Refurbishment of a Female Change Area">
-                </div>
-                <div class="carousel-item" data-caption="Refurbishment of a Female Change Area">
-                    <img src="assets/images/FmealeChange2DDraft.jpg" alt="Refurbishment of a Female Change Area">
-                </div>
-                <div class="carousel-item" data-caption="Refurbishment of a Male Change Area">
-                    <img src="assets/images/MaleChange2DDraft.jpg" alt="Refurbishment of a Male Change Area">
+                <div class="icon-wrapper">
+                    <img src="Assets/Icons/linkedinIcon.svg" alt="LinkedIn" class="social-icon" />
+                    <img src="Assets/Icons/LinkedInQRCode.svg" alt="LinkedIn QR" class="qr-popup" />
                 </div>
             </div>
-            <button class="carousel-nav right" onclick="navigateCarousel(1)">&#10095;</button>
-        </div>
-        <button class="close-portfolio" onclick="closePortfolio()">Close</button>
-<!-- Video Cards Section -->
-<div id="videoCards" style="display: block;">
-    <div class="video-cards-container">
-        <!-- Card 1 -->
-        <div class="video-card" data-video-src="assets/Videos/FemaleChange.mp4">
-            <div class="video-card-inner">
-                <div class="video-card-front">
-                    <img src="assets/images/Female Proposed 1.png" alt="Video Thumbnail">
-                </div>
-                <div class="video-card-back">
-                    <h3>Female Change Walkthrough</h3>
-                    <button class="play-video-btn">Play Walkthrough</button>
-                </div>
-            </div>
-        </div>
-        <!-- Card 2 -->
-        <div class="video-card" data-video-src="assets/Videos/MaleChange.mp4">
-            <div class="video-card-inner">
-                <div class="video-card-front">
-                    <img src="assets/images/MaleChange1.png" alt="Video Thumbnail">
-                </div>
-                <div class="video-card-back">
-                    <h3>Male Change Walkthrough</h3>
-                    <button class="play-video-btn">Play Walkthrough</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Video Modal -->
-<div id="videoModal" class="modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); justify-content: center; align-items: center; z-index: 1000;">
-    <div class="modal-content" style="position: relative; max-width: 90%; max-height: 90%; text-align: center;">
-        <span class="close" onclick="closeVideoModal()" style="position: absolute; top: 10px; right: 10px; background-color: red; color: white; padding: 5px 10px; cursor: pointer;">&times;</span>
-        <video id="modalVideo" controls style="width: 100%; max-height: 90%; background-color: black;">
-            Your browser does not support the video tag.
-        </video>
-    </div>
-  </div>
-</div>
-
-<!-- Our Game Page -->
-<div id="ourGamePage" style="display: none;">
-    <div class="sharedBackground">
-        <video autoplay loop muted playsinline>
-            <source src="assets/Videos/HomePageBGV2.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
-    <div class="ourGamePanel">
-        <h1>Our Game</h1>
-        <canvas id="gameCanvas" width="800" height="600"></canvas>
-        <div>
-            <button onclick="startGame()">Play Game</button>
-            <button onclick="closeOurGame()">Back to Home</button>
-        </div>
-    </div>
-</div>
-
-    <!-- Contact Us Form -->
-    <div id="contactUs" style="display: none;">
-        <div class="sharedBackground">
-            <video autoplay loop muted playsinline>
-                <source src="assets/Videos/HomePageBGV2.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-        <div class="form-container">
-            <h2>Contact Us</h2>
-            <form id="contactForm">
-                <label for="firstName">First Name:</label>
-                <input type="text" id="firstName" name="firstName" required>
-
-                <label for="lastName">Last Name:</label>
-                <input type="text" id="lastName" name="lastName" required>
-
-                <label for="company">Company (if applicable):</label>
-                <input type="text" id="company" name="company">
-
-                <label for="description">Description:</label>
-                <textarea id="description" name="description" maxlength="200" required></textarea>
-
-                <button type="submit">Submit</button>
-                <button type="button" onclick="goToHome()">Back to Home</button>
-            </form>
-        </div>
+        </footer>
     </div>
 
-    <div id="aboutUs" style="display: none;">
-        <div class="sharedBackground">
-            <video autoplay loop muted playsinline>
-                <source src="assets/Videos/HomePageBGV2.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-        <div class="aboutUsContent">
-            <h1>About Us</h1>
-            <div class="aboutUsText">
-                <p>
-                    At Plot Perfect Studios Ltd., we are passionate about bringing architectural visions to life. With years of experience in 3D architectural visualization and 2D planning, we specialize in transforming ideas into stunning, immersive visual experiences. Our mission is to empower architects, builders, and property developers by providing them with precise and detailed renderings that capture the essence of their projects.
-                </p>
-                <p>
-                    Our team of skilled designers and technicians combines cutting-edge technology with artistic expertise to deliver visualizations that not only meet but exceed expectations. Whether it's a modern home, a commercial building, or an ambitious urban development, we are committed to showcasing your vision with clarity and elegance.
-                </p>
-                <h2>What We Do</h2>
-                <ul>
-                    <li><strong>3D Architectural Visualizations:</strong> Experience your projects like never before with lifelike 3D renderings.</li>
-                    <li><strong>2D Plan Drawings:</strong> We create detailed and accurate 2D floor plans and elevations.</li>
-                    <li><strong>Conceptual Design Presentations:</strong> Perfect for securing approvals and visualizing the next big project.</li>
-                    <li><strong>Custom Visualization Packages:</strong> Tailor-made solutions to suit your project requirements.</li>
-                </ul>
-                <h2>Why Choose Us?</h2>
-                <ul>
-                    <li><strong>Unmatched Quality:</strong> We use cutting-edge tools to create stunning renderings.</li>
-                    <li><strong>Timely Delivery:</strong> Deadlines are a priority, and we ensure on-time delivery.</li>
-                    <li><strong>Client-Centric Approach:</strong> Your vision guides our process.</li>
-                    <li><strong>Affordable Solutions:</strong> High-quality services at competitive prices.</li>
-                </ul>
-                <p>
-                    At Plot Perfect Studios Ltd., we are here to help you turn ideas into reality. Let us take your architectural projects to the next level!
-                </p>
-            </div>
-            <button onclick="closeAboutUs()">Back to Home</button>
-        </div>
-    </div>
-
-    <!-- Footer (Always Visible) -->
-    <footer>
-        Website Designed & Developed by Plot Perfect Studios Ltd. &copy; 2025
-    </footer>
-    <script src="assets/js/script.js"></script>
+    <script src="Assets/js/index.js"></script>
 </body>
 </html>
