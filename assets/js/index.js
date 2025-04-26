@@ -26,16 +26,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (menuOpen) {
             menuOverlay.classList.add("show");
-            menuIcon.src = "Assets/Icons/MenuIconOpen.svg"; // Open icon
+            menuIcon.src = "assets/Icons/MenuIconOpen.svg"; // Open icon
         } else {
             menuOverlay.classList.remove("show");
-            menuIcon.src = "Assets/Icons/MenuIconClosed.svg"; // Closed icon
+            menuIcon.src = "assets/Icons/MenuIconClosed.svg"; // Closed icon
         }
     });
 
     closeMenuOverlay.addEventListener("click", () => {
         menuOverlay.classList.remove("show");
-        menuIcon.src = "Assets/Icons/MenuIconClosed.svg"; // Reset icon
+        menuIcon.src = "assets/Icons/MenuIconClosed.svg"; // Reset icon
         menuOpen = false;
     });
 
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }, 50);
         
             menuOverlay.classList.remove('show');
-            menuIcon.src = "Assets/Icons/MenuIconClosed.svg";
+            menuIcon.src = "assets/Icons/MenuIconClosed.svg";
             menuOpen = false;
     
             setupFAQ(); // <--- Add this too!
