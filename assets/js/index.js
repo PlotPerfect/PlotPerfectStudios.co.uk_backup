@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="webdev-grid">
                 <div class="project-item">
                     <a href="https://corriganandchapman.co.uk" target="_blank">
-                        <img src="assets/icons/C&CC Main Logo Light.svg" alt="Corrigan Logo" class="logo-ccc">
+                        <img src="assets/Icons/C&CC Main Logo Light.svg" alt="Corrigan Logo" class="logo-ccc">
                     </a>
                         <p>
                             I designed and developed the official website for <strong>Corrigan & Chapman Construction Ltd</strong>, a leading construction company based in Essex. 
@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 
                 <div class="project-item">
                     <a href="https://cre8.london" target="_blank">
-                        <img src="assets/icons/Cre8Logo.svg" alt="Cre8 Logo" class="logo-cre8">
+                        <img src="assets/Icons/Cre8Logo.svg" alt="Cre8 Logo" class="logo-cre8">
                     </a>
                         <p>
                             I designed and developed the official website for <strong>CRE8 London</strong>, a signage and display solutions company. 
@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 <div class="project-item">
                     <a href="https://www.f7coaching.co.uk" target="_blank">
-                        <img src="assets/icons/F7CoachingLogo.svg" alt="F7 Coaching Logo" class="logo-f7">
+                        <img src="assets/Icons/F7CoachingLogo.svg" alt="F7 Coaching Logo" class="logo-f7">
                     </a>
                         <p>
                             This project involved the complete design and development of a responsive, futuristic-style website for <strong>F7 Coaching</strong>, a youth football coaching company. The site features a full-page video intro, a custom floating menu with smooth scrolling navigation, animated overlays, a stylish gallery carousel, and an integrated contact form. 
