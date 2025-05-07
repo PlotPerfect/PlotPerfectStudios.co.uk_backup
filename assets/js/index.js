@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
 
                 <div class="project-item">
-                    <a href="https://www.f7coaching.co.uk" target="_blank">
+                    <a href="https://www.f7coaching.com" target="_blank">
                         <img src="assets/Icons/F7CoachingLogo.svg" alt="F7 Coaching Logo" class="logo-f7">
                     </a>
                         <p>
