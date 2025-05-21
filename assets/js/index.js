@@ -133,8 +133,64 @@ document.addEventListener("DOMContentLoaded", function () {
                     <div class="render-image-overlay">Female Change Room</div>
                 </div>
                 <div class="render-image-item">
+                    <img src="assets/images/Female Proposed 2.png" alt="3D Render - Female Proposed 2" />
+                    <div class="render-image-overlay">Female Change Room</div>
+                </div>
+                <div class="render-image-item">
+                    <img src="assets/images/Female Proposed 3.png" alt="3D Render - Female Proposed 3" />
+                    <div class="render-image-overlay">Female Change Room</div>
+                </div>
+                <div class="render-image-item">
+                    <img src="assets/images/Female Proposed 4.png" alt="3D Render - Female Proposed 4" />
+                    <div class="render-image-overlay">Female Change Room</div>
+                </div>
+                <div class="render-image-item">
                     <img src="assets/images/MaleChange1.png" alt="3D Render - Male Change 1" />
                     <div class="render-image-overlay">Male Change Room</div>
+                </div>
+                <div class="render-image-item">
+                    <img src="assets/images/MaleChange2.png" alt="3D Render - Male Change 2" />
+                    <div class="render-image-overlay">Male Change Room</div>
+                </div>
+                <div class="render-image-item">
+                    <img src="assets/images/MaleChange3.png" alt="3D Render - Male Change 3" />
+                    <div class="render-image-overlay">Male Change Room</div>
+                </div>
+                <div class="render-image-item">
+                    <img src="assets/images/GymSpace.png" alt="3D Render - Gym Space" />
+                    <div class="render-image-overlay">Gym</div>
+                </div>
+                <div class="render-image-item">
+                    <img src="assets/images/ToiletsImage1.png" alt="3D Render - Toilets Image 1" />
+                    <div class="render-image-overlay">Toilets</div>
+                </div>
+                <div class="render-image-item">
+                    <img src="assets/images/ToiletsImage2.png" alt="3D Render - Toilets Image 2" />
+                    <div class="render-image-overlay">Toilets</div>
+                </div>
+                <div class="render-image-item">
+                    <img src="assets/images/ToiletsImage5.png" alt="3D Render - Toilets Image 5" />
+                    <div class="render-image-overlay">Toilets</div>
+                </div>
+                <div class="render-image-item">
+                    <img src="assets/images/ToiletsImage6.png" alt="3D Render - Toilets Image 6" />
+                    <div class="render-image-overlay">Toilets</div>
+                </div>
+                <div class="render-image-item">
+                    <img src="assets/images/SpinStudio1.png" alt="3D Render - Spin Studio 1" />
+                    <div class="render-image-overlay">Spin Studio</div>
+                </div>
+                <div class="render-image-item">
+                    <img src="assets/images/SpinStudio2.png" alt="3D Render - Spin Studio 2" />
+                    <div class="render-image-overlay">Spin Studio</div>
+                </div>
+                <div class="render-image-item">
+                    <img src="assets/images/SpinStudio3.png" alt="3D Render - Spin Studio 3" />
+                    <div class="render-image-overlay">Spin Studio</div>
+                </div>
+                <div class="render-image-item">
+                    <img src="assets/images/SpinStudio4.png" alt="3D Render - Spin Studio 4" />
+                    <div class="render-image-overlay">Spin Studio</div>
                 </div>
                 <!-- Add more images as needed -->
             </div>
@@ -155,6 +211,13 @@ document.addEventListener("DOMContentLoaded", function () {
                         <button class="render-video-play"><span>&#9658;</span></button>
                     </div>
                     <div class="render-video-caption">Male Change Walkthrough</div>
+                </div>
+                <div class="render-video-item">
+                    <div class="render-video-thumb" data-video="assets/Videos/SpinStudios.mp4">
+                        <img src="assets/images/SpinStudio1.png" alt="Spin Studio Video Video" />
+                        <button class="render-video-play"><span>&#9658;</span></button>
+                    </div>
+                    <div class="render-video-caption">Spin Studio Walkthrough</div>
                 </div>
                 <!-- Add more videos as needed -->
             </div>
@@ -359,6 +422,97 @@ document.addEventListener("DOMContentLoaded", function () {
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
+        `,
+        "Pricing": `
+        <div class="pricing-hero fade-in">
+            <h1 class="pricing-title">Pricing</h1>
+            <p class="pricing-lead">Transparent, competitive rates for creative solutions. Below is our starting price for a basic website package, an advanced package, and a full-featured eCommerce package.</p>
+        </div>
+        <div class="pricing-row">
+            <div class="pricing-section fade-in" style="animation-delay:0.1s;">
+                <h2 class="pricing-section-title">Basic Website Package</h2>
+                <div class="pricing-card">
+                    <div class="pricing-amount">
+                        <span class="pricing-from">From</span>
+                        <span class="pricing-price">£600.00</span>
+                        <span class="pricing-to">up to</span>
+                        <span class="pricing-price">£1,200.00</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Up to 5 custom-designed pages</li>
+                        <li>Responsive (mobile & tablet friendly)</li>
+                        <li>Modern, bespoke design</li>
+                        <li>Contact/enquiry form</li>
+                        <li>Basic SEO setup</li>
+                        <li>Image gallery or portfolio section</li>
+                        <li>Social media integration</li>
+                        <li>1 round of revisions</li>
+                        <li>Fast turnaround</li>
+                        <li>Custom Cursors</li>
+                        <li>Custom Icons</li>
+                        <li>Hosting setup assistance</li>
+                        <li>Domain name setup assistance</li>
+                    </ul>
+                    <div class="pricing-note">* Final price depends on project requirements and additional features.</div>
+                </div>
+            </div>
+            <div class="pricing-section fade-in" style="animation-delay:0.15s;">
+                <h2 class="pricing-section-title">Advanced Website Package</h2>
+                <div class="pricing-card">
+                    <div class="pricing-amount">
+                        <span class="pricing-from">From</span>
+                        <span class="pricing-price">£1,500.00</span>
+                        <span class="pricing-to">up to</span>
+                        <span class="pricing-price">£3,000.00</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Up to 12 custom-designed pages</li>
+                        <li>All features of Basic Package</li>
+                        <li>Online booking system integration</li>
+                        <li>Payment gateway integration (Stripe, PayPal, etc.)</li>
+                        <li>Advanced contact & enquiry forms</li>
+                        <li>Blog or news section</li>
+                        <li>Client/admin dashboard (optional)</li>
+                        <li>Custom animations & interactive features</li>
+                        <li>Google Analytics setup</li>
+                        <li>2 rounds of revisions</li>
+                        <li>Priority support</li>
+                    </ul>
+                    <div class="pricing-note">* Final price depends on project requirements, integrations, and additional features.</div>
+                </div>
+            </div>
+            <div class="pricing-section fade-in" style="animation-delay:0.18s;">
+                <h2 class="pricing-section-title">eCommerce Website Package</h2>
+                <div class="pricing-card">
+                    <div class="pricing-amount">
+                        <span class="pricing-from">From</span>
+                        <span class="pricing-price">£2,500.00</span>
+                        <span class="pricing-to">up to</span>
+                        <span class="pricing-price">£6,000.00</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Up to 20 custom-designed pages</li>
+                        <li>All features of Advanced Package</li>
+                        <li>Full eCommerce functionality (shop, cart, checkout)</li>
+                        <li>Product management system</li>
+                        <li>Order management dashboard</li>
+                        <li>Inventory tracking</li>
+                        <li>Discount codes & promotions</li>
+                        <li>Customer account system</li>
+                        <li>Multiple payment gateways (Stripe, PayPal, Apple Pay, etc.)</li>
+                        <li>Shipping & tax configuration</li>
+                        <li>Email notifications (orders, shipping, etc.)</li>
+                        <li>Basic training & documentation</li>
+                        <li>3 rounds of revisions</li>
+                        <li>Ongoing support options</li>
+                    </ul>
+                    <div class="pricing-note">* Final price depends on product count, integrations, and custom requirements.</div>
+                </div>
+            </div>
+        </div>
+        <div class="pricing-contact fade-in" style="animation-delay:0.2s;">
+            <p>For a tailored quote or to discuss your project, please <b><a href="#" class="contact-link-internal">Contact Us</a></b>.</p>
+        </div>
         `
     };
 
@@ -393,6 +547,15 @@ document.addEventListener("DOMContentLoaded", function () {
             panel.style.display = "none"; // Immediately hide the panel without animation
         });
     }
+
+    // Add event delegation for internal contact link
+    panelContent.addEventListener('click', function(e) {
+        if (e.target.classList.contains('contact-link-internal')) {
+            e.preventDefault();
+            const contactBtn = Array.from(document.querySelectorAll('.nav-button, .overlay-nav-button')).find(btn => btn.textContent.trim() === 'Contact Us');
+            if (contactBtn) contactBtn.click();
+        }
+    });
 });
 
 // Setup FAQ toggles (after FAQ content loads)
