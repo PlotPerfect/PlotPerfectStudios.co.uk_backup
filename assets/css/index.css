@@ -654,7 +654,8 @@ button, a, .nav-button, .desc-toggle-btn, .faq-question, .overlay-nav-button, .s
 }
 .about-cards {
     display: flex;
-    flex-wrap: gap;
+    flex-wrap: wrap;
+    gap: 32px;
     justify-content: center;
     margin-bottom: 40px;
 }
@@ -732,7 +733,8 @@ button, a, .nav-button, .desc-toggle-btn, .faq-question, .overlay-nav-button, .s
 }
 .about-values-list {
     display: flex;
-    flex-wrap: gap;
+    flex-wrap: wrap;
+    gap: 32px;
     justify-content: center;
 }
 .about-value-item {
@@ -763,14 +765,7 @@ button, a, .nav-button, .desc-toggle-btn, .faq-question, .overlay-nav-button, .s
     to { opacity: 1; transform: translateY(0); }
 }
 @media (max-width: 900px) {
-    .about-cards {
-        flex-direction: column;
-        align-items: center;
-    }
-    .about-card {
-        max-width: 95vw;
-        min-width: 0;
-    }
+    .about-cards,
     .about-values-list {
         flex-direction: column;
         gap: 14px;
@@ -800,7 +795,8 @@ button, a, .nav-button, .desc-toggle-btn, .faq-question, .overlay-nav-button, .s
 }
 .contact-cards {
     display: flex;
-    flex-wrap: gap;
+    flex-wrap: wrap;
+    gap: 32px;
     justify-content: center;
     margin-bottom: 40px;
 }
@@ -877,11 +873,7 @@ button, a, .nav-button, .desc-toggle-btn, .faq-question, .overlay-nav-button, .s
 @media (max-width: 900px) {
     .contact-cards {
         flex-direction: column;
-        align-items: center;
-    }
-    .contact-card {
-        max-width: 95vw;
-        min-width: 0;
+        gap: 14px;
     }
     .contact-map-wrapper {
         max-width: 98vw;
@@ -1179,7 +1171,8 @@ button, a, .nav-button, .desc-toggle-btn, .faq-question, .overlay-nav-button, .s
 }
 .pricing-row {
     display: flex;
-    flex-wrap: gap;
+    flex-wrap: wrap;
+    gap: 32px;
     justify-content: center;
     margin-bottom: 40px;
     position: relative;
@@ -1264,8 +1257,10 @@ button, a, .nav-button, .desc-toggle-btn, .faq-question, .overlay-nav-button, .s
     margin-top: 18px;
 }
 @media (max-width: 900px) {
-    .pricing-row { flex-direction: column; gap: 0; }
-    .pricing-section { max-width: 98vw; min-width: 0; }
+    .pricing-row {
+        flex-direction: column;
+        gap: 14px;
+    }
 }
 
 /* ===== Footer Flex and Policy Icons ===== */
@@ -1378,10 +1373,22 @@ button, a, .nav-button, .desc-toggle-btn, .faq-question, .overlay-nav-button, .s
 
     .social-icons {
         left: 20px;
+        top: 15px;
         gap: 10px;
     }
 
     .social-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .policy-icons {
+        right: 5px;
+        bottom: 35px;
+        gap: 12px;
+    }
+
+    .policy-icons img {
         width: 28px;
         height: 28px;
     }
@@ -1403,8 +1410,20 @@ button, a, .nav-button, .desc-toggle-btn, .faq-question, .overlay-nav-button, .s
         grid-template-columns: 1fr;
     }
 
+    .project-item {
+        padding: 10px;
+        margin: 0 10px;
+        width: 70%;
+    }
+
     .project-item p {
         font-size: 14px;
+    }
+
+    .pricing-row {
+        padding: 10px;
+        margin: 0 -40px;
+        width: 70%;
     }
 }
 
