@@ -99,9 +99,10 @@ button, a, .nav-button, .desc-toggle-btn, .faq-question, .overlay-nav-button, .s
 
 /* Style the social icon area */
 .social-icons {
-    position: absolute;
-    bottom: 10px;
-    left: 50px;
+    position: relative;
+    left: 0;
+    bottom: -15px;
+    margin-right: auto;
     display: flex;
     gap: 15px;
     z-index: 4;
@@ -1265,6 +1266,64 @@ button, a, .nav-button, .desc-toggle-btn, .faq-question, .overlay-nav-button, .s
 @media (max-width: 900px) {
     .pricing-row { flex-direction: column; gap: 0; }
     .pricing-section { max-width: 98vw; min-width: 0; }
+}
+
+/* ===== Footer Flex and Policy Icons ===== */
+.footer-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    padding: 0 50px 10px 50px;
+    box-sizing: border-box;
+}
+.policy-icons {
+    position: relative;
+    right: 0;
+    bottom: -15px;
+    margin-left: auto;
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+
+.policy-icons img {
+    width: 42px;
+    height: 42px;
+    transition: transform 0.2s;
+}
+
+.policy-icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.policy-icons img:hover {
+    transform: scale(1.1);
+}
+
+.policy-icon-btn :hover {
+    color: #ce8157;
+}
+
+@media (max-width: 700px) {
+    .footer-flex {
+        flex-direction: column;
+        gap: 12px;
+        padding: 0 10px 10px 10px;
+    }
+    .policy-icons {
+        margin-top: 8px;
+        margin-left: 0;
+        align-self: flex-end;
+    }
+    .social-icons {
+        margin-right: 0;
+        align-self: flex-start;
+    }
 }
 
 /* ========== Responsive Design ========== */

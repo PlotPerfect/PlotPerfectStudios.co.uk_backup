@@ -513,6 +513,93 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="pricing-contact fade-in" style="animation-delay:0.2s;">
             <p>For a tailored quote or to discuss your project, please <b><a href="#" class="contact-link-internal">Contact Us</a></b>.</p>
         </div>
+        `,
+        "Terms & Conditions": `
+        <div class="policy-panel">
+            <h1>Terms & Conditions</h1>
+            <p>Welcome to Plot Perfect Studios Ltd. By accessing or using our website and services, you agree to comply with and be bound by the following terms and conditions. Please read them carefully.</p>
+            <h2>1. Intellectual Property</h2>
+            <ul>
+                <li>All content, graphics, logos, images, and designs on this website are the property of Plot Perfect Studios Ltd unless otherwise stated.</li>
+                <li>You may not reproduce, distribute, modify, or use any content from this site without our express written permission.</li>
+            </ul>
+            <h2>2. Use of Services</h2>
+            <ul>
+                <li>Our services are provided as described on this website. We reserve the right to update or modify our services at any time without prior notice.</li>
+                <li>Quotes, timelines, and deliverables are estimates and may vary depending on project requirements and client communication.</li>
+                <li>All projects require a signed agreement and may require a deposit before work commences.</li>
+            </ul>
+            <h2>3. Payment Terms</h2>
+            <ul>
+                <li>Payment terms will be outlined in your project agreement or invoice. Late payments may incur additional charges.</li>
+                <li>Final deliverables will be provided upon receipt of full payment.</li>
+            </ul>
+            <h2>4. Client Responsibilities</h2>
+            <ul>
+                <li>Clients are responsible for providing accurate information, content, and feedback in a timely manner.</li>
+                <li>Delays in client response may affect project timelines and delivery dates.</li>
+            </ul>
+            <h2>5. Limitation of Liability</h2>
+            <ul>
+                <li>Plot Perfect Studios Ltd is not liable for any indirect, incidental, or consequential damages arising from the use of our website or services.</li>
+                <li>We do not guarantee uninterrupted or error-free operation of our website or services.</li>
+            </ul>
+            <h2>6. Third-Party Links</h2>
+            <ul>
+                <li>Our website may contain links to third-party websites. We are not responsible for the content or privacy practices of these external sites.</li>
+            </ul>
+            <h2>7. Changes to Terms</h2>
+            <ul>
+                <li>We reserve the right to update these terms and conditions at any time. Changes will be posted on this page with an updated effective date.</li>
+            </ul>
+            <h2>8. Governing Law</h2>
+            <ul>
+                <li>These terms are governed by the laws of England and Wales. Any disputes will be subject to the exclusive jurisdiction of the courts of England and Wales.</li>
+            </ul>
+            <p>For any questions regarding these terms, please contact us at <a href="mailto:info@plotperfectstudios.co.uk">info@plotperfectstudios.co.uk</a>.</p>
+        </div>
+        `,
+        "Privacy Policy": `
+        <div class="policy-panel">
+            <h1>Privacy Policy</h1>
+            <p>Plot Perfect Studios Ltd is committed to protecting your privacy. This policy explains how we collect, use, and safeguard your personal information when you use our website and services.</p>
+            <h2>1. Information We Collect</h2>
+            <ul>
+                <li>Personal information you provide via contact forms, email, or phone (such as name, email address, phone number, and project details).</li>
+                <li>Technical data such as IP address, browser type, and usage data collected through cookies and analytics tools.</li>
+            </ul>
+            <h2>2. How We Use Your Information</h2>
+            <ul>
+                <li>To respond to your enquiries and provide requested services.</li>
+                <li>To communicate with you about your project or our services.</li>
+                <li>To improve our website, services, and user experience.</li>
+                <li>To comply with legal obligations.</li>
+            </ul>
+            <h2>3. Data Sharing & Security</h2>
+            <ul>
+                <li>We do not sell, trade, or rent your personal information to third parties.</li>
+                <li>We may share your data with trusted service providers who assist us in operating our website or delivering services, under strict confidentiality agreements.</li>
+                <li>We use industry-standard security measures to protect your data from unauthorized access, alteration, or disclosure.</li>
+            </ul>
+            <h2>4. Cookies & Analytics</h2>
+            <ul>
+                <li>Our website may use cookies and analytics tools (such as Google Analytics) to collect anonymous usage data and improve our services.</li>
+                <li>You can control cookie preferences through your browser settings.</li>
+            </ul>
+            <h2>5. Your Rights</h2>
+            <ul>
+                <li>You have the right to access, update, or request deletion of your personal data at any time.</li>
+                <li>To exercise your rights, please contact us at <a href="mailto:info@plotperfectstudios.co.uk">info@plotperfectstudios.co.uk</a>.</li>
+            </ul>
+            <h2>6. Changes to This Policy</h2>
+            <ul>
+                <li>We may update this privacy policy from time to time. Changes will be posted on this page with an updated effective date.</li>
+            </ul>
+            <h2>7. Contact</h2>
+            <ul>
+                <li>If you have any questions about this policy or how we handle your data, please contact us at <a href="mailto:info@plotperfectstudios.co.uk">info@plotperfectstudios.co.uk</a>.</li>
+            </ul>
+        </div>
         `
     };
 
@@ -556,6 +643,28 @@ document.addEventListener("DOMContentLoaded", function () {
             if (contactBtn) contactBtn.click();
         }
     });
+
+    // Add event listeners for policy icons
+    const termsBtn = document.getElementById('termsBtn');
+    const privacyBtn = document.getElementById('privacyBtn');
+    if (termsBtn) {
+        termsBtn.addEventListener('click', () => {
+            panelContent.innerHTML = panelText["Terms & Conditions"] || "Content coming soon.";
+            panel.style.display = "block";
+            setTimeout(() => {
+                panel.classList.add("show");
+            }, 50);
+        });
+    }
+    if (privacyBtn) {
+        privacyBtn.addEventListener('click', () => {
+            panelContent.innerHTML = panelText["Privacy Policy"] || "Content coming soon.";
+            panel.style.display = "block";
+            setTimeout(() => {
+                panel.classList.add("show");
+            }, 50);
+        });
+    }
 });
 
 // Setup FAQ toggles (after FAQ content loads)
