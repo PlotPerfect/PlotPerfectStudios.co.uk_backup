@@ -1425,6 +1425,12 @@ button, a, .nav-button, .desc-toggle-btn, .faq-question, .overlay-nav-button, .s
         margin: 0 -40px;
         width: 70%;
     }
+
+        .footer-flex {
+        flex-direction: column;
+        gap: 12px;
+        padding: 0 10px 10px 10px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1472,5 +1478,11 @@ button, a, .nav-button, .desc-toggle-btn, .faq-question, .overlay-nav-button, .s
 
     iframe {
         height: 300px;
+    }
+
+        .footer-flex {
+        flex-direction: column;
+        gap: 12px;
+        padding: 0 10px 10px 10px;
     }
 }
