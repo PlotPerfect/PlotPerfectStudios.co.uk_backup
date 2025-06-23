@@ -2,30 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Plot Perfect Studios - Creative Solutions for 3D Rendering & Web Development</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Plot Perfect Studios specializes in 3D rendering and web development. Explore our portfolio and contact us for creative solutions tailored to your needs.">
-    <meta name="keywords" content="3D rendering, web development, creative solutions, portfolio, Plot Perfect Studios, architectural visualization, product rendering, interactive design, responsive web design, e-commerce development, UI/UX design, branding, graphic design, photorealistic rendering, custom websites, digital marketing, SEO optimization, creative agency">
+    <title>Plot Perfect Studios | 3D Renders, Web Development & Creative Solutions</title>
+    <meta name="description" content="Plot Perfect Studios offers professional 3D architectural renders, web development, SEO, UI/UX design, and digital marketing to elevate your business.">
+    <meta name="robots" content="index, follow">
     <meta name="author" content="Plot Perfect Studios">
-    <link rel="stylesheet" href="assets/css/index.css">
-    <link rel="icon" type="image/svg+xml" href="assets/Images/LogoV2.svg" sizes="any">
-    <meta property="og:title" content="Plot Perfect Studios - Expert Web Development & Creative 3D Solutions">
-    <meta property="og:description" content="Explore our portfolio of 3D rendering and web development projects. Contact Plot Perfect Studios for innovative and tailored solutions.">
-    <meta property="og:image" content="assets/Images/LogoV2.svg">
-    <meta property="og:url" content="https://www.plotperfectstudios.co.uk">
+    <meta name="keywords" content="3D renders, architectural visualization, web development, SEO, UI/UX design, digital marketing, Plot Perfect Studios, creative studio, UK">
+    <link rel="canonical" href="https://plotperfectstudios.co.uk/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Plot Perfect Studios | 3D Renders, Web Development & Creative Solutions">
+    <meta property="og:description" content="Professional 3D architectural renders, web development, SEO, UI/UX design, and digital marketing services in the UK.">
+    <meta property="og:url" content="https://plotperfectstudios.co.uk/">
+    <meta property="og:image" content="https://plotperfectstudios.co.uk/assets/images/LogoV2.svg">
+    <meta property="og:site_name" content="Plot Perfect Studios">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Plot Perfect Studios | 3D Renders, Web Development & Creative Solutions">
+    <meta name="twitter:description" content="Professional 3D architectural renders, web development, SEO, UI/UX design, and digital marketing services in the UK.">
+    <meta name="twitter:image" content="https://plotperfectstudios.co.uk/assets/images/LogoV2.svg">
+    <meta name="theme-color" content="#181d23">
     <link rel="icon" type="image/svg+xml" href="assets/Icons/FaviconPP.svg">
-
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "Plot Perfect Studios Ltd",
-      "url": "https://www.plotperfectstudios.co.uk",
-      "logo": "https://www.plotperfectstudios.co.uk/assets/Images/LogoV2.svg",
-      "description": "Plot Perfect Studios specializes in 3D rendering and web development. Explore our portfolio and contact us for creative solutions tailored to your needs.",
-      "email": "info@plotperfectstudios.co.uk",
-      "telephone": "+44 7401 153 663",
+      "name": "Plot Perfect Studios",
+      "url": "https://plotperfectstudios.co.uk/",
+      "logo": "https://plotperfectstudios.co.uk/assets/images/LogoV2.svg",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+44 7401 154 663",
+        "contactType": "customer service",
+        "email": "info@plotperfectstudios.co.uk",
+        "areaServed": "GB"
+      },
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Parklands, Coopersale",
@@ -34,103 +43,381 @@
         "addressCountry": "GB"
       },
       "sameAs": [
-        "https://instagram.com/plotperfectstudios",
-        "https://linkedin.com/company/plot-perfect-studios"
+        "https://www.instagram.com/plotperfectstudios/",
+        "https://www.linkedin.com/in/adam-chapman-935b27322/"
       ]
     }
     </script>
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-    <meta name="author" content="Plot Perfect Studios Ltd">
-    <meta name="copyright" content="Plot Perfect Studios Ltd 2025">
+    <link rel="preload" href="assets/fonts/ASENINE_.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="stylesheet" href="assets/css/index.css">
 </head>
 <body>
-
-    <div id="intro">
-        <video id="introVideo" autoplay loop muted playsinline>
-            <source src="assets/Videos/WebsiteBGVideo.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        
-        <header id="mainHeader">
-            <!-- Left: Logo -->
-            <a href="index.html" class="logo-wrapper">
-                <img src="assets/images/LogoV2.svg" alt="Logo" id="headerLogo">
-            </a>
-        
-            <!-- Center: Nav Button -->
-            <nav class="header-center-nav">
-                <button class="nav-button">About Us</button>
-                <button class="nav-button">3D Render Portfolio</button>
-                <button class="nav-button">Web Development Portfolio</button>
-                <button class="nav-button">FAQ</button>
-                <button class="nav-button">Contact Us</button>
-                <button class="nav-button">Pricing</button>
-            </nav>
-        
-            <!-- Right: Menu Icon -->
-            <button id="menuToggle">
-                <img src="assets/Icons/MenuIconClosed.svg" alt="Menu Icon" id="menuIcon">
-            </button>
-        </header>
-
-        <!-- Info Panel -->
-        <div id="infoPanel">
-            <button id="closePanel">
-                <img src="assets/Icons/CloseButtonIcon.svg" alt="Close Panel">
-            </button>
-            <div id="panelContent"></div>
+    <header class="pps-header">
+        <div class="pps-header-left">
+            <img src="assets/images/LogoV2.svg" alt="Plot Perfect Studios Logo" class="pps-logo">
+            <span class="pps-title">Plot Perfect Studios</span>
         </div>
-        
-        <!-- Menu Overlay -->
-        <div id="menuOverlay">
-            <button id="closeMenuOverlay">
-                <img src="assets/Icons/CloseButtonIcon.svg" alt="Close Icon">
-            </button>
-            <nav class="menu-overlay-nav">
-                <button class="overlay-nav-button">About Us</button>
-                <button class="overlay-nav-button">3D Render Portfolio</button>
-                <button class="overlay-nav-button">Web Development Portfolio</button>
-                <button class="overlay-nav-button">FAQ</button>
-                <button class="overlay-nav-button">Contact Us</button>
-                <button class="overlay-nav-button">Pricing</button>
-            </nav>
-        </div>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Open menu">&#9776;</button>
+        <nav class="pps-nav" id="main-nav">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
+    <section class="hero-section" id="home">
+        <h1 class="hero-title">Welcome to Plot Perfect Studios</h1>
+        <p class="hero-desc">We bring your visions to life with stunning 3D renders, web development, and creative solutions.</p>
+        <!-- Add hero call-to-action or image here if needed -->
+    </section>
 
-        <footer id="mainFooter">
-            <p>© 2025 Plot Perfect Studios Ltd. All rights reserved.</p>
-            <p>info@plotperfectstudios.co.uk</p>
-
-            <div class="footer-flex">
-                <!-- Social Icons (Left) -->
-                <div class="social-icons">
-                    <div class="icon-wrapper">
-                        <a href="https://www.instagram.com/plotperfectstudios/" target="_blank" rel="noopener">
-                            <img src="assets/Icons/InstaIcon.svg" alt="Instagram" class="social-icon" />
-                        </a>
-                        <img src="assets/Icons/InstaQRCode.svg" alt="Instagram QR" class="qr-popup" />
-                    </div>
-                    <div class="icon-wrapper">
-                        <a href="https://www.linkedin.com/in/adam-chapman-935b27322/" target="_blank" rel="noopener">
-                            <img src="assets/Icons/linkedinIcon.svg" alt="LinkedIn" class="social-icon" />
-                        </a>
-                        <img src="assets/Icons/LinkedInQRCode.svg" alt="LinkedIn QR" class="qr-popup" />
-                    </div>
-                </div>
-                <!-- Policy Icons (Right) -->
-                <div class="policy-icons">
-                    <button class="policy-icon-btn" id="termsBtn" title="Terms & Conditions">
-                        <img src="assets/Icons/T&CIcon.svg" alt="Terms & Conditions" class="policy-icon" />
-                    </button>
-                    <button class="policy-icon-btn" id="privacyBtn" title="Privacy Policy">
-                        <img src="assets/Icons/PrivacyPolicyIcon.svg" alt="Privacy Policy" class="policy-icon" />
-                    </button>
+    <section class="hero-split-section">
+        <div class="hero-split-container">
+            <div class="hero-split-left">
+                <h1 class="hero-split-title">Bringing Your<br>Vision To Life</h1>
+                <div class="hero-split-underline"></div>
+                <p class="hero-split-desc">Professional 3D architectural renders, web development, and SEO solutions to elevate your business.</p>
+                <div class="hero-split-buttons">
+                    <a href="#services" class="hero-btn hero-btn-primary">Our Services</a>
+                    <a href="#contact" class="hero-btn hero-btn-outline">Get in Touch</a>
                 </div>
             </div>
-        </footer>
+            <div class="hero-split-right">
+                <div class="hero-split-card">
+                    <div class="hero-split-card-img" style="width:100%; height:100%; display:flex; align-items:center; justify-content:center;">
+                        <img src="assets/images/LivingRoom.jpg" alt="3D Architectural Visualization" style="max-width:100%; max-height:100%; width:auto; height:auto; display:block;">
+                    </div>
+                    <div class="hero-split-card-label">3D Architectural Visualization Preview</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-section" id="services">
+        <div class="services-video-bg-wrapper">
+            <video class="services-video-bg" autoplay loop muted playsinline poster="assets/images/LivingRoom.jpg">
+                <source src="assets/Videos/ServicesBGVideo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="services-video-overlay"></div>
+        </div>
+        <div class="services-container">
+            <h2 class="services-title">Our Services</h2>
+            <div class="services-underline"></div>
+            <p class="services-desc">We offer comprehensive solutions to bring your projects to life with precision and creativity.</p>
+            <div class="services-cards">
+                <div class="service-card">
+                    <div class="service-icon service-icon-3d">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="20" fill="#181d23"/><g><rect x="13" y="18" width="14" height="10" rx="2" fill="#fff"/><rect x="16" y="21" width="2" height="2" rx="1" fill="#181d23"/><rect x="22" y="21" width="2" height="2" rx="1" fill="#181d23"/><rect x="19" y="24" width="2" height="2" rx="1" fill="#181d23"/></g><rect x="15" y="13" width="10" height="6" rx="2" fill="#fff"/><rect x="18" y="15" width="4" height="2" rx="1" fill="#181d23"/></svg>
+                    </div>
+                    <h3 class="service-card-title">3D Architectural Renders</h3>
+                    <p class="service-card-desc">Photorealistic visualizations that bring your architectural designs to life before construction begins.</p>
+                    <a href="#" class="service-learn-more" data-service="3d-rendering">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon service-icon-web">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="20" fill="#181d23"/><text x="20" y="26" text-anchor="middle" font-size="18" fill="#fff">&lt;/&gt;</text></svg>
+                    </div>
+                    <h3 class="service-card-title">Web Development</h3>
+                    <p class="service-card-desc">Custom, responsive websites designed to showcase your brand and engage your audience effectively.</p>
+                    <a href="#" class="service-learn-more" data-service="web-development">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon service-icon-seo">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="20" fill="#181d23"/><g><circle cx="20" cy="18" r="7" stroke="#fff" stroke-width="2" fill="none"/><rect x="27" y="25" width="2" height="7" rx="1" transform="rotate(-45 27 25)" fill="#fff"/></g></svg>
+                    </div>
+                    <h3 class="service-card-title">SEO Services</h3>
+                    <p class="service-card-desc">Strategic optimization to improve your online visibility and drive targeted traffic to your website.</p>
+                    <a href="#" class="service-learn-more" data-service="seo-services">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon service-icon-uiux">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="20" fill="#181d23"/><rect x="12" y="14" width="16" height="12" rx="3" fill="#fff"/><rect x="16" y="18" width="8" height="4" rx="2" fill="#181d23"/></svg>
+                    </div>
+                    <h3 class="service-card-title">UI/UX Design</h3>
+                    <p class="service-card-desc">User-focused design for digital products, ensuring intuitive and delightful experiences.</p>
+                    <a href="#" class="service-learn-more" data-service="ui-ux-design">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon service-icon-marketing">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="20" fill="#181d23"/><rect x="14" y="18" width="12" height="8" rx="2" fill="#fff"/><rect x="18" y="22" width="4" height="2" rx="1" fill="#181d23"/></svg>
+                    </div>
+                    <h3 class="service-card-title">Digital Marketing</h3>
+                    <p class="service-card-desc">Grow your brand online with our digital marketing services, including social media, PPC, and more.</p>
+                    <a href="#" class="service-learn-more" data-service="digital-marketing">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="portfolio-section" id="portfolio">
+        <div class="portfolio-container">
+            <h2 class="portfolio-title">Our Portfolio</h2>
+            <div class="portfolio-underline"></div>
+            <p class="portfolio-desc">Explore our latest projects and see how we've helped clients achieve their vision.</p>
+            <div class="portfolio-grid">
+                <a href="3d-render-portfolio.html?project=modern-residential-complex" class="portfolio-card">
+                    <div class="portfolio-card-img"> <img src = "assets/images/SpinStudio1.png" width="300" height="200" viewBox="0 0 80 80"><rect width="80" height="80" rx="10" fill="#DDE0E4"/><path d="M20 60L35 40L50 55L60 45L70 60H20Z" fill="#B0B6BE"/><circle cx="32" cy="32" r="8" fill="#B0B6BE"/></svg></div>
+                    <div class="portfolio-card-info">
+                        <div class="portfolio-card-title">Leisure Centre - New Spin Studio</div>
+                        <div class="portfolio-card-type">3D Architectural Rendering</div>
+                    </div>
+                    <div class="portfolio-card-overlay"><span>View Project</span></div>
+                </a>
+                <a href="3d-render-portfolio.html?project=luxury-hotel-website" class="portfolio-card">
+                    <div class="portfolio-card-img"> <img src = "assets/Icons/F7CoachingLogo.svg" width="300" height="200" viewBox="0 0 80 80"><rect width="80" height="80" rx="10" fill="#DDE0E4"/><path d="M20 60L35 40L50 55L60 45L70 60H20Z" fill="#B0B6BE"/><circle cx="32" cy="32" r="8" fill="#B0B6BE"/></svg></div>
+                    <div class="portfolio-card-info">
+                        <div class="portfolio-card-title">F7 Football Coaching</div>
+                        <div class="portfolio-card-type">Web Development</div>
+                    </div>
+                    <div class="portfolio-card-overlay"><span>View Project</span></div>
+                </a>
+                <a href="3d-render-portfolio.html?project=corporate-office-interior" class="portfolio-card">
+                    <div class="portfolio-card-img"> <img src = "assets/images/Kitchen.png" width="300" height="200" viewBox="0 0 80 80"><rect width="80" height="80" rx="10" fill="#DDE0E4"/><path d="M20 60L35 40L50 55L60 45L70 60H20Z" fill="#B0B6BE"/><circle cx="32" cy="32" r="8" fill="#B0B6BE"/></svg></div>
+                    <div class="portfolio-card-info">
+                        <div class="portfolio-card-title">Kitchen Refurbishment</div>
+                        <div class="portfolio-card-type">3D Visualization</div>
+                    </div>
+                    <div class="portfolio-card-overlay"><span>View Project</span></div>
+                </a>
+                <a href="3d-render-portfolio.html?project=ecommerce-seo-campaign" class="portfolio-card">
+                    <div class="portfolio-card-img"> <img src = "assets/Icons/Cre8Logo.svg" width="300" height="200" viewBox="0 0 80 80"><rect width="80" height="80" rx="10" fill="#DDE0E4"/><path d="M20 60L35 40L50 55L60 45L70 60H20Z" fill="#B0B6BE"/><circle cx="32" cy="32" r="8" fill="#B0B6BE"/></svg></div>
+                    <div class="portfolio-card-info">
+                        <div class="portfolio-card-title">Cre8 Sign Supplies</div>
+                        <div class="portfolio-card-type">Web Development</div>
+                    </div>
+                    <div class="portfolio-card-overlay"><span>View Project</span></div>
+                </a>
+                <a href="3d-render-portfolio.html?project=restaurant-web-app" class="portfolio-card">
+                    <div class="portfolio-card-img"> <img src = "assets/images/Female Proposed 4.png" width="300" height="200" viewBox="0 0 80 80"><rect width="80" height="80" rx="10" fill="#DDE0E4"/><path d="M20 60L35 40L50 55L60 45L70 60H20Z" fill="#B0B6BE"/><circle cx="32" cy="32" r="8" fill="#B0B6BE"/></svg></div>
+                    <div class="portfolio-card-info">
+                        <div class="portfolio-card-title">New Changing Village</div>
+                        <div class="portfolio-card-type">3D Visualization</div>
+                    </div>
+                    <div class="portfolio-card-overlay"><span>View Project</span></div>
+                </a>
+                <a href="3d-render-portfolio.html?project=urban-park-concept" class="portfolio-card">
+                    <div class="portfolio-card-img"> <img src = "assets/Icons/C&CC Main Logo Light.svg" width="300" height="200" viewBox="0 0 80 80"><rect width="80" height="80" rx="10" fill="#DDE0E4"/><path d="M20 60L35 40L50 55L60 45L70 60H20Z" fill="#B0B6BE"/><circle cx="32" cy="32" r="8" fill="#B0B6BE"/></svg></div>
+                    <div class="portfolio-card-info">
+                        <div class="portfolio-card-title">Corrigan & Chapman construction Ltd</div>
+                        <div class="portfolio-card-type">Web Development</div>
+                    </div>
+                    <div class="portfolio-card-overlay"><span>View Project</span></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section" id="about">
+        <div class="about-container">
+            <div class="about-image">
+                <div class="about-image-card">
+                    <img src="assets/images/LogoV2.svg" alt="Our Team">
+                    <div class="about-image-label">Our Team</div>
+                </div>
+            </div>
+            <div class="about-content">
+                <h2 class="about-title">About Plot Perfect Studios</h2>
+                <div class="about-underline"></div>
+                <p class="about-desc">Founded in 2024, Plot Perfect Studios has been at the forefront of combining technology and creativity to deliver exceptional results for our clients.</p>
+                <p class="about-desc">Our team of experts specializes in creating stunning 3D architectural visualizations, developing cutting-edge websites, and implementing effective SEO strategies that drive results.</p>
+                <div class="about-mission-vision">
+                    <div class="about-mission">
+                        <div class="about-mission-title">Our Mission</div>
+                        <div class="about-mission-desc">To transform ideas into impactful digital experiences that exceed expectations.</div>
+                    </div>
+                    <div class="about-vision">
+                        <div class="about-mission-title">Our Vision</div>
+                        <div class="about-mission-desc">To be the leading creative studio known for innovation and excellence.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials-section" id="testimonials">
+        <div class="testimonials-container">
+            <h2 class="testimonials-title">What Our Clients Say</h2>
+            <div class="testimonials-underline"></div>
+            <p class="testimonials-desc">Don't just take our word for it. Here's what our clients have to say about working with us.</p>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img class="testimonial-avatar" src="assets/Icons/Avatar1.svg" alt="Chappy avatar" style="width:40px;height:40px;border-radius:50%;object-fit:cover;">
+                        <div>
+                            <div class="testimonial-name">Chappy</div>
+                            <div class="testimonial-role">1 review • 0 photos</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-stars">★★★★★ <span class="testimonial-date">4 weeks ago</span> <span class="testimonial-new">NEW</span></div>
+                    <div class="testimonial-quote">Quality service and very professional</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img class="testimonial-avatar" src="assets/Icons/Avatar1.svg" alt="murat cetin avatar" style="width:40px;height:40px;border-radius:50%;object-fit:cover;">
+                        <div>
+                            <div class="testimonial-name">murat cetin</div>
+                            <div class="testimonial-role">Local Guide • 67 reviews • 7 photos</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-stars">★★★★★ <span class="testimonial-date">4 weeks ago</span> <span class="testimonial-new">NEW</span></div>
+                    <div class="testimonial-quote">One word, flawless. Would highly recommend.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <div class="contact-form-area">
+                <h2 class="contact-title">Get In Touch</h2>
+                <div class="contact-underline"></div>
+                <p class="contact-desc">Ready to bring your vision to life? Contact us today to discuss your project.</p>
+                <form class="contact-form">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <button type="submit" class="contact-submit">Send Message</button>
+                </form>
+            </div>
+            <div class="contact-info-area">
+                <div class="contact-info-card">
+                    <h3 class="contact-info-title">Contact Information</h3>
+                    <div class="contact-info-list">
+                        <div class="contact-info-item">
+                            <span class="contact-info-icon"> <svg width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="16" fill="#181d23"/><path d="M16 10a4 4 0 0 1 4 4c0 2.21-4 8-4 8s-4-5.79-4-8a4 4 0 0 1 4-4zm0 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z" fill="#fff"/></svg></span>
+                            <div>
+                                <div class="contact-info-label">Address</div>
+                                <div class="contact-info-value">Parklands,<br>Coopersale, UK, CM16 7RQ</div>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <span class="contact-info-icon"> <svg width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="16" fill="#181d23"/><path d="M22 20.94v2.06a1 1 0 0 1-1.11 1A17.06 17.06 0 0 1 8 10.11 1 1 0 0 1 9 9h2.06a1 1 0 0 1 1 .76l.47 2a1 1 0 0 1-.29 1l-1.27 1.27a13.06 13.06 0 0 0 5.06 5.06l1.27-1.27a1 1 0 0 1 1-.29l2 .47a1 1 0 0 1 .76 1z" fill="#fff"/></svg></span>
+                            <div>
+                                <div class="contact-info-label">Phone</div>
+                                <div class="contact-info-value">+44 7401 154 663</div>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <span class="contact-info-icon"> <svg width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="16" fill="#181d23"/><path d="M8 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8l-8 5-8-5zm16-2a2 2 0 0 0-2-2H10a2 2 0 0 0-2 2l8 5 8-5z" fill="#fff"/></svg></span>
+                            <div>
+                                <div class="contact-info-label">Email</div>
+                                <div class="contact-info-value">info@plotperfectstudios.co.uk</div>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <span class="contact-info-icon"> <svg width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="16" fill="#181d23"/><path d="M16 8a8 8 0 0 1 8 8c0 4.42-8 8-8 8s-8-3.58-8-8a8 8 0 0 1 8-8zm0 2a6 6 0 0 0-6 6c0 2.67 4 5.33 6 6.67C18 21.33 22 18.67 22 16a6 6 0 0 0-6-6z" fill="#fff"/></svg></span>
+                            <div>
+                                <div class="contact-info-label">Working Hours</div>
+                                <div class="contact-info-value">Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-social">
+                        <div class="contact-social-label">Follow Us</div>
+                        <div class="contact-social-icons">
+                    <a href="#" aria-label="Facebook">
+                        <svg width="22" height="22" viewBox="0 0 28 28">
+                            <circle cx="14" cy="14" r="14" fill="#181d23" fill-opacity="1"/>
+                            <path d="M18 9h-2a1 1 0 0 0-1 1v2h3l-.5 3h-2.5v7h-3v-7h-2v-3h2v-2a3 3 0 0 1 3-3h2v3z" fill="#fff"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/plotperfectstudios/" target="_blank" rel="noopener" aria-label="Instagram">
+                        <svg width="22" height="22" viewBox="0 0 28 28">
+                            <circle cx="14" cy="14" r="14" fill="#181d23" fill-opacity="1"/>
+                            <rect x="9" y="9" width="10" height="10" rx="5" fill="#fff"/>
+                            <circle cx="14" cy="14" r="3" fill="#181d23"/>
+                            <circle cx="19" cy="11" r="1" fill="#181d23"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/adam-chapman-935b27322/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <svg width="22" height="22" viewBox="0 0 28 28">
+                            <circle cx="14" cy="14" r="14" fill="#181d23" fill-opacity="1"/>
+                            <rect x="9" y="12" width="2" height="7" fill="#fff"/>
+                            <rect x="13" y="15" width="2" height="4" fill="#fff"/>
+                            <circle cx="10" cy="10" r="1" fill="#fff"/>
+                            <rect x="15" y="12" width="2" height="7" fill="#fff"/>
+                        </svg>
+                    </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-col footer-brand">
+                <div class="footer-logo-row">
+                    <img src="assets/images/LogoV2.svg" alt="Plot Perfect Studios Logo" class="footer-logo">
+                    <span class="footer-brand-title">Plot Perfect Studios</span>
+                </div>
+                <div class="footer-brand-desc">Creating exceptional digital experiences through innovative design and technology.</div>
+                <div class="footer-social-icons">
+                    <a href="#" aria-label="Facebook"><svg width="22" height="22" viewBox="0 0 28 28"><circle cx="14" cy="14" r="14" fill="#fff" fill-opacity="0.1"/><path d="M18 9h-2a1 1 0 0 0-1 1v2h3l-.5 3h-2.5v7h-3v-7h-2v-3h2v-2a3 3 0 0 1 3-3h2v3z" fill="#fff"/></svg></a>
+                    <a href="https://www.instagram.com/plotperfectstudios/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="22" height="22" viewBox="0 0 28 28"><circle cx="14" cy="14" r="14" fill="#fff" fill-opacity="0.1"/><rect x="9" y="9" width="10" height="10" rx="5" fill="#fff"/><circle cx="14" cy="14" r="3" fill="#181d23"/><circle cx="19" cy="11" r="1" fill="#181d23"/></svg></a>
+                    <a href="https://www.linkedin.com/in/adam-chapman-935b27322/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="22" height="22" viewBox="0 0 28 28"><circle cx="14" cy="14" r="14" fill="#fff" fill-opacity="0.1"/><rect x="9" y="12" width="2" height="7" fill="#fff"/><rect x="13" y="15" width="2" height="4" fill="#fff"/><circle cx="10" cy="10" r="1" fill="#fff"/><rect x="15" y="12" width="2" height="7" fill="#fff"/></svg></a>
+                </div>
+            </div>
+            <div class="footer-col footer-links">
+                <div class="footer-col-title">Quick Links</div>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col footer-services">
+                <div class="footer-col-title">Services</div>
+                <ul>
+                    <li><a href="#services">3D Architectural Renders</a></li>
+                    <li><a href="#services">Web Development</a></li>
+                    <li><a href="#services">SEO Services</a></li>
+                    <li><a href="#services">UI/UX Design</a></li>
+                    <li><a href="#services">Digital Marketing</a></li>
+                </ul>
+            </div>
+            <div class="footer-col footer-newsletter">
+                <div class="footer-col-title">Newsletter</div>
+                <div class="footer-newsletter-desc">Subscribe to our newsletter for the latest updates and insights.</div>
+                <form class="footer-newsletter-form">
+                    <input type="email" placeholder="Your email" required>
+                    <button type="submit" aria-label="Subscribe">
+                        <svg width="20" height="20" viewBox="0 0 20 20"><path d="M2 10h16M10 2l8 8-8 8" stroke="#181d23" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-left">© 2025 Plot Perfect Studios Ltd. All rights reserved.</div>
+            <div class="footer-bottom-links">
+                <a href="privacyPolicy.html" target="_blank" rel="noopener" class="footer-link-btn">Privacy Policy</a>
+                <a href="Terms&Conditions.html" target="_blank" rel="noopener" class="footer-link-btn">Terms of Service</a>
+                <a href="sitemap.html" target="_blank" rel="noopener" class="footer-link-btn">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Service Details Overlay -->
+    <div class="service-overlay" id="serviceOverlay" style="display:none;">
+        <div class="service-overlay-content" id="serviceOverlayContent">
+            <span class="service-overlay-close" id="serviceOverlayClose" aria-label="Close">&times;</span>
+            <h2 id="serviceOverlayTitle"></h2>
+            <div id="serviceOverlayDesc"></div>
+        </div>
     </div>
 
     <script src="assets/js/index.js"></script>
+    <script src="assets/js/EmailJS.js"></script>
 </body>
 </html>
