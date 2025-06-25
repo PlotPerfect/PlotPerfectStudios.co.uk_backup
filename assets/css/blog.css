@@ -220,6 +220,11 @@
   .blog-modal-content { padding: 10px 2px 10px 2px; border-radius: 8px; }
 }
 
+/* Move only the second blog modal content down */
+#blog-modal-epping-local-seo-tips .blog-modal-content {
+  margin-top: 2400px;
+}
+
 /* Full mobile-first adjustments for blog pages */
 @media (max-width: 480px) {
     .blog-main {
@@ -328,4 +333,19 @@
         margin-top: auto;
         width: 100%;
     }
+}
+
+/* Blog Card 2 image update for visual consistency */
+.blog-card img.blog-card-image {
+  object-fit: cover;
+  width: 100%;
+  height: 180px;
+  display: block;
+  border-radius: 0;
+  box-shadow: 0 2px 12px rgba(24,29,35,0.08);
+}
+@media (max-width: 700px) {
+  .blog-card img.blog-card-image {
+    height: 120px;
+  }
 }
