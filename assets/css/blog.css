@@ -225,6 +225,11 @@
   margin-top: 2400px;
 }
 
+/* Move only the second blog modal content down */
+#blog-modal-custom-vs-wordpress .blog-modal-content {
+  margin-top: 3300px;
+}
+
 /* Full mobile-first adjustments for blog pages */
 @media (max-width: 480px) {
     .blog-main {

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login | Plot Perfect Studios</title>
+  <link rel="stylesheet" href="assets/css/index.css">
+  <link rel="stylesheet" href="assets/css/admin.css">
+  <link rel="icon" type="image/svg+xml" href="assets/Icons/FaviconPP.svg">
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+  <script defer src="assets/js/admin.js"></script>
+
+</head>
+<body>
+  <a href="index.html" class="admin-back-btn">← Back to Main Website</a>
+  <div id="login-container" class="admin-login-container">
+    <img src="assets/images/LogoV2.svg" alt="Plot Perfect Studios Logo" class="admin-login-logo">
+    <div class="admin-login-title">Admin Login</div>
+    <form id="login-form" class="admin-login-form">
+      <input type="text" id="username" placeholder="Username" required />
+      <input type="email" id="email" placeholder="Email" required autocomplete="username" />
+      <input type="password" id="password" placeholder="Password" required autocomplete="current-password" />
+      <button type="submit">Login</button>
+      <div id="login-error" class="admin-login-error"></div>
+    </form>
+  </div>
+  <div id="admin-dashboard" style="display:none; text-align:center;">
+    <h2 class="admin-dashboard-welcome">Welcome to your Business Assistant</h2>
+    <!-- Dashboard content will go here -->
+  </div>
+  <div id="add-client-form" style="display:none;">
+    <h3>Add Client</h3>
+    <form id="client-form">
+      <input type="text" id="client-name" placeholder="Client Name" required />
+      <input type="email" id="client-email" placeholder="Client Email" required />
+      <input type="tel" id="client-phone" placeholder="Client Phone" required />
+      <select id="client-status" required>
+        <option value="">Select Status</option>
+        <option value="active">Active</option>
+        <option value="inactive">Inactive</option>
+      </select>
+      <button type="submit">Add Client</button>
+    </form>
+  </div>
+  <div id="client-table-container" style="display:none;">
+    <h3>Clients</h3>
+    <table id="client-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Client rows will be populated by JavaScript -->
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
