@@ -16,12 +16,12 @@
   </url>
 
   <url>
-    <loc>https://www.plotperfectstudios.co.uk/privacyPolicy.html</loc>
+    <loc>https://www.plotperfectstudios.co.uk/privacy-policy.html</loc>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://www.plotperfectstudios.co.uk/Terms&amp;Conditions.html</loc>
+    <loc>https://www.plotperfectstudios.co.uk/terms-and-conditions.html</loc>
     <priority>0.5</priority>
   </url>
 
@@ -33,5 +33,20 @@
   <url>
     <loc>https://www.plotperfectstudios.co.uk/Blogs.html</loc>
     <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.plotperfectstudios.co.uk/FAQs.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.plotperfectstudios.co.uk/pricing.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.plotperfectstudios.co.uk/admin.html</loc>
+    <priority>0.2</priority>
   </url>
 </urlset>

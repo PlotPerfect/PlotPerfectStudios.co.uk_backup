@@ -3,24 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plot Perfect Studios | 3D Renders, Web Development & Creative Solutions</title>
-    <meta name="description" content="Plot Perfect Studios offers professional 3D architectural renders, web development, SEO, UI/UX design, and digital marketing to elevate your business.">
+    <title>Plot Perfect Studios | Web Development & SEO Epping</title>
+    <meta name="description" content="Plot Perfect Studios offers expert web development and SEO services in Epping, UK. Boost your business online with our bespoke website design and digital marketing solutions.">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Plot Perfect Studios">
     <meta name="keywords" content="3D renders, architectural visualization, web development, SEO, UI/UX design, digital marketing, Plot Perfect Studios, creative studio, UK, website design Epping, web design company in Epping, website design in Epping, Epping website design, web design Epping">
     <link rel="canonical" href="https://plotperfectstudios.co.uk/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Plot Perfect Studios | 3D Renders, Web Development & Creative Solutions">
-    <meta property="og:description" content="Professional 3D architectural renders, web development, SEO, UI/UX design, and digital marketing services in the UK.">
+    <meta property="og:title" content="Plot Perfect Studios | Web Development & SEO Epping">
+    <meta property="og:description" content="Expert web development and SEO services in Epping, UK. Bespoke website design and digital marketing for your business.">
     <meta property="og:url" content="https://plotperfectstudios.co.uk/">
     <meta property="og:image" content="https://plotperfectstudios.co.uk/assets/images/LogoV2.svg">
     <meta property="og:site_name" content="Plot Perfect Studios">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Plot Perfect Studios | 3D Renders, Web Development & Creative Solutions">
-    <meta name="twitter:description" content="Professional 3D architectural renders, web development, SEO, UI/UX design, and digital marketing services in the UK.">
+    <meta name="twitter:title" content="Plot Perfect Studios | Web Development & SEO Epping">
+    <meta name="twitter:description" content="Expert web development and SEO services in Epping, UK. Bespoke website design and digital marketing for your business.">
     <meta name="twitter:image" content="https://plotperfectstudios.co.uk/assets/images/LogoV2.svg">
     <meta name="theme-color" content="#181d23">
     <link rel="icon" type="image/svg+xml" href="assets/Icons/FaviconPP.svg">
+    <link rel="icon" type="image/x-icon" href="assets/Icons/favicon.ico">
+    <link rel="icon" type="image/png" href="assets/Icons/FaviconPP.png" sizes="32x32">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -48,13 +50,120 @@
       ]
     }
     </script>
+    <style>
+        /* Critical CSS: Header, Navigation, Hero Section */
+        body {
+            font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+            background: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        .pps-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 24px 48px;
+            background: #000;
+            border-bottom: 1px solid #fff;
+        }
+        .pps-header-left {
+            display: flex;
+            align-items: center;
+        }
+        .pps-logo {
+            width: 125px;
+            height: 125px;
+            margin-right: 24px;
+        }
+        .pps-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: 0.01em;
+        }
+        .pps-nav {
+            display: flex;
+            gap: 40px;
+        }
+        .pps-nav a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.8rem;
+            font-weight: 900;
+            transition: color 0.2s;
+            position: relative;
+        }
+        .pps-nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #fff;
+            transition: width 0.3s ease;
+        }
+        .pps-nav a:hover::after {
+            width: 100%;
+        }
+        .pps-nav a:hover {
+            color: #ce8157;
+        }
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+        @media (max-width: 800px) {
+            .pps-header {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 16px;
+            }
+            .pps-nav {
+                gap: 24px;
+                margin-top: 12px;
+                flex-direction: column;
+                width: 100%;
+                display: none;
+            }
+            .pps-nav.active {
+                display: flex;
+            }
+            .menu-toggle {
+                display: block;
+                margin-left: auto;
+            }
+        }
+        .hero-section {
+            padding: 30px 0 60px 0;
+            background: #f5f6fa;
+            text-align: center;
+        }
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 0px;
+            color: #181d23;
+        }
+        .hero-desc {
+            font-size: 1.2rem;
+            color: #444;
+            margin-bottom: 32px;
+        }
+    </style>
     <link rel="preload" href="assets/fonts/ASENINE_.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="preload" href="assets/css/index.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="assets/css/index.css"></noscript>
+    <link href="https://plotperfectstudios.co.uk/" rel="canonical" />
 </head>
 <body>
     <header class="pps-header">
         <div class="pps-header-left">
-            <img src="assets/images/LogoV2.svg" alt="Plot Perfect Studios Logo" class="pps-logo">
+            <img src="assets/images/LogoV2.svg" alt="Plot Perfect Studios Logo" width="125" height="125" class="pps-logo responsive-img">
             <span class="pps-title">Plot Perfect Studios</span>
         </div>
         <button class="menu-toggle" id="menu-toggle" aria-label="Open menu">&#9776;</button>
@@ -62,23 +171,25 @@
             <a href="#home">Home</a>
             <a href="#services">Services</a>
             <a href="#portfolio">Portfolio</a>
+            <a href="pricing.html">Pricing</a>
             <a href="#about">About</a>
+            <a href="FAQs.html">FAQs</a>
             <a href="#contact">Contact</a>
-            <a href="Blogs.html">Blogs</a>
+            <a href="blogs.html">Blogs</a>
 
         </nav>
     </header>
 
     <section class="hero-section" id="home">
-        <h1 class="hero-title">Welcome to Plot Perfect Studios</h1>
-        <p class="hero-desc">We bring your visions to life with stunning 3D renders, web development, and creative solutions.</p>
+        <h1 class="hero-title">Custom Web Development, 3D Renders & SEO Services in Epping, UK</h1>
+        <p class="hero-desc">Plot Perfect Studios delivers photorealistic 3D renders, bespoke website design, UI/UX, and digital marketing services for architects, developers, and businesses in Epping and across the UK.</p>
         <!-- Add hero call-to-action or image here if needed -->
     </section>
 
     <section class="hero-split-section">
         <div class="hero-split-container">
             <div class="hero-split-left">
-                <h1 class="hero-split-title">Bringing Your<br>Vision To Life</h1>
+                <h2 class="hero-split-title">Web Development & SEO Solutions for Local Businesses</h2>
                 <div class="hero-split-underline"></div>
                 <p class="hero-split-desc">Professional 3D architectural renders, web development, and SEO solutions to elevate your business.</p>
                 <div class="hero-split-buttons">
@@ -88,8 +199,14 @@
             </div>
             <div class="hero-split-right">
                 <div class="hero-split-card">
-                    <div class="hero-split-card-img" style="width:100%; height:100%; display:flex; align-items:center; justify-content:center;">
-                        <img src="assets/images/LivingRoom.jpg" alt="3D Architectural Visualization" style="max-width:100%; max-height:100%; width:auto; height:auto; display:block;">
+                    <div class="hero-split-card-img">
+                        <img 
+                            src="assets/images/LivingRoom.jpg" 
+                            alt="3D Architectural Visualization" 
+                            width="600" height="400"
+                            srcset="assets/images/LivingRoom.jpg 600w, assets/images/LivingRoom.jpg 300w"
+                            sizes="(max-width: 700px) 100vw, 600px"
+                            class="responsive-img">
                     </div>
                     <div class="hero-split-card-label">3D Architectural Visualization Preview</div>
                 </div>
@@ -216,7 +333,7 @@
         <div class="about-container">
             <div class="about-image">
                 <div class="about-image-card">
-                    <img src="assets/images/LogoV2.svg" alt="Our Team">
+                    <img src="assets/images/LogoV2.svg" alt="Our Team" width="125" height="250" class="about-logo responsive-img">
                     <div class="about-image-label">Our Team</div>
                 </div>
             </div>
@@ -311,7 +428,7 @@
                             <span class="contact-info-icon"> <svg width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="16" fill="#181d23"/><path d="M8 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8l-8 5-8-5zm16-2a2 2 0 0 0-2-2H10a2 2 0 0 0-2 2l8 5 8-5z" fill="#fff"/></svg></span>
                             <div>
                                 <div class="contact-info-label">Email</div>
-                                <div class="contact-info-value">info@plotperfectstudios.co.uk</div>
+                                <div class="contact-info-value"><span id="email-link"></span></div>
                             </div>
                         </div>
                         <div class="contact-info-item">
@@ -322,33 +439,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="contact-social">
-                        <div class="contact-social-label">Follow Us</div>
-                        <div class="contact-social-icons">
-                    <a href="#" aria-label="Facebook">
-                        <svg width="22" height="22" viewBox="0 0 28 28">
-                            <circle cx="14" cy="14" r="14" fill="#181d23" fill-opacity="1"/>
-                            <path d="M18 9h-2a1 1 0 0 0-1 1v2h3l-.5 3h-2.5v7h-3v-7h-2v-3h2v-2a3 3 0 0 1 3-3h2v3z" fill="#fff"/>
-                        </svg>
-                    </a>
-                    <a href="https://www.instagram.com/plotperfectstudios/" target="_blank" rel="noopener" aria-label="Instagram">
-                        <svg width="22" height="22" viewBox="0 0 28 28">
-                            <circle cx="14" cy="14" r="14" fill="#181d23" fill-opacity="1"/>
-                            <rect x="9" y="9" width="10" height="10" rx="5" fill="#fff"/>
-                            <circle cx="14" cy="14" r="3" fill="#181d23"/>
-                            <circle cx="19" cy="11" r="1" fill="#181d23"/>
-                        </svg>
-                    </a>
-                    <a href="https://www.linkedin.com/in/adam-chapman-935b27322/" target="_blank" rel="noopener" aria-label="LinkedIn">
-                        <svg width="22" height="22" viewBox="0 0 28 28">
-                            <circle cx="14" cy="14" r="14" fill="#181d23" fill-opacity="1"/>
-                            <rect x="9" y="12" width="2" height="7" fill="#fff"/>
-                            <rect x="13" y="15" width="2" height="4" fill="#fff"/>
-                            <circle cx="10" cy="10" r="1" fill="#fff"/>
-                            <rect x="15" y="12" width="2" height="7" fill="#fff"/>
-                        </svg>
-                    </a>
-                        </div>
+                        <div class="sharethis-inline-follow-buttons"></div> 
                     </div>
                 </div>
             </div>
@@ -359,12 +450,12 @@
         <div class="footer-container">
             <div class="footer-col footer-brand">
                 <div class="footer-logo-row">
-                    <img src="assets/images/LogoV2.svg" alt="Plot Perfect Studios Logo" class="footer-logo">
+                    <img src="assets/images/LogoV2.svg" alt="Plot Perfect Studios Logo" width="125" height="125" class="footer-logo responsive-img">
                     <span class="footer-brand-title">Plot Perfect Studios</span>
                 </div>
                 <div class="footer-brand-desc">Creating exceptional digital experiences through innovative design and technology.</div>
                 <div class="footer-social-icons">
-                    <a href="#" aria-label="Facebook"><svg width="22" height="22" viewBox="0 0 28 28"><circle cx="14" cy="14" r="14" fill="#fff" fill-opacity="0.1"/><path d="M18 9h-2a1 1 0 0 0-1 1v2h3l-.5 3h-2.5v7h-3v-7h-2v-3h2v-2a3 3 0 0 1 3-3h2v3z" fill="#fff"/></svg></a>
+                    <a href="https://www.facebook.com/profile.php?id=61577402140219" aria-label="Facebook"><svg width="22" height="22" viewBox="0 0 28 28"><circle cx="14" cy="14" r="14" fill="#fff" fill-opacity="0.1"/><path d="M18 9h-2a1 1 0 0 0-1 1v2h3l-.5 3h-2.5v7h-3v-7h-2v-3h2v-2a3 3 0 0 1 3-3h2v3z" fill="#fff"/></svg></a>
                     <a href="https://www.instagram.com/plotperfectstudios/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="22" height="22" viewBox="0 0 28 28"><circle cx="14" cy="14" r="14" fill="#fff" fill-opacity="0.1"/><rect x="9" y="9" width="10" height="10" rx="5" fill="#fff"/><circle cx="14" cy="14" r="3" fill="#181d23"/><circle cx="19" cy="11" r="1" fill="#181d23"/></svg></a>
                     <a href="https://www.linkedin.com/in/adam-chapman-935b27322/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="22" height="22" viewBox="0 0 28 28"><circle cx="14" cy="14" r="14" fill="#fff" fill-opacity="0.1"/><rect x="9" y="12" width="2" height="7" fill="#fff"/><rect x="13" y="15" width="2" height="4" fill="#fff"/><circle cx="10" cy="10" r="1" fill="#fff"/><rect x="15" y="12" width="2" height="7" fill="#fff"/></svg></a>
                 </div>
@@ -404,8 +495,8 @@
         <div class="footer-bottom">
             <div class="footer-bottom-left">© 2025 Plot Perfect Studios Ltd. All rights reserved.</div>
             <div class="footer-bottom-links">
-                <a href="privacyPolicy.html" target="_blank" rel="noopener" class="footer-link-btn">Privacy Policy</a>
-                <a href="Terms&Conditions.html" target="_blank" rel="noopener" class="footer-link-btn">Terms of Service</a>
+                <a href="privacy-policy.html" target="_blank" rel="noopener" class="footer-link-btn">Privacy Policy</a>
+                <a href="terms-and-conditions.html" target="_blank" rel="noopener" class="footer-link-btn">Terms of Service</a>
                 <a href="sitemap.html" target="_blank" rel="noopener" class="footer-link-btn">Sitemap</a>
             </div>
         </div>
@@ -422,5 +513,20 @@
 
     <script src="assets/js/index.js"></script>
     <script src="assets/js/EmailJS.js"></script>
+    <script>
+    // Email obfuscation to prevent spam bots
+    (function() {
+        var user = 'info';
+        var domain = 'plotperfectstudios.co.uk';
+        var email = user + '@' + domain;
+        var link = document.createElement('a');
+        link.href = 'mailto:' + email;
+        link.textContent = email;
+        link.setAttribute('aria-label', 'Email Plot Perfect Studios');
+        document.getElementById('email-link').appendChild(link);
+    })();
+    </script>
+    <!-- ShareThis Social Follow Buttons -->
+    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=685e4ea98ca9160019f29512&product=inline-follow-buttons&source=platform" async="async"></script>
 </body>
 </html>
