@@ -11,6 +11,7 @@
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script defer src="assets/js/admin.js"></script>
 
 </head>
@@ -26,10 +27,35 @@
       <button type="submit">Login</button>
       <div id="login-error" class="admin-login-error"></div>
     </form>
+    <div style="margin: 24px 0; font-weight: 600; color: #888;">or</div>
+    <button id="google-signin-btn" type="button" style="background:#fff; color:#181d23; border:1px solid #ce8157; border-radius:6px; padding:10px 24px; font-size:1.1rem; font-weight:700; cursor:pointer; display:flex; align-items:center; gap:10px; margin:0 auto;">
+      <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google Logo" style="width:22px; height:22px;"> Sign in with Google
+    </button>
+    <div id="google-login-error" class="admin-login-error"></div>
   </div>
   <div id="admin-dashboard" style="display:none; text-align:center;">
     <h2 class="admin-dashboard-welcome">Welcome to your Business Assistant</h2>
-    <!-- Dashboard content will go here -->
+    <div id="ga4-analytics-section" style="display:none; text-align:center; margin:32px auto; max-width:600px; background:#fff; border-radius:18px; box-shadow:0 2px 12px #0001; padding:32px 16px 24px 16px;">
+      <h2 style="color:#c77b4c; font-size:2rem; font-weight:700; margin-bottom:12px;">GA4 Website Analytics Overview</h2>
+      <div id="ga4-analytics-result" style="font-size:1.2rem; font-weight:600; margin-bottom:12px;">Loading analytics...</div>
+      <div style="font-size:0.95rem; color:#888;">This uses the Google Analytics Data API for GA4. You must provide an API key or use a secure backend for production.</div>
+    </div>
+    <div id="client-table-container" style="display:none;">
+      <h3>Clients</h3>
+      <table id="client-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Client rows will be populated by JavaScript -->
+        </tbody>
+      </table>
+    </div>
   </div>
   <div id="add-client-form" style="display:none;">
     <h3>Add Client</h3>
@@ -45,21 +71,6 @@
       <button type="submit">Add Client</button>
     </form>
   </div>
-  <div id="client-table-container" style="display:none;">
-    <h3>Clients</h3>
-    <table id="client-table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Phone</th>
-          <th>Status</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- Client rows will be populated by JavaScript -->
-      </tbody>
-    </table>
-  </div>
+  <!-- Remove Firebase config and initialization from HTML. Only keep in admin.js -->
 </body>
 </html>

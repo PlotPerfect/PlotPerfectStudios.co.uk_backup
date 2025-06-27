@@ -9,7 +9,7 @@ const firebaseConfig = {
   projectId: "plotperfectadmin",
   storageBucket: "plotperfectadmin.firebasestorage.app",
   messagingSenderId: "618282091546",
-  appId: "1:618282091546:web:e1583406403c97b1bcbda3",
+  appId: "1:618282091546:web:e158340640403c97b1bcbda3",
   measurementId: "G-N6RYXJW2HQ"
 };
 
@@ -417,12 +417,192 @@ function showLogoutButton() {
   };
 }
 
+// Store Google OAuth access token after sign-in
+let googleOAuthAccessToken = null;
+
+// Google Sign-In button logic (with GA4 scope)
+const googleSignInBtn = document.getElementById('google-signin-btn');
+const googleLoginError = document.getElementById('google-login-error');
+if (googleSignInBtn) {
+  googleSignInBtn.onclick = async function() {
+    const provider = new firebase.auth.GoogleAuthProvider();
+    provider.addScope('https://www.googleapis.com/auth/analytics.readonly');
+    try {
+      const result = await auth.signInWithPopup(provider);
+      // Extract and store the Google OAuth access token
+      if (result.credential && result.credential.accessToken) {
+        googleOAuthAccessToken = result.credential.accessToken;
+        sessionStorage.setItem('googleOAuthAccessToken', googleOAuthAccessToken);
+      }
+      // User signed in, UI will update via onAuthStateChanged
+    } catch (error) {
+      if (googleLoginError) googleLoginError.textContent = 'Google login failed: ' + error.message;
+    }
+  };
+}
+
+// Add a Connect Google Analytics button if access token is missing
+function showAnalyticsSection() {
+  const analyticsSection = document.getElementById('ga4-analytics-section');
+  const resultDiv = document.getElementById('ga4-analytics-result');
+  if (analyticsSection) {
+    analyticsSection.style.display = 'block';
+    let finalToken = googleOAuthAccessToken || sessionStorage.getItem('googleOAuthAccessToken');
+    if (!finalToken) {
+      // Show a connect button if not already present
+      if (!document.getElementById('connect-ga-btn')) {
+        const connectBtn = document.createElement('button');
+        connectBtn.id = 'connect-ga-btn';
+        connectBtn.textContent = 'Connect Google Analytics';
+        connectBtn.style.margin = '16px auto';
+        connectBtn.onclick = async function() {
+          const provider = new firebase.auth.GoogleAuthProvider();
+          provider.addScope('https://www.googleapis.com/auth/analytics.readonly');
+          try {
+            const result = await auth.signInWithPopup(provider);
+            if (result.credential && result.credential.accessToken) {
+              googleOAuthAccessToken = result.credential.accessToken;
+              sessionStorage.setItem('googleOAuthAccessToken', googleOAuthAccessToken);
+              if (resultDiv) resultDiv.textContent = '';
+              connectBtn.remove();
+              fetchGA4Sessions();
+            }
+          } catch (error) {
+            if (resultDiv) resultDiv.textContent = 'Google Analytics connection failed: ' + error.message;
+          }
+        };
+        analyticsSection.appendChild(connectBtn);
+      }
+      if (resultDiv) resultDiv.textContent = 'To view analytics, connect your Google Analytics account.';
+      return;
+    }
+    fetchGA4Sessions();
+  }
+}
+
+// Fetch GA4 Sessions using OAuth token
+async function fetchGA4Sessions() {
+  const resultDiv = document.getElementById('ga4-analytics-result');
+  if (!auth.currentUser) {
+    if (resultDiv) resultDiv.innerHTML = '<div class="ga4-analytics-card-error">You must be logged in to view analytics.</div>';
+    return;
+  }
+  let sessions = 'N/A';
+  let hasData = false;
+  try {
+    let finalToken = googleOAuthAccessToken || sessionStorage.getItem('googleOAuthAccessToken');
+    if (!finalToken && auth.currentUser.providerData && auth.currentUser.providerData.length) {
+      finalToken = auth.currentUser.providerData[0].accessToken;
+    }
+    if (finalToken) {
+      const propertyId = '494551293';
+      const url = `https://analyticsdata.googleapis.com/v1beta/properties/${propertyId}:runReport`;
+      const body = {
+        dateRanges: [{ startDate: '30daysAgo', endDate: 'yesterday' }],
+        metrics: [{ name: 'sessions' }]
+      };
+      const res = await fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${finalToken}`
+        },
+        body: JSON.stringify(body)
+      });
+      if (res.ok) {
+        const data = await res.json();
+        if (data.rows && data.rows[0]) {
+          sessions = data.rows[0].metricValues[0].value;
+          hasData = true;
+        }
+      }
+    }
+  } catch (e) {
+    // Ignore all errors, just show N/A
+  }
+  if (resultDiv) {
+    resultDiv.innerHTML = `
+      <div class="ga4-analytics-card">
+        <div class="ga4-analytics-title">Website Analytics (GA4)</div>
+        <div class="ga4-analytics-metric-label">Sessions (last 30 days)</div>
+        <div class="ga4-analytics-metric-value">${hasData ? sessions : '<span class=\'ga4-analytics-na\'>N/A</span>'}</div>
+        <div class="ga4-analytics-footer">Google Analytics 4 Data API</div>
+      </div>
+    `;
+  }
+}
+
+/* Add styles for analytics card */
+(function addGA4AnalyticsStyles() {
+  if (document.getElementById('ga4-analytics-styles')) return;
+  const style = document.createElement('style');
+  style.id = 'ga4-analytics-styles';
+  style.textContent = `
+    .ga4-analytics-card {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+      padding: 32px 40px 24px 40px;
+      max-width: 420px;
+      margin: 32px auto 0 auto;
+      text-align: center;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      border: 1px solid #e5e7eb;
+      transition: box-shadow 0.2s;
+    }
+    .ga4-analytics-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #b46a2b;
+      margin-bottom: 18px;
+      letter-spacing: 0.01em;
+    }
+    .ga4-analytics-metric-label {
+      font-size: 1.1rem;
+      color: #222;
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+    .ga4-analytics-metric-value {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #2d2d2d;
+      margin-bottom: 12px;
+      letter-spacing: 0.01em;
+    }
+    .ga4-analytics-na {
+      color: #bbb;
+      font-weight: 600;
+      font-size: 2.2rem;
+    }
+    .ga4-analytics-footer {
+      font-size: 0.95rem;
+      color: #888;
+      margin-top: 10px;
+      letter-spacing: 0.01em;
+    }
+    .ga4-analytics-card-error {
+      background: #fff3f3;
+      color: #b30000;
+      border: 1px solid #ffd6d6;
+      border-radius: 10px;
+      padding: 18px 24px;
+      margin: 24px auto 0 auto;
+      max-width: 400px;
+      text-align: center;
+      font-size: 1.1rem;
+    }
+  `;
+  document.head.appendChild(style);
+})();
+
 auth.onAuthStateChanged(user => {
   if (user) {
     if (loginContainer) loginContainer.style.display = 'none';
     if (dashboard) dashboard.style.display = 'block';
     showLogoutButton();
     showDashboardUsername(user);
+    showAnalyticsSection();
   } else {
     if (dashboard) dashboard.style.display = 'none';
     if (loginContainer) loginContainer.style.display = 'block';

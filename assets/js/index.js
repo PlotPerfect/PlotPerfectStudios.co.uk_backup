@@ -494,3 +494,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     attachServiceOverlayEvents();
 });
+// Remove any Firebase config or initialization from this file.
+// All Firebase config and initialization should be handled in your HTML or a dedicated admin.js file only.
