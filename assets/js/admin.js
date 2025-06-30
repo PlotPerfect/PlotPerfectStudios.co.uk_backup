@@ -616,3 +616,189 @@ auth.onAuthStateChanged(user => {
     if (welcomeMsg) welcomeMsg.textContent = 'Welcome to your Business Assistant';
   }
 });
+
+// === MAINTENANCE PLANNER CALENDAR LOGIC ===
+
+const calendarBody = document.getElementById('calendar-body');
+const addTaskBtn = document.getElementById('add-task-btn');
+const taskModal = document.getElementById('task-modal');
+const closeTaskModalBtn = document.getElementById('close-task-modal');
+const taskForm = document.getElementById('task-form');
+const taskServiceInput = document.getElementById('task-service');
+const taskDetailsInput = document.getElementById('task-details');
+const taskDateInput = document.getElementById('task-date');
+const taskRecurringInput = document.getElementById('task-recurring');
+const modalTitle = document.getElementById('modal-title');
+
+let tasks = [];
+let editingTaskId = null;
+
+function getTodayStr() {
+  const d = new Date();
+  return d.toISOString().slice(0, 10);
+}
+
+function getFirstDayOfMonth(year, month) {
+  return new Date(year, month, 1).getDay();
+}
+
+function getDaysInMonth(year, month) {
+  return new Date(year, month + 1, 0).getDate();
+}
+
+function renderCalendar(year, month) {
+  calendarBody.innerHTML = '';
+  const firstDay = getFirstDayOfMonth(year, month);
+  const daysInMonth = getDaysInMonth(year, month);
+  let date = 1;
+  for (let i = 0; i < 6; i++) { // 6 weeks max
+    const row = document.createElement('tr');
+    for (let j = 0; j < 7; j++) {
+      const cell = document.createElement('td');
+      cell.style = 'height:70px; min-width:90px; border:1px solid #ececec; vertical-align:top; position:relative;';
+      if (i === 0 && j < firstDay) {
+        cell.innerHTML = '';
+      } else if (date > daysInMonth) {
+        cell.innerHTML = '';
+      } else {
+        const cellDate = new Date(year, month, date);
+        const cellDateStr = cellDate.toISOString().slice(0, 10);
+        cell.innerHTML = `<div style='font-size:0.98rem; color:#888; position:absolute; top:6px; left:8px;'>${date}</div>`;
+        // Render tasks for this day
+        const dayTasks = getTasksForDate(cellDateStr);
+        dayTasks.forEach(task => {
+          const taskDiv = document.createElement('div');
+          taskDiv.textContent = task.service;
+          taskDiv.title = task.details;
+          taskDiv.style = `margin:18px 0 0 0; padding:4px 8px; border-radius:6px; font-size:0.98rem; font-weight:600; background:${task.done ? '#2ecc71' : '#ce8157'}; color:#fff; cursor:pointer;`;
+          taskDiv.onclick = () => toggleTaskDone(task.id);
+          cell.appendChild(taskDiv);
+        });
+        // Add button to add task for this day
+        const addBtn = document.createElement('button');
+        addBtn.textContent = '+';
+        addBtn.title = 'Add task for this day';
+        addBtn.style = 'position:absolute; top:4px; right:8px; background:#ce8157; color:#fff; border:none; border-radius:50%; width:22px; height:22px; font-size:1rem; cursor:pointer;';
+        addBtn.onclick = (e) => {
+          e.stopPropagation();
+          openTaskModal(null, cellDateStr);
+        };
+        cell.appendChild(addBtn);
+        date++;
+      }
+      row.appendChild(cell);
+    }
+    calendarBody.appendChild(row);
+    if (date > daysInMonth) break;
+  }
+}
+
+function getTasksForDate(dateStr) {
+  // Return tasks for this date, including recurring tasks
+  const d = new Date(dateStr);
+  return tasks.filter(task => {
+    if (task.date === dateStr) return true;
+    if (task.recurring) {
+      // Check if this date matches the recurrence rule (same weekday and week of month)
+      const taskDate = new Date(task.date);
+      const weekOfMonth = Math.floor((d.getDate() - 1) / 7);
+      const taskWeekOfMonth = Math.floor((taskDate.getDate() - 1) / 7);
+      return d.getDay() === taskDate.getDay() && weekOfMonth === taskWeekOfMonth;
+    }
+    return false;
+  });
+}
+
+function openTaskModal(task, dateStr) {
+  editingTaskId = task ? task.id : null;
+  modalTitle.textContent = task ? 'Edit Maintenance Task' : 'Add Maintenance Task';
+  taskServiceInput.value = task ? task.service : '';
+  taskDetailsInput.value = task ? task.details : '';
+  taskDateInput.value = dateStr || (task ? task.date : getTodayStr());
+  taskRecurringInput.checked = task ? !!task.recurring : false;
+  taskModal.style.display = 'flex';
+}
+
+function closeTaskModal() {
+  editingTaskId = null;
+  taskForm.reset();
+  taskModal.style.display = 'none';
+}
+
+addTaskBtn.onclick = () => openTaskModal(null, '');
+closeTaskModalBtn.onclick = closeTaskModal;
+taskModal.onclick = (e) => { if (e.target === taskModal) closeTaskModal(); };
+
+taskForm.onsubmit = function(e) {
+  e.preventDefault();
+  const service = taskServiceInput.value.trim();
+  const details = taskDetailsInput.value.trim();
+  const date = taskDateInput.value;
+  const recurring = taskRecurringInput.checked;
+  if (!service || !details || !date) return;
+  if (editingTaskId) {
+    // Edit existing
+    const idx = tasks.findIndex(t => t.id === editingTaskId);
+    if (idx !== -1) {
+      tasks[idx] = { ...tasks[idx], service, details, date, recurring };
+    }
+  } else {
+    // Add new
+    tasks.push({ id: 'task-' + Date.now(), service, details, date, recurring, done: false });
+  }
+  closeTaskModal();
+  renderCalendar(currentYear, currentMonth);
+};
+
+function toggleTaskDone(taskId) {
+  const idx = tasks.findIndex(t => t.id === taskId);
+  if (idx !== -1) {
+    tasks[idx].done = !tasks[idx].done;
+    renderCalendar(currentYear, currentMonth);
+  }
+}
+
+// Calendar navigation
+let currentYear = new Date().getFullYear();
+let currentMonth = new Date().getMonth();
+
+function renderCalendarHeader() {
+  let calTable = document.getElementById('calendar-table');
+  if (!calTable) return;
+  let oldHeader = document.getElementById('calendar-header-row');
+  if (oldHeader) oldHeader.remove();
+  const headerRow = document.createElement('tr');
+  headerRow.id = 'calendar-header-row';
+  const headerCell = document.createElement('th');
+  headerCell.colSpan = 7;
+  headerCell.style = 'background:#fff; border:none; padding:12px 0 0 0;';
+  headerCell.innerHTML = `
+    <button id='prev-month-btn' style='margin-right:18px; background:#eee; border:none; border-radius:6px; padding:4px 12px; font-size:1rem; cursor:pointer;'>&lt;</button>
+    <span style='font-size:1.2rem; font-weight:700; color:#c77b4c;'>${getMonthName(currentMonth)} ${currentYear}</span>
+    <button id='next-month-btn' style='margin-left:18px; background:#eee; border:none; border-radius:6px; padding:4px 12px; font-size:1rem; cursor:pointer;'>&gt;</button>
+  `;
+  headerRow.appendChild(headerCell);
+  calTable.querySelector('thead').insertAdjacentElement('afterbegin', headerRow);
+  document.getElementById('prev-month-btn').onclick = () => {
+    currentMonth--;
+    if (currentMonth < 0) { currentMonth = 11; currentYear--; }
+    renderCalendarHeader();
+    renderCalendar(currentYear, currentMonth);
+  };
+  document.getElementById('next-month-btn').onclick = () => {
+    currentMonth++;
+    if (currentMonth > 11) { currentMonth = 0; currentYear++; }
+    renderCalendarHeader();
+    renderCalendar(currentYear, currentMonth);
+  };
+}
+
+function getMonthName(monthIdx) {
+  return ['January','February','March','April','May','June','July','August','September','October','November','December'][monthIdx];
+}
+
+// Initial render
+if (calendarBody) {
+  renderCalendarHeader();
+  renderCalendar(currentYear, currentMonth);
+}
