@@ -97,6 +97,7 @@
     display: flex;
     align-items: stretch;
     justify-content: center;
+    left: -7vw;
   }
   .services-cards {
     display: flex;
