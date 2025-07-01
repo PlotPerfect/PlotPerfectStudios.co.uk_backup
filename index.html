@@ -137,6 +137,10 @@
                 display: block;
                 margin-left: auto;
             }
+            .carousel-btn.carousel-btn-prev,
+  .carousel-btn.carousel-btn-next {
+    display: block !important;
+  }
         }
         .hero-section {
             padding: 30px 0 60px 0;
@@ -154,10 +158,17 @@
             color: #444;
             margin-bottom: 32px;
         }
+        @media (min-width: 801px) {
+  .carousel-btn.carousel-btn-prev,
+  .carousel-btn.carousel-btn-next {
+    display: none !important;
+  }
+}
     </style>
     <link rel="preload" href="assets/fonts/ASENINE_.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="preload" href="assets/css/index.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="assets/css/index.css"></noscript>
+    <link rel="stylesheet" href="assets/mobile-css/index-mob.css" media="(max-width: 800px)">
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-513298907"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -596,5 +607,6 @@
     </script>
     <!-- ShareThis Social Follow Buttons -->
     <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=685e4ea98ca9160019f29512&product=inline-follow-buttons&source=platform" async="async"></script>
+    <script src="assets/js/mobile.js"></script>
 </body>
 </html>
