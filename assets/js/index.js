@@ -262,30 +262,6 @@ const projectVideos = {
     // Add more projects as needed
 };
 
-// Service details data
-const serviceDetails = {
-    '3d-rendering': {
-        title: '3D Architectural Rendering',
-        desc: 'Our 3D architectural rendering service transforms your concepts into photorealistic visuals. We work closely with architects, developers, and designers to create detailed exterior and interior renders, aerial views, and marketing imagery. Our process includes advanced modeling, texturing, lighting, and post-production, ensuring every project is presented with clarity and impact for planning, marketing, and client presentations.'
-    },
-    'web-development': {
-        title: 'Web Development',
-        desc: 'We deliver bespoke web development solutions tailored to your business goals. Our team specializes in responsive websites, e-commerce platforms, and custom web applications. We focus on performance, security, and user experience, using the latest technologies to ensure your online presence is modern, scalable, and effective.'
-    },
-    'seo-services': {
-        title: 'SEO Services',
-        desc: 'Our SEO services are designed to boost your website’s visibility and drive targeted traffic. We provide comprehensive audits, keyword research, on-page and technical optimization, content strategy, and ethical link building. Our data-driven approach helps you achieve higher search rankings, increased organic traffic, and measurable business growth.'
-    },
-    'ui-ux-design': {
-        title: 'UI/UX Design',
-        desc: 'We craft intuitive and engaging digital experiences through expert UI/UX design. Our process includes user research, wireframing, prototyping, and usability testing. We focus on creating interfaces that are visually appealing, accessible, and optimized for conversion, ensuring your users enjoy seamless interactions across all devices.'
-    },
-    'digital-marketing': {
-        title: 'Digital Marketing',
-        desc: 'Our digital marketing services help you reach and engage your audience across multiple channels. We offer social media management, pay-per-click (PPC) advertising, email marketing, and analytics. Our strategies are tailored to your brand, driving awareness, engagement, and measurable results for your business.'
-    }
-};
-
 function getProjectIdFromUrl() {
     const params = new URLSearchParams(window.location.search);
     return params.get('project') || 'modern-residential-complex';
@@ -432,8 +408,6 @@ function attachVideoOverlayEvents() {
 // Service overlay logic (event delegation for robustness)
 function attachServiceOverlayEvents() {
     const overlay = document.getElementById('serviceOverlay');
-    const overlayTitle = document.getElementById('serviceOverlayTitle');
-    const overlayDesc = document.getElementById('serviceOverlayDesc');
     const overlayClose = document.getElementById('serviceOverlayClose');
     // Use event delegation on the services container
     const servicesContainer = document.querySelector('.services-cards');
@@ -442,14 +416,20 @@ function attachServiceOverlayEvents() {
             const btn = e.target.closest('.service-learn-more');
             if (btn) {
                 e.preventDefault();
-                // Instead of removing href, set it to 'javascript:void(0);' to ensure no navigation
                 btn.setAttribute('href', 'javascript:void(0);');
                 const key = btn.getAttribute('data-service');
-                const details = serviceDetails[key];
-                if (details) {
-                    overlayTitle.textContent = details.title;
-                    overlayDesc.textContent = details.desc;
-                    overlay.style.display = 'flex';
+                // Hide all service details
+                document.querySelectorAll('.service-details').forEach(div => {
+                    div.style.display = 'none';
+                });
+                // Show the overlay regardless
+                overlay.style.display = 'flex';
+                // Show the correct service detail by ID
+                const detailDiv = document.getElementById('service-' + key);
+                if (detailDiv) {
+                    detailDiv.style.display = 'block';
+                } else {
+                    console.warn('No service detail found for', key);
                 }
                 return false;
             }
@@ -457,10 +437,17 @@ function attachServiceOverlayEvents() {
     }
     overlayClose.addEventListener('click', function() {
         overlay.style.display = 'none';
+        // Hide all service details when closing
+        document.querySelectorAll('.service-details').forEach(div => {
+            div.style.display = 'none';
+        });
     });
     overlay.addEventListener('click', function(e) {
         if (e.target === overlay) {
             overlay.style.display = 'none';
+            document.querySelectorAll('.service-details').forEach(div => {
+                div.style.display = 'none';
+            });
         }
     });
 }
