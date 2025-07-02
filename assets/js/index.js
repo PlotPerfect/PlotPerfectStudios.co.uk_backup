@@ -405,53 +405,6 @@ function attachVideoOverlayEvents() {
     });
 }
 
-// Service overlay logic (event delegation for robustness)
-function attachServiceOverlayEvents() {
-    const overlay = document.getElementById('serviceOverlay');
-    const overlayClose = document.getElementById('serviceOverlayClose');
-    // Use event delegation on the services container
-    const servicesContainer = document.querySelector('.services-cards');
-    if (servicesContainer) {
-        servicesContainer.addEventListener('click', function(e) {
-            const btn = e.target.closest('.service-learn-more');
-            if (btn) {
-                e.preventDefault();
-                btn.setAttribute('href', 'javascript:void(0);');
-                const key = btn.getAttribute('data-service');
-                // Hide all service details
-                document.querySelectorAll('.service-details').forEach(div => {
-                    div.style.display = 'none';
-                });
-                // Show the overlay regardless
-                overlay.style.display = 'flex';
-                // Show the correct service detail by ID
-                const detailDiv = document.getElementById('service-' + key);
-                if (detailDiv) {
-                    detailDiv.style.display = 'block';
-                } else {
-                    console.warn('No service detail found for', key);
-                }
-                return false;
-            }
-        }, false);
-    }
-    overlayClose.addEventListener('click', function() {
-        overlay.style.display = 'none';
-        // Hide all service details when closing
-        document.querySelectorAll('.service-details').forEach(div => {
-            div.style.display = 'none';
-        });
-    });
-    overlay.addEventListener('click', function(e) {
-        if (e.target === overlay) {
-            overlay.style.display = 'none';
-            document.querySelectorAll('.service-details').forEach(div => {
-                div.style.display = 'none';
-            });
-        }
-    });
-}
-
 function openPrivacyPolicy() {
     window.open('privacyPolicy.html', '_blank');
 }
@@ -479,7 +432,4 @@ document.addEventListener('DOMContentLoaded', () => {
             if (activePanel) activePanel.style.display = '';
         });
     });
-    attachServiceOverlayEvents();
 });
-// Remove any Firebase config or initialization from this file.
-// All Firebase config and initialization should be handled in your HTML or a dedicated admin.js file only.
