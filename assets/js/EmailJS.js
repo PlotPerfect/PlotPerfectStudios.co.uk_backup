@@ -58,8 +58,8 @@ window.addEventListener('DOMContentLoaded', function() {
         }
         // Collect form data
         var formData = {
-            name: form.name.value,
-            email: form.email.value,
+            from_name: form.from_name.value,
+            from_email: form.from_email.value,
             subject: form.subject.value,
             message: form.message.value,
             'g-recaptcha-response': recaptchaResponse // Add reCAPTCHA response for EmailJS
