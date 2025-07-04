@@ -50,12 +50,19 @@ window.addEventListener('DOMContentLoaded', function() {
 
     form.addEventListener('submit', function(e) {
         e.preventDefault();
+        // Check reCAPTCHA v2
+        var recaptchaResponse = typeof grecaptcha !== "undefined" ? grecaptcha.getResponse() : "";
+        if (!recaptchaResponse) {
+            showCustomNotification('Please complete the reCAPTCHA.', true);
+            return;
+        }
         // Collect form data
         var formData = {
             name: form.name.value,
             email: form.email.value,
             subject: form.subject.value,
-            message: form.message.value
+            message: form.message.value,
+            'g-recaptcha-response': recaptchaResponse // Add reCAPTCHA response for EmailJS
         };
 
         // Send email via EmailJS
@@ -63,6 +70,7 @@ window.addEventListener('DOMContentLoaded', function() {
             .then(function(response) {
                 showCustomNotification('Thank you for contacting us! We have received your message and will reply soon.');
                 form.reset();
+                if (typeof grecaptcha !== "undefined") grecaptcha.reset();
             }, function(error) {
                 showCustomNotification('Sorry, there was an error sending your message. Please try again later.', true);
             });

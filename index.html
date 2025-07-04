@@ -468,6 +468,7 @@
                     <input type="text" id="subject" name="subject">
                     <label for="message">Message</label>
                     <textarea id="message" name="message" rows="5" required></textarea>
+                    <div class="g-recaptcha" data-sitekey="6Ld5uLEqAAAAAEkHy4-zPvvslply1TWW40YEgnuV"></div>
                     <button type="submit" class="contact-submit">Send Message</button>
                 </form>
             </div>
@@ -568,6 +569,7 @@
 
     <script src="assets/js/index.js"></script>
     <script src="assets/js/EmailJS.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script>
     // Email obfuscation to prevent spam bots
     (function() {
