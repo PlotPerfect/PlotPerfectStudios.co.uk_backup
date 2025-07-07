@@ -85,6 +85,72 @@
             <li><span class="webdev-highlight">All-in-One Agency:</span> From web development to SEO and digital marketing, we cover all your online needs.</li>
         </ul>
     </section>
+
+  <!-- Web Development FAQs Section -->
+    <section class="faqs-section">
+        <h2 class="faqs-title" style="text-align:center; color:#181d23; margin-bottom: 24px;">Web Development – Frequently Asked Questions</h2>
+        <div class="faqs-list" itemscope itemtype="https://schema.org/FAQPage">
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <button class="faq-question" itemprop="name" aria-expanded="false">What types of websites do you build?</button>
+                <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <p itemprop="text">We build custom websites for businesses of all sizes, including brochure sites, e-commerce stores, blogs, portfolios, and more. Every site is tailored to your brand and goals.</p>
+                </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <button class="faq-question" itemprop="name" aria-expanded="false">Are your websites mobile-friendly?</button>
+                <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <p itemprop="text">Yes! Every website we create is fully responsive and optimized for all devices, ensuring a seamless experience for your visitors on desktop, tablet, and mobile.</p>
+                </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <button class="faq-question" itemprop="name" aria-expanded="false">Can I update my website myself?</button>
+                <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <p itemprop="text">Absolutely. We offer content management systems (CMS) like WordPress or custom solutions, so you can easily update your content, images, and more without technical knowledge.</p>
+                </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <button class="faq-question" itemprop="name" aria-expanded="false">How long does it take to build a website?</button>
+                <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <p itemprop="text">Project timelines vary based on complexity and requirements, but most websites are completed within 3–6 weeks. We’ll provide a clear timeline before starting your project.</p>
+                </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <button class="faq-question" itemprop="name" aria-expanded="false">How much does a website cost?</button>
+                <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <p itemprop="text">Website pricing depends on your needs, features, and design preferences. We offer transparent quotes and flexible packages to suit your budget.</p>
+                </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <button class="faq-question" itemprop="name" aria-expanded="false">Do you offer ongoing support?</button>
+                <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <p itemprop="text">Yes! We provide ongoing support, maintenance, and updates to keep your website secure, up-to-date, and performing at its best.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <script>
+    // FAQ accordion toggle for this page
+    document.addEventListener('DOMContentLoaded', function() {
+      var faqQuestions = document.querySelectorAll('.faq-question');
+      faqQuestions.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var expanded = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', !expanded);
+          var answer = btn.nextElementSibling;
+          if (answer) {
+            answer.style.display = expanded ? 'none' : 'block';
+          }
+        });
+        // Hide answers by default
+        var answer = btn.nextElementSibling;
+        if (answer) {
+          answer.style.display = 'none';
+        }
+      });
+    });
+    </script>
+
     <section class="webdev-cta">
         <div class="webdev-cta-title">Ready to Launch Your New Website?</div>
         <div>Contact Plot Perfect Studios for a free consultation and discover how our <span class="webdev-highlight">web development agency</span> can help your business thrive online.</div>
