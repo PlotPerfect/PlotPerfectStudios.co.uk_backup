@@ -53,7 +53,7 @@
         <div class="pps-header-left">
             <img src="assets/images/LogoV2.svg" alt="Plot Perfect Studios Logo" class="pps-logo">
             <span class="pps-title">Plot Perfect Studios</span>
-        </div>
+        </div>  
         <button class="menu-toggle" id="menu-toggle" aria-label="Open menu">&#9776;</button>
         <nav class="pps-nav" id="main-nav">
             <a href="index.html#home">Home</a>
@@ -75,6 +75,20 @@
         </nav>
         <h1 class="main-blogs-title" style="margin: 18px 0 24px 0; font-size: 2.2rem; font-weight: 700; text-align: center; color: #181d23; letter-spacing: -1px;">Blogs</h1>
         <div class="blog-list-container">
+          <!-- Blog Card: CRE8.London -->
+          <article class="blog-card" itemscope itemtype="https://schema.org/BlogPosting">
+            <img src="assets/Icons/Cre8Logo.svg" alt="CRE8.London Website Development" class="blog-card-image" itemprop="image" loading="lazy">
+            <div class="blog-card-content">
+              <h2 class="blog-card-title" itemprop="headline">Behind the Build: Developing the CRE8.London Website from Vision to Functionality</h2>
+              <div class="blog-card-meta">
+                <time datetime="2025-07-07" itemprop="datePublished">July 7, 2025</time> &bull; by <span itemprop="author">Plot Perfect Studios</span>
+              </div>
+              <p class="blog-card-excerpt" itemprop="description">
+                Go behind the scenes of the CRE8.London website build — from early design and UI/UX strategy to launching a visual product catalogue and planning for full e-commerce integration.
+              </p>
+              <button class="blog-card-readmore" itemprop="url" data-article="cre8-london-build">Read More</button>
+            </div>
+          </article>
           <!-- Blog Card 1 -->
           <article class="blog-card" itemscope itemtype="https://schema.org/BlogPosting">
             <img src="assets/images/LivingRoom.jpg" alt="Modern website design for Epping businesses" class="blog-card-image" itemprop="image" loading="lazy">
@@ -145,6 +159,75 @@
               <button class="blog-card-readmore" itemprop="url" data-article="10-key-steps-small-business">Read More</button>
             </div>
           </article>
+        </div>
+        <!-- Blog Article Modal Overlay: CRE8.London -->
+        <div id="blog-modal-cre8-london-build" class="blog-modal-overlay" style="display:none;">
+          <div class="blog-modal-content">
+            <button class="blog-modal-close" aria-label="Close Article">&times;</button>
+            <article class="blog-article" itemscope itemtype="https://schema.org/BlogPosting">
+                <header>
+                    <h1 class="blog-title" itemprop="headline">Behind the Build: Developing the CRE8.London Website from Vision to Functionality</h1>
+                    <div class="blog-meta">
+                        <span>By <span itemprop="author">Plot Perfect Studios</span></span> |
+                        <time datetime="2025-07-07" itemprop="datePublished">July 7, 2025</time>
+                    </div>
+                    <img src="assets/Icons/Cre8Logo.svg" alt="CRE8.London Website Development" class="blog-featured-image" itemprop="image">
+                </header>
+                <section class="blog-content" itemprop="articleBody">
+<p>At Plot Perfect Studios Ltd, we take pride in crafting custom websites that reflect a brand's identity while providing users with a seamless and engaging online experience. One of our recent highlights is the development of <a href="https://www.cre8.london" target="_blank" rel="noopener">www.cre8.london</a> — a cutting-edge website built for a signage supply company with bold ambitions and a growing customer base.</p>
+<p>This blog takes you behind the scenes of the development journey — from early design discussions and UI/UX strategies, to launching a visual product catalogue, and our roadmap for integrating a full e-commerce experience in the near future.</p>
+
+<h2>Understanding the CRE8 Vision</h2>
+<p>From the outset, the founders of CRE8 Sign Supplies had a clear objective: create a sleek, user-friendly, and professional website that showcases their product range visually, provides easy access to key product information, and builds credibility with both new and existing clients. They wanted a website that stood out, not just for aesthetics but also for usability.</p>
+<p>Rather than immediately launching with full e-commerce functionality, the CRE8 team opted to build out a strong foundation first — a visual product catalogue that could serve as both an online showroom and a point of contact for inquiries.</p>
+
+<h2>Phase One: Building the Visual Shop</h2>
+<p>Our initial development focused on crafting an interactive, visual-first experience. We designed a structure that allowed users to easily browse through product categories such as Cre8bond panels, adhesives and accessories, LED lightboxes, and more — all without requiring a login or shopping basket at this stage.</p>
+<p><strong>Key features in this initial build included:</strong></p>
+<ul>
+  <li>Hover-based previews of product images to make browsing feel dynamic and intuitive.</li>
+  <li>Expandable product panels, allowing users to view product details, subcategories, and specifications in a clean layout.</li>
+  <li>QR code integration for WhatsApp and direct phone inquiries, enabling customers to quickly get in touch without filling out forms.</li>
+  <li>Fixed background visuals, stylish hover effects, and responsive design for seamless mobile compatibility.</li>
+  <li>Custom cursor, scrollable content panels, and smooth animations — all contributing to a modern, engaging user experience.</li>
+</ul>
+<p>While this version doesn't include basket or checkout functionality, the current system serves as an ideal step one: showcasing the product offering and building online visibility while preparing for the next phase of expansion.</p>
+
+<h2>Design Approach and Technologies Used</h2>
+<p>To bring the vision to life, we employed a custom HTML, CSS, and JavaScript stack, avoiding templated platforms like Shopify or WordPress in favour of full control over the UI and performance. Every element of the site — from section layout to product interaction — has been hand-coded to ensure precision and future scalability.</p>
+<p>The website structure was designed using a modular panel system, allowing different product categories and subcategories to be toggled in and out based on user interaction. This makes the site light on load and easy to maintain while keeping the experience highly visual.</p>
+<p>For hosting and speed, we used GitHub Pages with custom domain routing via Fasthosts DNS. This provided a fast, secure, and scalable deployment pipeline while keeping overheads low — a win-win for a growing business.</p>
+
+<h2>Accessibility and SEO Considerations</h2>
+<p>From the ground up, the site was built with SEO in mind. Clean semantic HTML structure, optimized meta descriptions, and keyword-rich content blocks were implemented to give the site a solid start on Google’s indexing. Accessibility features were also considered — ensuring proper contrast ratios, alternative text for images, and mobile responsiveness across all devices.</p>
+<p>The CRE8.London site was submitted to search engines and business directories to begin building organic traffic, with the visual shop acting as a powerful portfolio of what the company offers.</p>
+
+<h2>What Comes Next: Full Online Shop Integration</h2>
+<p>While the initial version focused on visual presentation and direct contact options, the next development milestone is already planned: full e-commerce functionality.</p>
+<p><strong>This future upgrade will introduce:</strong></p>
+<ul>
+  <li>User login and registration system with email/password authentication.</li>
+  <li>Shopping basket and order tracking.</li>
+  <li>Product filtering and search to help customers quickly locate what they need.</li>
+  <li>Payment gateway integration, allowing secure checkout via credit/debit card or invoice.</li>
+  <li>Admin backend panel, enabling the CRE8 team to manage inventory, view orders, and update product details easily.</li>
+  <li>Customer dashboard, where users can see past orders, manage account info, and download invoices.</li>
+</ul>
+<p>To prepare for this, the site has already been structured with scalability in mind. Our next steps will likely include integrating Firebase or a similar backend system for database and authentication functionality — keeping the site lightning-fast while adding robust features.</p>
+
+<h2>Building with the Brand in Mind</h2>
+<p>What makes CRE8.London stand out isn't just its functionality — it’s the attention to branding. The black and neon green colour scheme was carried through every element, from buttons to hover states, giving the site a distinct look that aligns with CRE8’s product identity. Even the hover animations and gallery displays were styled to feel high-tech and professional, mirroring the company’s innovation in signage.</p>
+<p>We also integrated future-ready panels for Terms & Conditions, Privacy Policy, and even a Gallery Overlay that can be expanded into a full carousel viewer. These forward-thinking components ensure that as CRE8 grows, the site can scale with them — both functionally and aesthetically.</p>
+
+<h2>Final Thoughts</h2>
+<p>Developing CRE8.London has been a collaborative journey. It’s more than just a website — it’s a scalable digital platform that balances visual appeal with strategic business planning. By first establishing a strong visual presence online and preparing the architecture for e-commerce in the background, we’ve helped CRE8 launch confidently while laying the groundwork for long-term digital growth.</p>
+<p>Whether you're browsing products today or planning to order directly in the near future, CRE8.London is built to evolve with you.</p>
+
+<h2>Ready to Build Your Own Scalable Website?</h2>
+<p>If you’re a business looking for a similar phased website rollout — one that balances budget, brand, and future-proof development — <strong><a href="index.html#contact">get in touch with Plot Perfect Studios Ltd</a></strong>. We build digital experiences that grow with your business.</p>
+                </section>
+            </article>
+          </div>
         </div>
         <!-- Blog Article Modal Overlay -->
         <div id="blog-modal-epping-web-design" class="blog-modal-overlay" style="display:none;">
@@ -831,6 +914,36 @@
         document.addEventListener('keydown', function(e) {
           if (e.key === 'Escape' && modal5.style.display === 'flex') {
             modal5.style.display = 'none';
+            document.body.style.overflow = '';
+          }
+        });
+      }
+    });
+    // Blog modal logic for CRE8.London
+    document.addEventListener('DOMContentLoaded', function() {
+      var readMoreBtnCRE8 = document.querySelector('.blog-card-readmore[data-article="cre8-london-build"]');
+      var modalCRE8 = document.getElementById('blog-modal-cre8-london-build');
+      var closeBtnCRE8 = modalCRE8 ? modalCRE8.querySelector('.blog-modal-close') : null;
+      if (readMoreBtnCRE8 && modalCRE8 && closeBtnCRE8) {
+        readMoreBtnCRE8.addEventListener('click', function() {
+          modalCRE8.style.display = 'flex';
+          document.body.style.overflow = 'hidden';
+        });
+        closeBtnCRE8.addEventListener('click', function() {
+          modalCRE8.style.display = 'none';
+          document.body.style.overflow = '';
+        });
+        // Close modal on overlay click
+        modalCRE8.addEventListener('click', function(e) {
+          if (e.target === modalCRE8) {
+            modalCRE8.style.display = 'none';
+            document.body.style.overflow = '';
+          }
+        });
+        // Close modal on Escape key
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' && modalCRE8.style.display === 'flex') {
+            modalCRE8.style.display = 'none';
             document.body.style.overflow = '';
           }
         });
