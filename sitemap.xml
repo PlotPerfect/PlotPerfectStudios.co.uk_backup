@@ -69,4 +69,29 @@
     <loc>https://www.plotperfectstudios.co.uk/pricing.html</loc>
     <priority>0.8</priority>
   </url>
+
+  <url>
+    <loc>https://www.plotperfectstudios.co.uk/blog-10-key-steps-small-business.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.plotperfectstudios.co.uk/blog-cre8-london.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.plotperfectstudios.co.uk/blog-custom-vs-wordpress.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.plotperfectstudios.co.uk/blog-epping-local-seo-tips.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.plotperfectstudios.co.uk/blog-epping-web-design.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.plotperfectstudios.co.uk/blog-web-design-seo-visibility.html</loc>
+    <priority>0.7</priority>
+  </url>
 </urlset>
