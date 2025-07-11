@@ -210,6 +210,12 @@
 (function() {
     // Map of project slugs to project data (title, desc, tags, image)
     var projects = {
+        'barton-close-ground-floor': {
+            title: 'Barton Close - Ground Floor',
+            desc: 'A visualization project showcasing the design and layout of the ground floor of a residential property.',
+            tags: ['3D Rendering', 'Architectural Visualization', 'Residential'],
+            image: 'assets/images/Utility1.webp'
+        },
         'modern-residential-complex': {
             title: 'Leisure Centre - New Spin Studio',
             desc: 'Photorealistic 3D render for a new spin studio at a leisure centre.',
@@ -251,8 +257,8 @@
         var url = new URL(window.location.href);
         return url.searchParams.get(name);
     }
-    var slug = getParam('project');
-    if (slug && projects[slug]) {
+    var slug = getParam('project') || 'barton-close-ground-floor';
+    if (projects[slug]) {
         document.getElementById('breadcrumbProjectName').textContent = projects[slug].title;
         document.getElementById('projectTitle').textContent = projects[slug].title;
         document.getElementById('projectDesc').textContent = projects[slug].desc;

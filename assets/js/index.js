@@ -52,6 +52,34 @@ if (heroServices) heroServices.addEventListener('click', scrollToServices);
 
 // Portfolio project data
 const portfolioProjects = {
+
+    'barton-close-ground-floor': {
+        title: 'Barton Close - Ground Floor',
+        desc: 'A visualization project showcasing the design and layout of the ground floor of a residential property.',
+        tags: ['3D Rendering', 'Architectural Visualization', 'Residential'],
+        imageLabel: 'Featured Image',
+        image: 'assets/images/Utility1.webp',
+        breadcrumbs: [
+            { label: 'Home', href: 'index.html#home' },
+            { label: 'Portfolio', href: 'index.html#portfolio' },
+            { label: 'Barton Close - Ground Floor' }
+        ],
+        overview: `<p>This project involved creating photorealistic 3D renders to visualize the ground floor of a residential property. The renders helped stakeholders understand the design, layout, and flow of the space, enabling better decision-making during the planning phase.</p>`,
+        process: `<ul>
+            <li>Collaboration with architects and homeowners to define project goals</li>
+            <li>3D modeling of the ground floor layout and key features</li>
+            <li>Material selection and color palette development</li>
+            <li>Rendering and presentation of final visuals</li>
+        </ul>`,
+        results: `<p>The final renders provided a clear and detailed visualization of the ground floor, allowing the client to make informed decisions about design and layout. The project was well-received, leading to further collaboration on additional phases.</p>`,
+        details: `<ul>
+            <li><strong>Client:</strong> Private Residence</li>
+            <li><strong>Location:</strong> E9, UK</li>
+            <li><strong>Services:</strong> 3D Rendering, Visualization</li>
+            <li><strong>Year:</strong> 2025</li>
+        </ul>`
+    },
+
     'modern-residential-complex': {
         title: 'New Spin Studio Extension',
         desc: 'A visualization project showcasing the formation and extension of a new spin studio, expanding the existing fitness area.',
@@ -202,6 +230,22 @@ const portfolioProjects = {
 
 // Project gallery data for each project
 const projectGalleries = {
+    'barton-close-ground-floor': [
+        { img: 'assets/images/Entrance1.webp', label: 'Entrance Render 1' },
+        { img: 'assets/images/Entrance2.webp', label: 'Entrance Render 2' },
+        { img: 'assets/images/Kitchen1.webp', label: 'Kitchen Render 1' },
+        { img: 'assets/images/Kitchen2.webp', label: 'Kitchen Render 2' },
+        { img: 'assets/images/Kitchen3.webp', label: 'Kitchen Render 3' },
+        { img: 'assets/images/Toilet1.webp', label: 'Toilet Render 1' },
+        { img: 'assets/images/Toilet2.webp', label: 'Toilet Render 2' },
+        { img: 'assets/images/Utility1.webp', label: 'Utility Render 1' },
+        { img: 'assets/images/Utility2.webp', label: 'Utility Render 2' },
+        { img: 'assets/images/Utility3.webp', label: 'Utility Render 3' },
+        { img: 'assets/images/Snug_Office1.webp', label: 'Snug Office Render 1' },
+        { img: 'assets/images/Snug_Office2.webp', label: 'Snug Office Render 2' },
+        { img: 'assets/images/Exterior1.webp', label: 'Exterior Render 1' },
+        { img: 'assets/images/Exterior2.webp', label: 'Exterior Render 2' },
+    ],
     'modern-residential-complex': [
         { img: 'assets/images/SpinStudio1.png', label: 'Interior View 1' },
         { img: 'assets/images/SpinStudio2.png', label: 'Interior View 2' },
@@ -250,6 +294,10 @@ const projectGalleries = {
 
 // Project video data for each project
 const projectVideos = {
+    'barton-close-ground-floor': [
+        { video: 'assets/Videos/Bartonvideo.mp4', label: 'Video Walkthrough' },
+    ],
+
     'modern-residential-complex': [
         { video: 'assets/Videos/SpinStudios.mp4', label: 'Female Changing Room Walkthrough' },
         // ...add more videos for this project
@@ -264,12 +312,12 @@ const projectVideos = {
 
 function getProjectIdFromUrl() {
     const params = new URLSearchParams(window.location.search);
-    return params.get('project') || 'modern-residential-complex';
+    return params.get('project') || 'barton-close-ground-floor';
 }
 
 function renderPortfolioProject() {
     const projectId = getProjectIdFromUrl();
-    const project = portfolioProjects[projectId] || portfolioProjects['modern-residential-complex'];
+    const project = portfolioProjects[projectId] || portfolioProjects['barton-close-ground-floor'];
     // Breadcrumbs
     const breadcrumbs = document.querySelector('.portfolio-breadcrumbs');
     if (breadcrumbs) {
