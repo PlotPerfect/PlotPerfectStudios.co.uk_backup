@@ -64,15 +64,15 @@ const portfolioProjects = {
             { label: 'Portfolio', href: 'index.html#portfolio' },
             { label: 'Barton Close - Ground Floor' }
         ],
-        overview: `<p>This project involved creating photorealistic 3D renders to visualize the ground floor of a residential property. The renders helped stakeholders understand the design, layout, and flow of the space, enabling better decision-making during the planning phase.</p>`,
-        process: `<ul>
+        overview: `<p style="line-height:1.7;font-size:1.05em;">This project involved creating photorealistic 3D renders to visualize the ground floor of a residential property. The renders helped stakeholders understand the design, layout, and flow of the space, enabling better decision-making during the planning phase.</p>`,
+        process: `<ul style="padding-left:20px;line-height:1.7;">
             <li>Collaboration with architects and homeowners to define project goals</li>
             <li>3D modeling of the ground floor layout and key features</li>
             <li>Material selection and color palette development</li>
             <li>Rendering and presentation of final visuals</li>
         </ul>`,
-        results: `<p>The final renders provided a clear and detailed visualization of the ground floor, allowing the client to make informed decisions about design and layout. The project was well-received, leading to further collaboration on additional phases.</p>`,
-        details: `<ul>
+        results: `<p style="line-height:1.7;font-size:1.05em;">The final renders provided a clear and detailed visualization of the ground floor, allowing the client to make informed decisions about design and layout. The project was well-received, leading to further collaboration on additional phases.</p>`,
+        details: `<ul style="padding-left:20px;line-height:1.7;">
             <li><strong>Client:</strong> Private Residence</li>
             <li><strong>Location:</strong> E9, UK</li>
             <li><strong>Services:</strong> 3D Rendering, Visualization</li>
@@ -91,10 +91,20 @@ const portfolioProjects = {
             { label: 'Portfolio', href: 'index.html#portfolio' },
             { label: 'New Spin Studio Extension' }
         ],
-        overview: `<p>This project involved creating photorealistic 3D renders to illustrate the formation of a new spin studio, extending the current fitness facilities. The design focused on integrating the new space seamlessly with the existing area, optimizing flow and user experience for gym members.</p>`,
-        process: `<ul><li>Collaboration with architects and gym management to define requirements</li><li>3D modeling of the extended studio and adjoining spaces</li><li>Material selection and lighting design to match the existing aesthetic</li><li>Rendering and iterative feedback with stakeholders</li></ul>`,
-        results: `<p>The visuals effectively communicated the vision for the new extension, supporting planning approval and stakeholder buy-in. The project enabled the client to showcase the enhanced facility to members and investors before construction began.</p>`,
-        details: `<ul><li><strong>Client:</strong> Corrigan & Chapman Construction Ltd.</li><li><strong>Location:</strong> London, UK</li><li><strong>Services:</strong> 3D Rendering, Visualization</li><li><strong>Year:</strong> 2025</li></ul>`
+        overview: `<p style="line-height:1.7;font-size:1.05em;">This project involved creating photorealistic 3D renders to illustrate the formation of a new spin studio, extending the current fitness facilities. The design focused on integrating the new space seamlessly with the existing area, optimizing flow and user experience for gym members.</p>`,
+        process: `<ul style="padding-left:20px;line-height:1.7;">
+            <li>Collaboration with architects and gym management to define requirements</li>
+            <li>3D modeling of the extended studio and adjoining spaces</li>
+            <li>Material selection and lighting design to match the existing aesthetic</li>
+            <li>Rendering and iterative feedback with stakeholders</li>
+        </ul>`,
+        results: `<p style="line-height:1.7;font-size:1.05em;">The visuals effectively communicated the vision for the new extension, supporting planning approval and stakeholder buy-in. The project enabled the client to showcase the enhanced facility to members and investors before construction began.</p>`,
+        details: `<ul style="padding-left:20px;line-height:1.7;">
+            <li><strong>Client:</strong> Corrigan & Chapman Construction Ltd.</li>
+            <li><strong>Location:</strong> London, UK</li>
+            <li><strong>Services:</strong> 3D Rendering, Visualization</li>
+            <li><strong>Year:</strong> 2025</li>
+        </ul>`
     },
     'luxury-hotel-website': {
         title: 'F7 Coaching Website',
@@ -107,8 +117,8 @@ const portfolioProjects = {
             { label: 'Portfolio', href: 'index.html#portfolio' },
             { label: 'F7 Coaching Website' }
         ],
-        overview: `<p>We designed and developed a modern website for a children's football coaching business. The site enables parents to view available sessions, book classes online, and manage their bookings with ease. The project focused on providing a seamless user experience for both the coach and parents.</p>`,
-        process: `<ul>
+        overview: `<p style="line-height:1.7;font-size:1.05em;">We designed and developed a modern website for a children's football coaching business. The site enables parents to view available sessions, book classes online, and manage their bookings with ease. The project focused on providing a seamless user experience for both the coach and parents.</p>`,
+        process: `<ul style="padding-left:20px;line-height:1.7;">
             <li>Requirements gathering with the coach to define booking and payment needs</li>
             <li>UI/UX design tailored for parents and mobile devices</li>
             <li>Development of a custom booking system with real-time availability</li>
@@ -116,15 +126,15 @@ const portfolioProjects = {
             <li>Setup of automated email confirmations and reminders for bookings</li>
             <li>Testing and deployment</li>
         </ul>`,
-        results: `<p>The new website streamlined the booking process, reduced administrative workload, and improved communication with parents through automated emails. Online payments increased session attendance and provided a professional experience for clients.</p>`,
-        details: `<ul>
+        results: `<p style="line-height:1.7;font-size:1.05em;">The new website streamlined the booking process, reduced administrative workload, and improved communication with parents through automated emails. Online payments increased session attendance and provided a professional experience for clients.</p>`,
+        details: `<ul style="padding-left:20px;line-height:1.7;">
             <li><strong>Client:</strong> F7 Coaching</li>
             <li><strong>Location:</strong> UK</li>
             <li><strong>Services:</strong> Web Development, Booking System, Stripe Integration, Email Automation</li>
             <li><strong>Year:</strong> 2025</li>
         </ul>
         <div style="margin-top:10px;">
-            <a href="https://f7coaching.com/" target="_blank" rel="noopener" style="color:#007bff;text-decoration:underline;">Visit F7 Coaching Website</a>
+            <a href="https://f7coaching.com/" target="_blank" rel="noopener" style="color:#007bff;text-decoration:underline;font-weight:bold;">Visit F7 Coaching Website</a>
         </div>`
     },
     'corporate-office-interior': {
@@ -138,15 +148,20 @@ const portfolioProjects = {
             { label: 'Portfolio', href: 'index.html#portfolio' },
             { label: 'Home Kitchen Renovation' }
         ],
-        overview: `<p>This project involved a site visit to obtain accurate measurements and understand the client’s requirements for their kitchen renovation. A full 3D build of the new kitchen layout was created to help the client visualize the proposed changes and finishes.</p>`,
-        process: `<ul>
+        overview: `<p style="line-height:1.7;font-size:1.05em;">This project involved a site visit to obtain accurate measurements and understand the client’s requirements for their kitchen renovation. A full 3D build of the new kitchen layout was created to help the client visualize the proposed changes and finishes.</p>`,
+        process: `<ul style="padding-left:20px;line-height:1.7;">
             <li>Initial site visit to take measurements and discuss client preferences</li>
             <li>3D modeling of the new kitchen layout and cabinetry</li>
             <li>Material and color selection in collaboration with the client</li>
             <li>Rendering and presentation of the design</li>
         </ul>`,
-        results: `<p>The 3D visuals enabled the client to make informed decisions about their kitchen renovation before any work began. More images coming soon.</p>`,
-        details: `<ul><li><strong>Client:</strong> Private Homeowner</li><li><strong>Location:</strong> UK</li><li><strong>Services:</strong> 3D Visualization, Home Renovation</li><li><strong>Year:</strong> 2024</li></ul>`
+        results: `<p style="line-height:1.7;font-size:1.05em;">The 3D visuals enabled the client to make informed decisions about their kitchen renovation before any work began. More images coming soon.</p>`,
+        details: `<ul style="padding-left:20px;line-height:1.7;">
+            <li><strong>Client:</strong> Private Homeowner</li>
+            <li><strong>Location:</strong> UK</li>
+            <li><strong>Services:</strong> 3D Visualization, Home Renovation</li>
+            <li><strong>Year:</strong> 2024</li>
+        </ul>`
     },
     'ecommerce-seo-campaign': {
         title: 'Cre8 Signs Website Development',
@@ -159,22 +174,22 @@ const portfolioProjects = {
             { label: 'Portfolio', href: 'index.html#portfolio' },
             { label: 'Cre8 Signs Website Development' }
         ],
-        overview: `<p>We developed a modern website for a leading sign supplier, focusing on presenting their current stock of signage products in an organized and visually appealing way. The initial phase allows customers to browse available items, with detailed product information and imagery. The platform is built to be scalable, with a full online shop planned for phase 2.</p>`,
-        process: `<ul>
+        overview: `<p style="line-height:1.7;font-size:1.05em;">We developed a modern website for a leading sign supplier, focusing on presenting their current stock of signage products in an organized and visually appealing way. The initial phase allows customers to browse available items, with detailed product information and imagery. The platform is built to be scalable, with a full online shop planned for phase 2.</p>`,
+        process: `<ul style="padding-left:20px;line-height:1.7;">
             <li>Consultation with the client to define requirements for stock display and future e-commerce integration</li>
             <li>Design and development of a responsive website with a user-friendly product catalogue</li>
             <li>Implementation of an easy-to-update stock management system for phase 1</li>
             <li>Planning and technical groundwork for seamless addition of online shopping features in phase 2</li>
         </ul>`,
-        results: `<p>The new website provides customers with clear access to the supplier's current stock, improving product visibility and customer enquiries. The client is now positioned to expand into full e-commerce in the next development phase.</p>`,
-        details: `<ul>
+        results: `<p style="line-height:1.7;font-size:1.05em;">The new website provides customers with clear access to the supplier's current stock, improving product visibility and customer enquiries. The client is now positioned to expand into full e-commerce in the next development phase.</p>`,
+        details: `<ul style="padding-left:20px;line-height:1.7;">
             <li><strong>Client:</strong> Cre8 Sign Supplies</li>
             <li><strong>Location:</strong> UK</li>
             <li><strong>Services:</strong> Web Development, Stock Display, E-commerce Planning</li>
             <li><strong>Year:</strong> 2025</li>
         </ul>
         <div style="margin-top:10px;">
-            <a href="https://cre8.london/" target="_blank" rel="noopener" style="color:#007bff;text-decoration:underline;">Visit Cre8 Sign Supplies Website</a>
+            <a href="https://cre8.london/" target="_blank" rel="noopener" style="color:#007bff;text-decoration:underline;font-weight:bold;">Visit Cre8 Sign Supplies Website</a>
         </div>`
         
     },
@@ -189,8 +204,8 @@ const portfolioProjects = {
             { label: 'Portfolio', href: 'index.html#portfolio' },
             { label: 'Changing Village Refresh and Refurbishment' }
         ],
-        overview: `<p>This project involved a full refresh of the changing village area to enhance both functionality and aesthetics. The refurbishment included the installation of new wall and floor tiles, modern cubicles, robust benching, upgraded lighting, and a stylish vanity unit to improve the user experience for all visitors.</p>`,
-        process: `<ul>
+        overview: `<p style="line-height:1.7;font-size:1.05em;">This project involved a full refresh of the changing village area to enhance both functionality and aesthetics. The refurbishment included the installation of new wall and floor tiles, modern cubicles, robust benching, upgraded lighting, and a stylish vanity unit to improve the user experience for all visitors.</p>`,
+        process: `<ul style="padding-left:20px;line-height:1.7;">
             <li>Assessment of existing changing village layout and user requirements</li>
             <li>Selection and specification of new wall tiles, floor tiles, and finishes</li>
             <li>Design and installation of new cubicles and benching for durability and comfort</li>
@@ -198,8 +213,8 @@ const portfolioProjects = {
             <li>Installation of a contemporary vanity unit with integrated sinks and mirrors</li>
             <li>Final inspection and handover to client</li>
         </ul>`,
-        results: `<p>The refurbished changing village now provides a clean, modern, and welcoming environment. The new materials and fittings offer improved durability, hygiene, and user satisfaction, supporting the facility’s reputation for quality and comfort.</p>`,
-        details: `<ul>
+        results: `<p style="line-height:1.7;font-size:1.05em;">The refurbished changing village now provides a clean, modern, and welcoming environment. The new materials and fittings offer improved durability, hygiene, and user satisfaction, supporting the facility’s reputation for quality and comfort.</p>`,
+        details: `<ul style="padding-left:20px;line-height:1.7;">
             <li><strong>Client:</strong> Corrigan & Chapman Construction Ltd</li>
             <li><strong>Location:</strong> UK</li>
             <li><strong>Scope:</strong> Wall Tiles, Floor Tiles, Cubicles, Benching, Lighting, Vanity Unit</li>
@@ -218,14 +233,55 @@ const portfolioProjects = {
             { label: 'Portfolio', href: 'index.html#portfolio' },
             { label: 'Corrigan & Chapman Construction Website Refresh' }
         ],
-        overview: `<p>We partnered with Corrigan & Chapman Construction Ltd to deliver a complete overhaul of their online presence. The project included a new, responsive website design, improved site structure, and a focus on user experience to better showcase their construction services and portfolio.</p>`,
-        process: `<ul><li>Consultation with the client to define goals and requirements</li><li>UI/UX design for a modern, intuitive interface</li><li>Development of a fully responsive website</li><li>SEO optimization for improved search visibility</li><li>Content updates and portfolio integration</li><li>Testing and launch</li></ul>`,
-        results: `<p>The refreshed website improved user engagement, increased organic traffic, and provided Corrigan & Chapman Construction Ltd with a professional digital platform to attract new clients and showcase their work.</p>`,
-        details: `<ul><li><strong>Client:</strong> Corrigan & Chapman Construction Ltd</li><li><strong>Location:</strong> Essex, UK</li><li><strong>Services:</strong> Web Development, SEO, UI/UX Design</li><li><strong>Year:</strong> 2025</li></ul>
+        overview: `<p style="line-height:1.7;font-size:1.05em;">We partnered with Corrigan & Chapman Construction Ltd to deliver a complete overhaul of their online presence. The project included a new, responsive website design, improved site structure, and a focus on user experience to better showcase their construction services and portfolio.</p>`,
+        process: `<ul style="padding-left:20px;line-height:1.7;">
+            <li>Consultation with the client to define goals and requirements</li>
+            <li>UI/UX design for a modern, intuitive interface</li>
+            <li>Development of a fully responsive website</li>
+            <li>SEO optimization for improved search visibility</li>
+            <li>Content updates and portfolio integration</li>
+            <li>Testing and launch</li>
+        </ul>`,
+        results: `<p style="line-height:1.7;font-size:1.05em;">The refreshed website improved user engagement, increased organic traffic, and provided Corrigan & Chapman Construction Ltd with a professional digital platform to attract new clients and showcase their work.</p>`,
+        details: `<ul style="padding-left:20px;line-height:1.7;">
+            <li><strong>Client:</strong> Corrigan & Chapman Construction Ltd</li>
+            <li><strong>Location:</strong> Essex, UK</li>
+            <li><strong>Services:</strong> Web Development, SEO, UI/UX Design</li>
+            <li><strong>Year:</strong> 2025</li>
+        </ul>
         <div style="margin-top:10px;">
-            <a href="https://corriganandchapman.co.uk/" target="_blank" rel="noopener" style="color:#007bff;text-decoration:underline;">Visit Corrigan & Chapman Construction Ltd Website</a>
+            <a href="https://corriganandchapman.co.uk/" target="_blank" rel="noopener" style="color:#007bff;text-decoration:underline;font-weight:bold;">Visit Corrigan & Chapman Construction Ltd Website</a>
         </div>`
-    }
+    },
+    // Fyndii Project
+    'fyndii': {
+        title: 'Fyndii',
+        desc: 'A modern web platform for Fyndii, designed to connect users with local deals and offers. Features include a user-friendly interface, real-time search, and seamless integration with local businesses to enhance customer engagement.',
+        tags: ['Web Development', 'Platform', 'Local Deals'],
+        imageLabel: 'Featured Image',
+        image: 'assets/images/Fyndii_Logo.svg',
+        breadcrumbs: [
+            { label: 'Home', href: 'index.html#home' },
+            { label: 'Portfolio', href: 'index.html#portfolio' },
+            { label: 'Fyndii' }
+        ],
+        overview: `<p style="line-height:1.7;font-size:1.05em;">Fyndii is a web platform designed to connect users with the best local deals and offers. The project focused on building a scalable, user-friendly interface with real-time search and seamless business integration. The platform enhances customer engagement and supports local businesses in reaching new audiences.</p>`,
+        process: `<ul style="padding-left:20px;line-height:1.7;">
+            <li>Market research and requirements gathering with Fyndii stakeholders</li>
+            <li>UI/UX design for a modern, intuitive user experience</li>
+            <li>Development of a scalable web platform with real-time search</li>
+            <li>Integration with local business APIs and offer management</li>
+            <li>Testing, optimization, and deployment</li>
+        </ul>`,
+        results: `<p style="line-height:1.7;font-size:1.05em;">The Fyndii platform successfully launched, providing users with easy access to local deals and supporting businesses in increasing their reach. The intuitive interface and real-time features have driven high user engagement and positive feedback from both users and business partners.</p>`,
+        details: `<ul style="padding-left:20px;line-height:1.7;">
+            <li><strong>Client:</strong> Fyndii</li>
+            <li><strong>Location:</strong> UK</li>
+            <li><strong>Services:</strong> Web Development, Platform Design, API Integration</li>
+            <li><strong>Year:</strong> 2025</li>
+            <li><strong>Website:</strong> <a href="https://fyndii.com" target="_blank" rel="noopener" style="color:#007bff;text-decoration:underline;font-weight:bold;">fyndii.com</a></li>
+        </ul>`
+    },
 };
 
 // Project gallery data for each project
@@ -288,6 +344,12 @@ const projectGalleries = {
         // ...add more images for this project
     ],
 
+        // Fyndii Gallery
+        'fyndii': [
+            { img: 'assets/images/Fyndii_Logo.svg', label: 'Fyndii Logo' },
+            // Add more images as available
+        ],
+
 
     // Add more projects as needed
 };
@@ -306,7 +368,11 @@ const projectVideos = {
         { video: 'assets/Videos/FemaleChange.mp4', label: 'Female Changing Room Walkthrough' },
         { video: 'assets/Videos/MaleChange.mp4', label: 'Male Changing Room Walkthrough' },
         // ...add more videos for this project
-    ]
+    ],
+    // Fyndii Videos (none currently, add if available)
+    'fyndii': [
+        // Example: { video: 'assets/Videos/FyndiiDemo.mp4', label: 'Platform Demo' }
+    ],
     // Add more projects as needed
 };
 
