@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blogs | Website Design Epping | Plot Perfect Studios</title>
-    <meta name="description" content="Plot Perfect Studios &#9776; Home Services Portfolio Pricing About FAQs Contact Blogs Home Blogs Expert Website Design, SEO & Digital Marketing Insights">
+    <meta name="description" content="Website design tips, SEO strategies, and digital solutions for Epping businesses. Read the latest blogs from Plot Perfect Studios, your local web design company.">
     <meta name="keywords" content="website design Epping, web design company in Epping, website design in Epping, Epping website design, web design Epping, Epping web design, Epping web design company, Essex web design, local web design Epping, responsive website Epping, SEO Epping">
     <link rel="canonical" href="https://plotperfectstudios.co.uk/Blogs.html">
     <meta property="og:title" content="Website Design Epping | Web Design Company in Epping | Plot Perfect Studios">
-    <meta property="og:description" content="Plot Perfect Studios &#9776; Home Services Portfolio Pricing About FAQs Contact Blogs Home Blogs Expert Website Design, SEO & Digital Marketing Insights">
+    <meta property="og:description" content="Why local businesses in Epping need modern website design. Learn about our web design services in Epping, Essex.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://plotperfectstudios.co.uk/Blogs.html">
     <meta property="og:image" content="https://plotperfectstudios.co.uk/assets/images/LivingRoom.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Website Design Epping | Web Design Company in Epping | Plot Perfect Studios">
-    <meta name="twitter:description" content="Plot Perfect Studios &#9776; Home Services Portfolio Pricing About FAQs Contact Blogs Home Blogs Expert Website Design, SEO & Digital Marketing Insights">
+    <meta name="twitter:description" content="Why local businesses in Epping need modern website design. Learn about our web design services in Epping, Essex.">
     <meta name="twitter:image" content="https://plotperfectstudios.co.uk/assets/images/LivingRoom.jpg">
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/blog.css">
@@ -46,33 +46,6 @@
   gtag('js', new Date());
   gtag('config', 'G-N6RYXJW2HQ');
   gtag('config', 'AW-513298907');
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Plot Perfect Studios",
-  "url": "https://plotperfectstudios.co.uk/",
-  "logo": "https://plotperfectstudios.co.uk/assets/images/LogoV2.svg",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+44 7401 154 663",
-    "contactType": "customer service",
-    "email": "info@plotperfectstudios.co.uk",
-    "areaServed": "GB"
-  },
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Parklands, Coopersale",
-    "addressLocality": "Epping",
-    "postalCode": "CM16 7RQ",
-    "addressCountry": "GB"
-  },
-  "sameAs": [
-    "https://www.instagram.com/plotperfectstudios/",
-    "https://www.linkedin.com/in/adam-chapman-935b27322/"
-  ]
-}
 </script>
 </head>
 <body>

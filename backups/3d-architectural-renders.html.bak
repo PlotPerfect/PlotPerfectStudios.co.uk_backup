@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Web Development in Epping — Get a Free Consult</title>
-    <meta name="description" content="Plot Perfect Studios &#9776; Home Services Portfolio Pricing About FAQs Contact Blogs Web Development Agency in Epping, UK Plot Perfect Studios is your">
+    <title>3D Architectural Renders | Plot Perfect Studios</title>
+    <meta name="description" content="Photorealistic 3D architectural renders by Plot Perfect Studios. Bring your designs to life with stunning visuals for planning, marketing, and client presentations.">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Plot Perfect Studios">
-    <meta name="keywords" content="web development, website agency, responsive websites, Plot Perfect Studios, Epping, UK, UI/UX design, digital marketing, SEO">
+    <meta name="keywords" content="3D renders, architectural visualization, 3D rendering, Plot Perfect Studios, Epping, UK, photorealistic, architecture, design, planning, marketing">
     <link rel="icon" type="image/svg+xml" href="assets/Icons/FaviconPP.svg">
     <link rel="icon" type="image/x-icon" href="assets/Icons/favicon.ico">
     <link rel="icon" type="image/png" href="assets/Icons/FaviconPP.png" sizes="32x32">
@@ -15,17 +15,18 @@
     <link rel="stylesheet" href="assets/css/FAQs.css">
     <link rel="stylesheet" href="assets/mobile-css/index-mob.css" media="(max-width: 800px)">
     <link rel="stylesheet" href="assets/css/web-development.css">
+    <link rel="stylesheet" href="assets/css/3d-architectural-renders.css">
     <link rel="preload" href="assets/fonts/ASENINE_.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="canonical" href="https://plotperfectstudios.co.uk/web-development.html">
+    <link rel="canonical" href="https://plotperfectstudios.co.uk/3d-architectural-renders.html">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Custom Web Development in Epping — Get a Free Consult">
-    <meta property="og:description" content="Plot Perfect Studios &#9776; Home Services Portfolio Pricing About FAQs Contact Blogs Web Development Agency in Epping, UK Plot Perfect Studios is your">
-    <meta property="og:url" content="https://plotperfectstudios.co.uk/web-development.html">
+    <meta property="og:title" content="3D Architectural Renders | Plot Perfect Studios">
+    <meta property="og:description" content="Photorealistic 3D architectural renders by Plot Perfect Studios. Bring your designs to life with stunning visuals for planning, marketing, and client presentations.">
+    <meta property="og:url" content="https://plotperfectstudios.co.uk/3d-architectural-renders.html">
     <meta property="og:image" content="https://plotperfectstudios.co.uk/assets/images/LogoV2.svg">
     <meta property="og:site_name" content="Plot Perfect Studios">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Custom Web Development in Epping — Get a Free Consult">
-    <meta name="twitter:description" content="Plot Perfect Studios &#9776; Home Services Portfolio Pricing About FAQs Contact Blogs Web Development Agency in Epping, UK Plot Perfect Studios is your">
+    <meta name="twitter:title" content="3D Architectural Renders | Plot Perfect Studios">
+    <meta name="twitter:description" content="Photorealistic 3D architectural renders by Plot Perfect Studios. Bring your designs to life with stunning visuals for planning, marketing, and client presentations.">
     <meta name="twitter:image" content="https://plotperfectstudios.co.uk/assets/images/LogoV2.svg">
     <meta name="theme-color" content="#181d23">
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-513298907"></script>
@@ -35,34 +36,6 @@
   gtag('js', new Date());
   gtag('config', 'G-N6RYXJW2HQ');
   gtag('config', 'AW-513298907');
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Plot Perfect Studios",
-  "url": "https://plotperfectstudios.co.uk/",
-  "logo": "https://plotperfectstudios.co.uk/assets/images/LogoV2.svg",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+44 7401 154 663",
-    "contactType": "customer service",
-    "email": "info@plotperfectstudios.co.uk",
-    "areaServed": "GB"
-  },
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Parklands, Coopersale",
-    "addressLocality": "Epping",
-    "postalCode": "CM16 7RQ",
-    "addressCountry": "GB"
-  },
-  "sameAs": [
-    "https://www.instagram.com/plotperfectstudios/",
-    "https://www.linkedin.com/in/adam-chapman-935b27322/"
-  ]
-}
 </script>
 </head>
 <body>
@@ -84,73 +57,82 @@
 
         </nav>
     </header>
-
-    <section class="webdev-hero">
-        <h1 class="webdev-hero-title">Web Development Agency in Epping, UK</h1>
-        <p class="webdev-hero-desc">
-            Plot Perfect Studios is your trusted <span class="webdev-highlight">website agency</span> for custom, high-performance web development. We create beautiful, responsive websites that help your business stand out and succeed online.
+    <main>
+    <section class="renders-hero">
+        <h1 class="renders-hero-title">3D Architectural Renders in Epping, UK</h1>
+        <p class="renders-hero-desc">
+            Plot Perfect Studios specializes in <span class="renders-highlight">photorealistic 3D architectural renders</span> that bring your designs to life. Our visuals help architects, developers, and planners communicate ideas, secure approvals, and market projects with confidence.
         </p>
     </section>
-    <section class="webdev-section">
-        <h2 class="webdev-section-title">What We Offer</h2>
-        <ul class="webdev-list">
-            <li><span class="webdev-highlight">Custom Website Design & Development:</span> Bespoke websites tailored to your brand, goals, and audience.</li>
-            <li><span class="webdev-highlight">Mobile-First & Responsive:</span> Seamless user experience on all devices, from desktop to mobile.</li>
-            <li><span class="webdev-highlight">UI/UX Design:</span> Intuitive, visually engaging interfaces that convert visitors into customers.</li>
-            <li><span class="webdev-highlight">SEO-Ready:</span> Every site is built with best practices for search engine optimization.</li>
-            <li><span class="webdev-highlight">E-Commerce Solutions:</span> Powerful online shops with secure payment integration and easy management.</li>
-            <li><span class="webdev-highlight">Content Management Systems:</span> WordPress, custom CMS, and more for easy updates and scalability.</li>
-            <li><span class="webdev-highlight">Ongoing Support:</span> Maintenance, updates, and expert advice to keep your site performing at its best.</li>
+    <section class="renders-section">
+        <h2 class="renders-section-title">What Are 3D Architectural Renders?</h2>
+        <ul class="renders-list">
+            <li><span class="renders-highlight">Visualize Before You Build:</span> See your project in stunning detail before construction begins.</li>
+            <li><span class="renders-highlight">Win Planning Approvals:</span> Impress stakeholders and planning authorities with clear, compelling imagery.</li>
+            <li><span class="renders-highlight">Market Effectively:</span> Use high-quality visuals for brochures, websites, and social media.</li>
+            <li><span class="renders-highlight">Enhance Communication:</span> Bridge the gap between technical drawings and real-world understanding.</li>
         </ul>
     </section>
-    <section class="webdev-section">
-        <h2 class="webdev-section-title">Why Choose Plot Perfect Studios?</h2>
-        <ul class="webdev-list">
-            <li><span class="webdev-highlight">Experienced Team:</span> Skilled developers, designers, and strategists with a passion for digital excellence.</li>
-            <li><span class="webdev-highlight">Transparent Process:</span> Clear communication and regular updates at every stage of your project.</li>
-            <li><span class="webdev-highlight">Results-Driven:</span> We focus on your business goals, delivering websites that generate leads and drive growth.</li>
-            <li><span class="webdev-highlight">All-in-One Agency:</span> From web development to SEO and digital marketing, we cover all your online needs.</li>
+    <section class="renders-section">
+        <h2 class="renders-section-title">Our 3D Rendering Services</h2>
+        <ul class="renders-list">
+            <li><span class="renders-highlight">Exterior Renders:</span> Showcase building exteriors in context, with realistic lighting and landscaping.</li>
+            <li><span class="renders-highlight">Interior Renders:</span> Visualize room layouts, finishes, and furnishings for residential and commercial spaces.</li>
+            <li><span class="renders-highlight">Aerial & Site Views:</span> Present your project from above, highlighting site layout and surroundings.</li>
+            <li><span class="renders-highlight">Animation & Walkthroughs:</span> Bring your project to life with dynamic flythroughs and video presentations.</li>
+            <li><span class="renders-highlight">Virtual Staging:</span> Add furniture and decor to empty spaces for marketing and sales.</li>
+            <li><span class="renders-highlight">Fast Turnaround:</span> Efficient, reliable delivery to meet your deadlines.</li>
+        </ul>
+    </section>
+    <section class="renders-section">
+        <h2 class="renders-section-title">Why Choose Plot Perfect Studios?</h2>
+        <ul class="renders-list">
+            <li><span class="renders-highlight">Expertise:</span> Years of experience in 3D visualization and architectural design.</li>
+            <li><span class="renders-highlight">Photorealism:</span> Attention to detail, lighting, and materials for lifelike results.</li>
+            <li><span class="renders-highlight">Collaboration:</span> We work closely with you to ensure your vision is realized.</li>
+            <li><span class="renders-highlight">Competitive Pricing:</span> High-quality renders at accessible rates.</li>
+            <li><span class="renders-highlight">Client Satisfaction:</span> Our visuals help you win projects, approvals, and sales.</li>
         </ul>
     </section>
 
-  <!-- Web Development FAQs Section -->
+    <!-- 3D Renders FAQs Section -->
     <section class="faqs-section">
-        <h2 class="faqs-title" style="text-align:center; color:#181d23; margin-bottom: 24px;">Web Development – Frequently Asked Questions</h2>
+        <h2 class="faqs-title" style="text-align:center; color:#181d23; margin-bottom: 24px;">3D Architectural Renders – Frequently Asked Questions</h2>
         <div class="faqs-list" itemscope itemtype="https://schema.org/FAQPage">
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <button class="faq-question" itemprop="name" aria-expanded="false">What types of websites do you build?</button>
+                <button class="faq-question" itemprop="name" aria-expanded="false">What is a 3D architectural render?</button>
                 <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <p itemprop="text">We build custom websites for businesses of all sizes, including brochure sites, e-commerce stores, blogs, portfolios, and more. Every site is tailored to your brand and goals.</p>
+                    <p itemprop="text">A 3D architectural render is a photorealistic digital image or animation that visualizes a building or space before it is built. It helps clients, planners, and stakeholders understand the design in detail.</p>
                 </div>
             </div>
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <button class="faq-question" itemprop="name" aria-expanded="false">Are your websites mobile-friendly?</button>
+                <button class="faq-question" itemprop="name" aria-expanded="false">How long does it take to produce a 3D render?</button>
                 <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <p itemprop="text">Yes! Every website we create is fully responsive and optimized for all devices, ensuring a seamless experience for your visitors on desktop, tablet, and mobile.</p>
+                    <p itemprop="text">Turnaround time depends on project complexity, but most 3D renders are delivered within 3–7 business days after receiving all necessary information.</p>
                 </div>
             </div>
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <button class="faq-question" itemprop="name" aria-expanded="false">Can I update my website myself?</button>
+                <button class="faq-question" itemprop="name" aria-expanded="false">What do I need to provide to get started?</button>
                 <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <p itemprop="text">Absolutely. We offer content management systems (CMS) like WordPress or custom solutions, so you can easily update your content, images, and more without technical knowledge.</p>
+                    <p itemprop="text">We typically require architectural drawings (plans, elevations), reference images, material specifications, and any design preferences you have.</p>
                 </div>
             </div>
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <button class="faq-question" itemprop="name" aria-expanded="false">How long does it take to build a website?</button>
+                <button class="faq-question" itemprop="name" aria-expanded="false">Can I request changes to the render?</button>
                 <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <p itemprop="text">Project timelines vary based on complexity and requirements, but most websites are completed within 3–6 weeks. We’ll provide a clear timeline before starting your project.</p>
+                    <p itemprop="text">Yes! We include a round of revisions with every project to ensure the final render matches your vision. Additional changes can be accommodated as needed.</p>
                 </div>
             </div>
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <button class="faq-question" itemprop="name" aria-expanded="false">How much does a website cost?</button>
+                <button class="faq-question" itemprop="name" aria-expanded="false">What formats will I receive?</button>
                 <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <p itemprop="text">Website pricing depends on your needs, features, and design preferences. We offer transparent quotes and flexible packages to suit your budget.</p>
+                    <p itemprop="text">You will receive high-resolution images (JPG/PNG) suitable for print and web. Animations or walkthroughs are delivered as video files (MP4). Other formats are available on request.</p>
                 </div>
             </div>
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <button class="faq-question" itemprop="name" aria-expanded="false">Do you offer ongoing support?</button>
+                <button class="faq-question" itemprop="name" aria-expanded="false">How much does a 3D render cost?</button>
                 <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <p itemprop="text">Yes! We provide ongoing support, maintenance, and updates to keep your website secure, up-to-date, and performing at its best.</p>
+                    <p itemprop="text">Pricing depends on the scope, detail, and type of render required. Contact us for a tailored quote based on your project needs.</p>
                 </div>
             </div>
         </div>
@@ -163,57 +145,63 @@
         "mainEntity": [
             {
                 "@type": "Question",
-                "name": "What types of websites do you build?",
+                "name": "What is a 3D architectural render?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "We build custom websites for businesses of all sizes, including brochure sites, e-commerce stores, blogs, portfolios, and more. Every site is tailored to your brand and goals."
+                    "text": "A 3D architectural render is a photorealistic digital image or animation that visualizes a building or space before it is built. It helps clients, planners, and stakeholders understand the design in detail."
                 }
             },
             {
                 "@type": "Question",
-                "name": "Are your websites mobile-friendly?",
+                "name": "How long does it take to produce a 3D render?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes! Every website we create is fully responsive and optimized for all devices, ensuring a seamless experience for your visitors on desktop, tablet, and mobile."
+                    "text": "Turnaround time depends on project complexity, but most 3D renders are delivered within 3–7 business days after receiving all necessary information."
                 }
             },
             {
                 "@type": "Question",
-                "name": "Can I update my website myself?",
+                "name": "What do I need to provide to get started?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Absolutely. We offer content management systems (CMS) like WordPress or custom solutions, so you can easily update your content, images, and more without technical knowledge."
+                    "text": "We typically require architectural drawings (plans, elevations), reference images, material specifications, and any design preferences you have."
                 }
             },
             {
                 "@type": "Question",
-                "name": "How long does it take to build a website?",
+                "name": "Can I request changes to the render?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Project timelines vary based on complexity and requirements, but most websites are completed within 3–6 weeks. We’ll provide a clear timeline before starting your project."
+                    "text": "Yes! We include a round of revisions with every project to ensure the final render matches your vision. Additional changes can be accommodated as needed."
                 }
             },
             {
                 "@type": "Question",
-                "name": "How much does a website cost?",
+                "name": "What formats will I receive?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Website pricing depends on your needs, features, and design preferences. We offer transparent quotes and flexible packages to suit your budget."
+                    "text": "You will receive high-resolution images (JPG/PNG) suitable for print and web. Animations or walkthroughs are delivered as video files (MP4). Other formats are available on request."
                 }
             },
             {
                 "@type": "Question",
-                "name": "Do you offer ongoing support?",
+                "name": "How much does a 3D render cost?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes! We provide ongoing support, maintenance, and updates to keep your website secure, up-to-date, and performing at its best."
+                    "text": "Pricing depends on the scope, detail, and type of render required. Contact us for a tailored quote based on your project needs."
                 }
             }
         ]
     }
     </script>
 
-        <script>
+    <section class="renders-cta">
+        <div class="renders-cta-title">Ready to Bring Your Project to Life?</div>
+        <div>Contact Plot Perfect Studios for a free consultation and discover how our <span class="renders-highlight">3D architectural renders</span> can elevate your next project.</div>
+        <a href="index.html#contact" class="renders-cta-btn">Get Your Free 3D Render Consultation</a>
+    </section>
+
+    <script>
     // FAQ accordion toggle for this page
     document.addEventListener('DOMContentLoaded', function() {
       var faqQuestions = document.querySelectorAll('.faq-question');
@@ -234,13 +222,7 @@
       });
     });
     </script>
-
-    <section class="webdev-cta">
-        <div class="webdev-cta-title">Ready to Launch Your New Website?</div>
-        <div>Contact Plot Perfect Studios for a free consultation and discover how our <span class="webdev-highlight">web development agency</span> can help your business thrive online.</div>
-        <a href="index.html#contact" class="webdev-cta-btn">Get Your Free Web Consultation</a>
-    </section>
-    
+    </main>
     <footer class="site-footer">
         <div class="footer-container">
             <div class="footer-col footer-brand">
@@ -295,7 +277,7 @@
             </div>
         </div>
     </footer>
-    <script>
+        <script>
       // Mobile menu toggle for this page
       document.addEventListener('DOMContentLoaded', function() {
         var menuToggle = document.getElementById('menu-toggle');

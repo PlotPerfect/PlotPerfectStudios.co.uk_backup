@@ -22,41 +22,6 @@
   gtag('config', 'G-N6RYXJW2HQ');
   gtag('config', 'AW-513298907');
 </script>
-<link rel="canonical" href="https://plotperfectstudios.co.uk/admin.html">
-<meta name="description" content="← Back to Main Website Admin Login Login or Sign in with Google GA4 Website Analytics Overview Loading analytics...">
-<meta property="og:title" content="Admin Login | Plot Perfect Studios">
-<meta property="og:description" content="← Back to Main Website Admin Login Login or Sign in with Google GA4 Website Analytics Overview Loading analytics...">
-<meta property="og:image" content="https://plotperfectstudios.co.uk/assets/images/LogoV2.svg">
-<meta name="twitter:title" content="Admin Login | Plot Perfect Studios">
-<meta name="twitter:description" content="← Back to Main Website Admin Login Login or Sign in with Google GA4 Website Analytics Overview Loading analytics...">
-<meta name="twitter:image" content="https://plotperfectstudios.co.uk/assets/images/LogoV2.svg">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Plot Perfect Studios",
-  "url": "https://plotperfectstudios.co.uk/",
-  "logo": "https://plotperfectstudios.co.uk/assets/images/LogoV2.svg",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+44 7401 154 663",
-    "contactType": "customer service",
-    "email": "info@plotperfectstudios.co.uk",
-    "areaServed": "GB"
-  },
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Parklands, Coopersale",
-    "addressLocality": "Epping",
-    "postalCode": "CM16 7RQ",
-    "addressCountry": "GB"
-  },
-  "sameAs": [
-    "https://www.instagram.com/plotperfectstudios/",
-    "https://www.linkedin.com/in/adam-chapman-935b27322/"
-  ]
-}
-</script>
 </head>
 <body>
   <a href="index.html" class="admin-back-btn">← Back to Main Website</a>

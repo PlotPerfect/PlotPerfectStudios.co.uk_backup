@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UI/UX Design Agency | Plot Perfect Studios</title>
-    <meta name="description" content="Plot Perfect Studios &#9776; Home Services Portfolio Pricing About FAQs Contact Blogs UI/UX Design Agency in Epping, UK Plot Perfect Studios is your">
+    <meta name="description" content="Expert UI/UX design agency in Epping, UK. Plot Perfect Studios creates intuitive, beautiful digital experiences that delight users and drive results.">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Plot Perfect Studios">
     <meta name="keywords" content="UI/UX design, user experience, user interface, website agency, Plot Perfect Studios, Epping, UK, web development, digital design, usability">
@@ -20,13 +20,13 @@
     <link rel="canonical" href="https://plotperfectstudios.co.uk/ui-ux-design.html">
     <meta property="og:type" content="website">
     <meta property="og:title" content="UI/UX Design Agency | Plot Perfect Studios">
-    <meta property="og:description" content="Plot Perfect Studios &#9776; Home Services Portfolio Pricing About FAQs Contact Blogs UI/UX Design Agency in Epping, UK Plot Perfect Studios is your">
+    <meta property="og:description" content="Expert UI/UX design agency in Epping, UK. Plot Perfect Studios creates intuitive, beautiful digital experiences that delight users and drive results.">
     <meta property="og:url" content="https://plotperfectstudios.co.uk/ui-ux-design.html">
     <meta property="og:image" content="https://plotperfectstudios.co.uk/assets/images/LogoV2.svg">
     <meta property="og:site_name" content="Plot Perfect Studios">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="UI/UX Design Agency | Plot Perfect Studios">
-    <meta name="twitter:description" content="Plot Perfect Studios &#9776; Home Services Portfolio Pricing About FAQs Contact Blogs UI/UX Design Agency in Epping, UK Plot Perfect Studios is your">
+    <meta name="twitter:description" content="Expert UI/UX design agency in Epping, UK. Plot Perfect Studios creates intuitive, beautiful digital experiences that delight users and drive results.">
     <meta name="twitter:image" content="https://plotperfectstudios.co.uk/assets/images/LogoV2.svg">
     <meta name="theme-color" content="#181d23">
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-513298907"></script>
@@ -36,33 +36,6 @@
   gtag('js', new Date());
   gtag('config', 'G-N6RYXJW2HQ');
   gtag('config', 'AW-513298907');
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Plot Perfect Studios",
-  "url": "https://plotperfectstudios.co.uk/",
-  "logo": "https://plotperfectstudios.co.uk/assets/images/LogoV2.svg",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+44 7401 154 663",
-    "contactType": "customer service",
-    "email": "info@plotperfectstudios.co.uk",
-    "areaServed": "GB"
-  },
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Parklands, Coopersale",
-    "addressLocality": "Epping",
-    "postalCode": "CM16 7RQ",
-    "addressCountry": "GB"
-  },
-  "sameAs": [
-    "https://www.instagram.com/plotperfectstudios/",
-    "https://www.linkedin.com/in/adam-chapman-935b27322/"
-  ]
-}
 </script>
 </head>
 <body>
