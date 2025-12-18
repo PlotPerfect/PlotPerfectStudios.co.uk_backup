@@ -28,3 +28,46 @@
   .breadcrumbs ol{padding:10px 8px}
   .breadcrumbs li{font-size:.98rem}
 }
+
+/* Individual Blog Post Styles */
+
+.blog-post{max-width:900px;margin:0 auto 60px auto;padding:0 16px}
+.blog-header{margin-bottom:40px;text-align:center}
+.blog-header h1{font-size:2.5rem;font-weight:800;color:#181d23;margin-bottom:16px;line-height:1.1;letter-spacing:-1px}
+.blog-meta{font-size:1.1rem;color:#888;margin-bottom:20px}
+.blog-featured-image{width:100%;height:400px;object-fit:cover;border-radius:14px;margin-bottom:40px;box-shadow:0 8px 32px rgba(24,29,35,.1)}
+.blog-content{font-size:1.15rem;line-height:1.7;color:#23272f}
+.blog-content p{margin-bottom:24px}
+.blog-content h2{font-size:1.8rem;font-weight:700;color:#181d23;margin:40px 0 20px 0;border-bottom:3px solid #ce8157;padding-bottom:8px}
+.blog-content h3{font-size:1.4rem;font-weight:700;color:#181d23;margin:32px 0 16px 0}
+.blog-content ul,.blog-content ol{margin-bottom:24px;padding-left:24px}
+.blog-content li{margin-bottom:8px;color:#23272f}
+.blog-content strong{font-weight:700;color:#181d23}
+.blog-content a{color:#ce8157;text-decoration:none;font-weight:600;border-bottom:1px solid transparent;transition:border-color .2s}
+.blog-content a:hover,.blog-content a:focus{border-bottom-color:#ce8157}
+.blog-cta{background:linear-gradient(135deg,#181d23 0%,#2a2f35 100%);color:#fff;padding:40px;border-radius:14px;text-align:center;margin:50px 0 30px 0;box-shadow:0 8px 32px rgba(24,29,35,.15)}
+.blog-cta h3{font-size:1.6rem;font-weight:700;margin-bottom:12px;color:#fff}
+.blog-cta p{font-size:1.1rem;margin-bottom:24px;color:#fff}
+.cta-button{background:#ce8157;color:#fff;border:none;border-radius:8px;padding:14px 32px;font-size:1.1rem;font-weight:700;cursor:pointer;text-decoration:none;transition:background .2s,transform .2s;display:inline-block}
+.cta-button:hover,.cta-button:focus{background:#fff;transform:translateY(-2px);color:#181d23}
+
+@media (max-width:768px){
+  .blog-post{padding:0 12px}
+  .blog-header h1{font-size:2rem}
+  .blog-featured-image{height:250px}
+  .blog-content{font-size:1.1rem}
+  .blog-content h2{font-size:1.5rem;margin:32px 0 16px 0}
+  .blog-content h3{font-size:1.25rem}
+  .blog-cta{padding:30px 20px}
+  .blog-cta h3{font-size:1.4rem}
+  .cta-button{padding:12px 24px;font-size:1rem}
+}
+
+@media (max-width:480px){
+  .blog-header h1{font-size:1.8rem}
+  .blog-featured-image{height:200px}
+  .blog-content{font-size:1.05rem}
+  .blog-content h2{font-size:1.3rem}
+  .blog-content h3{font-size:1.15rem}
+  .blog-cta h3{font-size:1.25rem}
+}
