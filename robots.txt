@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.plotperfectstudios.co.uk/sitemap.xml
+Sitemap: https://plotperfectstudios.co.uk/sitemap.xml

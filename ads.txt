@@ -1,3 +1,0 @@
-# ads.txt for Plot Perfect Studios
-# Add your authorized digital sellers below. For example:
-# google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0

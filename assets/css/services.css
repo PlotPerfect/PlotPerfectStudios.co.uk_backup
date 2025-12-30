@@ -1,0 +1,19 @@
+.pricing{padding:18px; margin-top:18px}
+.pricing-grid{grid-template-columns: repeat(3, 1fr); gap:14px; margin-top:14px}
+.price-card{
+  border:1px solid var(--line);
+  background: rgba(255,255,255,.03);
+  border-radius: 18px;
+  padding:16px;
+}
+.price-card h3{margin:0 0 6px}
+.price-card .muted{color:var(--muted); margin:0 0 10px; font-size:13px}
+.price-card.featured{
+  border-color: rgba(199,90,26,.4);
+  background: linear-gradient(180deg, rgba(199,90,26,.10), rgba(255,255,255,.02));
+}
+.pricing-cta{display:flex; gap:12px; flex-wrap:wrap; margin-top:14px}
+
+@media (max-width: 980px){
+  .pricing-grid{grid-template-columns:1fr}
+}

@@ -1,0 +1,29 @@
+.work-list{display:grid; gap:16px}
+.case-full{padding:16px}
+.case-full-grid{
+  display:grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap:16px;
+  align-items:stretch;
+}
+.case-full-img{
+  border-radius: 18px;
+  border:1px solid var(--line);
+  background-size:contain;
+  background-position:center;
+  background-repeat:no-repeat;
+  min-height: 240px;
+}
+.case-full-body{padding:6px}
+.tag-row{display:flex; gap:10px; flex-wrap:wrap; margin:10px 0 14px}
+
+@media (max-width: 980px){
+  .case-full-grid{grid-template-columns:1fr}
+}
+
+.compare{padding:18px}
+.compare h3{margin:0 0 10px}
+.compare-good{
+  border-color: rgba(199,90,26,.35);
+  background: linear-gradient(180deg, rgba(199,90,26,.10), rgba(255,255,255,.02));
+}

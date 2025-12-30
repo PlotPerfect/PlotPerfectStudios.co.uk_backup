@@ -44,6 +44,28 @@ function scrollToServices(e) {
     }
 }
 
+function initScrollUI(){
+  const bar = document.getElementById("scrollProgress");
+  const btn = document.getElementById("toTop");
+
+  function onScroll(){
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const docH = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docH > 0 ? (scrollTop / docH) * 100 : 0;
+
+    if (bar) bar.style.width = pct + "%";
+    if (btn) btn.classList.toggle("show", scrollTop > 500);
+  }
+
+  window.addEventListener("scroll", onScroll, { passive:true });
+  onScroll();
+
+  if (btn){
+    btn.addEventListener("click", () => window.scrollTo({ top:0, behavior:"smooth" }));
+  }
+}
+initScrollUI();
+
 // Attach to header nav and hero button
 const headerServices = document.querySelector('.pps-nav a[href="#services"]');
 const heroServices = document.querySelector('.hero-btn-primary[href="#services"]');
@@ -148,7 +170,7 @@ const portfolioProjects = {
             { label: 'Portfolio', href: 'index.html#portfolio' },
             { label: 'Home Kitchen Renovation' }
         ],
-        overview: `<p style="line-height:1.7;font-size:1.05em;">This project involved a site visit to obtain accurate measurements and understand the client’s requirements for their kitchen renovation. A full 3D build of the new kitchen layout was created to help the client visualize the proposed changes and finishes.</p>`,
+        overview: `<p style="line-height:1.7;font-size:1.05em;">This project involved a site visit to obtain accurate measurements and understand the client's requirements for their kitchen renovation. A full 3D build of the new kitchen layout was created to help the client visualize the proposed changes and finishes.</p>`,
         process: `<ul style="padding-left:20px;line-height:1.7;">
             <li>Initial site visit to take measurements and discuss client preferences</li>
             <li>3D modeling of the new kitchen layout and cabinetry</li>
@@ -213,7 +235,7 @@ const portfolioProjects = {
             <li>Installation of a contemporary vanity unit with integrated sinks and mirrors</li>
             <li>Final inspection and handover to client</li>
         </ul>`,
-        results: `<p style="line-height:1.7;font-size:1.05em;">The refurbished changing village now provides a clean, modern, and welcoming environment. The new materials and fittings offer improved durability, hygiene, and user satisfaction, supporting the facility’s reputation for quality and comfort.</p>`,
+        results: `<p style="line-height:1.7;font-size:1.05em;">The refurbished changing village now provides a clean, modern, and welcoming environment. The new materials and fittings offer improved durability, hygiene, and user satisfaction, supporting the facility's reputation for quality and comfort.</p>`,
         details: `<ul style="padding-left:20px;line-height:1.7;">
             <li><strong>Client:</strong> Corrigan & Chapman Construction Ltd</li>
             <li><strong>Location:</strong> UK</li>
@@ -280,6 +302,37 @@ const portfolioProjects = {
             <li><strong>Services:</strong> Web Development, Platform Design, API Integration</li>
             <li><strong>Year:</strong> 2025</li>
             <li><strong>Website:</strong> <a href="https://fyndii.com" target="_blank" rel="noopener" style="color:#007bff;text-decoration:underline;font-weight:bold;">fyndii.com</a></li>
+        </ul>`
+    },
+
+    // Bark Lane Project
+    'bark-lane': {
+        title: 'Bark Lane Daycare Website',
+        desc: 'A modern website for Bark Lane Dog Daycare, featuring online booking capabilities, service information, and a user-friendly interface to connect pet owners with quality daycare services.',
+        tags: ['Web Development', 'Pet Services', 'Booking System'],
+        imageLabel: 'Featured Image',
+        image: './assets/images/CITY OF WOOFMINSTER.png',
+        breadcrumbs: [
+            { label: 'Home', href: 'index.html#home' },
+            { label: 'Portfolio', href: 'index.html#portfolio' },
+            { label: 'Bark Lane Daycare Website' }
+        ],
+        overview: `<p style="line-height:1.7;font-size:1.05em;">Bark Lane Daycare needed a professional website to showcase their dog daycare services and streamline their booking process. The project focused on creating a welcoming, informative platform that helps pet owners understand the services offered while providing easy access to booking and contact information.</p>`,
+        process: `<ul style="padding-left:20px;line-height:1.7;">
+            <li>Consultation with Bark Lane to understand their service offerings and client needs</li>
+            <li>UI/UX design focused on pet owners and ease of navigation</li>
+            <li>Development of a responsive website with service descriptions and pricing</li>
+            <li>Implementation of contact forms and booking inquiry system</li>
+            <li>SEO optimization for local pet service searches</li>
+            <li>Testing and launch with ongoing support</li>
+        </ul>`,
+        results: `<p style="line-height:1.7;font-size:1.05em;">The new website has improved Bark Lane's online presence, making it easier for pet owners to learn about their services and get in touch. The professional design has helped build trust with potential clients and streamlined their inquiry process.</p>`,
+        details: `<ul style="padding-left:20px;line-height:1.7;">
+            <li><strong>Client:</strong> Bark Lane Daycare</li>
+            <li><strong>Location:</strong> UK</li>
+            <li><strong>Services:</strong> Web Development, UI/UX Design, SEO</li>
+            <li><strong>Year:</strong> 2025</li>
+            <li><strong>Website:</strong> <a href="https://barklanedaycare.co.uk" target="_blank" rel="noopener" style="color:#007bff;text-decoration:underline;font-weight:bold;">barklanedaycare.co.uk</a></li>
         </ul>`
     },
 };
@@ -546,4 +599,78 @@ document.addEventListener('DOMContentLoaded', () => {
             if (activePanel) activePanel.style.display = '';
         });
     });
+});
+
+// FAQ accordion
+document.addEventListener('DOMContentLoaded', function() {
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(button => {
+        button.addEventListener('click', () => {
+            const expanded = button.getAttribute('aria-expanded') === 'true';
+            button.setAttribute('aria-expanded', !expanded);
+            const answer = button.nextElementSibling;
+            if (answer) {
+                answer.style.display = expanded ? 'none' : 'block';
+            }
+        });
+    });
+});
+
+// Portfolio carousel drag functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const portfolioGrid = document.querySelector('.portfolio-grid');
+    if (portfolioGrid) {
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        // Mouse events
+        portfolioGrid.addEventListener('mousedown', (e) => {
+            isDown = true;
+            portfolioGrid.classList.add('active');
+            startX = e.pageX - portfolioGrid.offsetLeft;
+            scrollLeft = portfolioGrid.scrollLeft;
+        });
+
+        portfolioGrid.addEventListener('mouseleave', () => {
+            isDown = false;
+            portfolioGrid.classList.remove('active');
+        });
+
+        portfolioGrid.addEventListener('mouseup', () => {
+            isDown = false;
+            portfolioGrid.classList.remove('active');
+        });
+
+        portfolioGrid.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - portfolioGrid.offsetLeft;
+            const walk = (x - startX) * 2; // Scroll speed multiplier
+            portfolioGrid.scrollLeft = scrollLeft - walk;
+        });
+
+        // Touch events for mobile
+        portfolioGrid.addEventListener('touchstart', (e) => {
+            isDown = true;
+            startX = e.touches[0].pageX - portfolioGrid.offsetLeft;
+            scrollLeft = portfolioGrid.scrollLeft;
+        });
+
+        portfolioGrid.addEventListener('touchend', () => {
+            isDown = false;
+        });
+
+        portfolioGrid.addEventListener('touchmove', (e) => {
+            if (!isDown) return;
+            const x = e.touches[0].pageX - portfolioGrid.offsetLeft;
+            const walk = (x - startX) * 2;
+            portfolioGrid.scrollLeft = scrollLeft - walk;
+        });
+
+        // Prevent default drag behavior on images/links
+        portfolioGrid.addEventListener('dragstart', (e) => {
+            e.preventDefault();
+        });
+    }
 });

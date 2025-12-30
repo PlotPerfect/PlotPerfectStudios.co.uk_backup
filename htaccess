@@ -1,7 +1,0 @@
-RewriteEngine On
-# Redirect www to non-www
-RewriteCond %{HTTP_HOST} ^www\.plotperfectstudios\.co\.uk [NC]
-RewriteRule ^(.*)$ https://plotperfectstudios.co.uk/ [L,R=301]
-
-RewriteCond %{THE_REQUEST} /index\.html [NC]
-RewriteRule ^index\.html$ / [R=301,L]

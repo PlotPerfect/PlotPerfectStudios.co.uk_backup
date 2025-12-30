@@ -2,96 +2,132 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://plotperfectstudios.co.uk/</loc>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-
   <url>
-    <loc>https://plotperfectstudios.co.uk/index.html</loc>
-    <priority>1.0</priority>
-  </url>
-
-  <url>
-    <loc>https://plotperfectstudios.co.uk/3d-render-portfolio.html</loc>
+    <loc>https://plotperfectstudios.co.uk/services.html</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-
   <url>
-    <loc>https://plotperfectstudios.co.uk/3d-architectural-renders.html</loc>
-    <priority>0.9</priority>
+    <loc>https://plotperfectstudios.co.uk/work/index.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://plotperfectstudios.co.uk/web-development.html</loc>
-    <priority>0.9</priority>
+    <loc>https://plotperfectstudios.co.uk/contact.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
-
   <url>
-    <loc>https://plotperfectstudios.co.uk/seo-services.html</loc>
-    <priority>0.9</priority>
+    <loc>https://plotperfectstudios.co.uk/free-homepage-design.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://plotperfectstudios.co.uk/ui-ux-design.html</loc>
-    <priority>0.9</priority>
+    <loc>https://plotperfectstudios.co.uk/vehicle-wrap-designs.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://plotperfectstudios.co.uk/digital-marketing.html</loc>
-    <priority>0.9</priority>
+    <loc>https://plotperfectstudios.co.uk/insights/index.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://plotperfectstudios.co.uk/privacy-policy.html</loc>
+    <loc>https://plotperfectstudios.co.uk/work/bark-lane-daycare.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://plotperfectstudios.co.uk/work/f7-coaching.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://plotperfectstudios.co.uk/work/ewing-law.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://plotperfectstudios.co.uk/work/cre8-london.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://plotperfectstudios.co.uk/work/corrigan-and-chapman.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://plotperfectstudios.co.uk/insights/why-pretty-websites-dont-rank.html</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
-
   <url>
-    <loc>https://plotperfectstudios.co.uk/terms-and-conditions.html</loc>
+    <loc>https://plotperfectstudios.co.uk/insights/why-custom-websites-win-long-term.html</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
-
+  <url>
+    <loc>https://plotperfectstudios.co.uk/insights/when-you-need-more-than-a-website.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://plotperfectstudios.co.uk/insights/what-happens-after-your-website-launches.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://plotperfectstudios.co.uk/insights/web-design-essex-what-to-look-for.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://plotperfectstudios.co.uk/insights/seo-isnt-dead-its-changing.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://plotperfectstudios.co.uk/insights/seo-first-website-structure.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://plotperfectstudios.co.uk/insights/how-much-should-a-website-cost-uk.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://plotperfectstudios.co.uk/insights/how-long-does-a-website-take-to-build.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://plotperfectstudios.co.uk/insights/homepage-sections-that-convert.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://plotperfectstudios.co.uk/insights/hand-coded-vs-wordpress-seo.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://plotperfectstudios.co.uk/insights/core-web-vitals-without-sacrificing-design.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://plotperfectstudios.co.uk/insights/choosing-the-right-web-developer.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
   <url>
     <loc>https://plotperfectstudios.co.uk/sitemap.html</loc>
-    <priority>0.4</priority>
-  </url>
-
-  <url>
-    <loc>https://plotperfectstudios.co.uk/Blogs.html</loc>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://plotperfectstudios.co.uk/FAQs.html</loc>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://plotperfectstudios.co.uk/pricing.html</loc>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://plotperfectstudios.co.uk/blog-10-key-steps-small-business.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://plotperfectstudios.co.uk/blog-cre8-london.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://plotperfectstudios.co.uk/blog-custom-vs-wordpress.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://plotperfectstudios.co.uk/blog-epping-local-seo-tips.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://plotperfectstudios.co.uk/blog-epping-web-design.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://plotperfectstudios.co.uk/blog-web-design-seo-visibility.html</loc>
-    <priority>0.7</priority>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>

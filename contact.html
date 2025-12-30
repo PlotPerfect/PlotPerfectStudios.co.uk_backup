@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get Your Free Quote | Custom Web Development | Plot Perfect Studios Ltd</title>
+  <meta name="description" content="Ready to transform your business? Get a free quote for bespoke web development, SEO-first builds, and scalable web systems. Let's discuss your project." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://plotperfectstudios.co.uk/contact.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Get Your Free Quote | Custom Web Development | Plot Perfect Studios Ltd" />
+  <meta property="og:description" content="Ready to transform your business? Get a free quote for bespoke web development, SEO-first builds, and scalable web systems." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://plotperfectstudios.co.uk/contact.html" />
+  <link rel="stylesheet" href="assets/css/index.css" />
+  <link rel="stylesheet" href="assets/css/contact.css" />
+
+  <link rel="icon" href="/assets/Icons/PlotPerfectFavicon.svg" type="image/svg+xml" />
+
+</head>
+
+<body>
+  <div class="bg-noise" aria-hidden="true"></div>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <div id="siteHeader"></div>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <p class="eyebrow">CONTACT</p>
+        <h1 class="h1">Request a quote</h1>
+        <p class="lead">Tell me what you need — I’ll reply with next steps and a clean fixed quote.</p>
+
+        <div class="grid contact-grid">
+          <!-- Form -->
+          <div class="card contact-card reveal">
+            <div class="card-top">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+              <span class="card-title">Quote Request</span>
+            </div>
+
+            <form class="form" id="quoteForm" novalidate>
+              <div class="row">
+                <label>
+                  <span>Name</span>
+                  <input type="text" name="name" placeholder="Your name" required minlength="2">
+                  <small class="err"></small>
+                </label>
+                <label>
+                  <span>Email</span>
+                  <input type="email" name="email" placeholder="you@company.com" required>
+                  <small class="err"></small>
+                </label>
+              </div>
+
+              <div class="row">
+                <label>
+                  <span>Company (optional)</span>
+                  <input type="text" name="company" placeholder="Company name">
+                  <small class="err"></small>
+                </label>
+                <label>
+                  <span>Phone (optional)</span>
+                  <input type="tel" name="phone" placeholder="07...">
+                  <small class="err"></small>
+                </label>
+              </div>
+
+              <label>
+                <span>What do you need?</span>
+                <select name="service" required>
+                  <option value="" selected disabled>Select a service</option>
+                  <option value="Website (brochure / marketing)">Website (brochure / marketing)</option>
+                  <option value="Website Redesign">Website Redesign</option>
+                  <option value="SEO & On-Site Setup">SEO & On-Site Setup</option>
+                  <option value="Booking System / Automation">Booking System / Automation</option>
+                  <option value="Web App / Portal (Firebase)">Web App / Portal (Firebase)</option>
+                </select>
+                <small class="err"></small>
+              </label>
+
+              <div class="row">
+                <label>
+                  <span>Budget range</span>
+                  <select name="budget" required>
+                    <option value="" selected disabled>Pick a range</option>
+                    <option value="£500–£1,000">£500–£1,000</option>
+                    <option value="£1,000–£3,000">£1,000–£3,000</option>
+                    <option value="£3,000–£7,500">£3,000–£7,500</option>
+                    <option value="£7,500+">£7,500+</option>
+                    <option value="Not sure yet">Not sure yet</option>
+                  </select>
+                  <small class="err"></small>
+                </label>
+
+                <label>
+                  <span>Timeline</span>
+                  <select name="timeline" required>
+                    <option value="" selected disabled>Pick a timeline</option>
+                    <option value="ASAP (1–2 weeks)">ASAP (1–2 weeks)</option>
+                    <option value="Soon (2–4 weeks)">Soon (2–4 weeks)</option>
+                    <option value="Planned (1–2 months)">Planned (1–2 months)</option>
+                    <option value="Not sure yet">Not sure yet</option>
+                  </select>
+                  <small class="err"></small>
+                </label>
+              </div>
+
+              <label>
+                <span>Project details</span>
+                <textarea name="message" placeholder="Pages needed, features, style references, current website link, etc." required minlength="10"></textarea>
+                <small class="err"></small>
+              </label>
+
+              <label class="check">
+                <input type="checkbox" name="consent" required>
+                <span>I agree to be contacted about my enquiry.</span>
+              </label>
+              <small class="err" data-consent-error></small>
+
+              <div class="form-actions">
+                <button class="btn primary" type="submit" id="submitBtn">Send Request</button>
+                <p class="micro" id="formStatus">This form is currently in demo mode (we’ll wire email next).</p>
+              </div>
+            </form>
+          </div>
+
+          <!-- Sidebar -->
+          <aside class="card contact-side reveal">
+            <h2 class="h2">What happens next?</h2>
+            <ul class="ticks">
+              <li>We confirm scope + goals</li>
+              <li>You get a fixed quote</li>
+              <li>We design → build → launch</li>
+              <li>Optional SEO/maintenance available</li>
+            </ul>
+
+            <div class="mini-box">
+              <h3>Prefer WhatsApp?</h3>
+              <p class="sub">Add your WhatsApp link here when ready.</p>
+              <a class="btn ghost" href="index.html#top">Back to homepage</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer include -->
+  <div id="siteFooter"></div>
+  <div id="siteLoader"></div>
+
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <button class="to-top" id="toTop" aria-label="Back to top">
+    ↑
+  </button>
+
+  <script src="assets/js/work.js"></script>
+  <script src="assets/js/index.js"></script>
+  <script src="assets/js/transition.js"></script>
+  <script src="assets/js/emailjs.min.js"></script>
+  <script src="assets/js/contact.js"></script>
+  <script src="assets/js/cursor-glow.js"></script>
+</body>
+</html>
