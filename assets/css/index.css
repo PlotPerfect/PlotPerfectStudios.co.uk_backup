@@ -464,6 +464,38 @@ img{max-width:100%; display:block}
 .form-actions{display:flex; align-items:center; gap:12px; flex-wrap:wrap}
 .micro{color:var(--muted); font-size:12px; margin:0}
 
+/* PP form styles */
+.pp-field{display:block; margin-bottom:12px}
+.pp-label{display:block; color:var(--muted); font-size:12px; margin:0 0 6px}
+.pp-input{
+  width:100%;
+  border-radius: 14px;
+  border:1px solid var(--line);
+  background: rgba(0,0,0,.25);
+  color: var(--text);
+  padding:12px 12px;
+  outline:none;
+}
+.pp-input:focus{
+  border-color: rgba(199,90,26,.65);
+  box-shadow: 0 0 0 6px rgba(199,90,26,.08);
+}
+textarea.pp-input{min-height: 110px; resize: vertical}
+
+/* Error styles */
+.err{
+  display:block;
+  min-height:16px;
+  margin-top:6px;
+  color: rgba(224,122,63,.95);
+  font-size: 12px;
+}
+
+.input-bad{
+  border-color: rgba(224,122,63,.8) !important;
+  box-shadow: 0 0 0 6px rgba(224,122,63,.10) !important;
+}
+
 /* Footer */
 .footer{
   border-top:1px solid var(--line);
