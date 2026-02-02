@@ -365,6 +365,26 @@ img{max-width:100%; display:block}
 }
 .note{color:var(--muted); font-size:12px}
 
+.price{
+  font-size: clamp(32px, 3.5vw, 44px);
+  line-height: 1.05;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  background: linear-gradient(90deg, var(--orange), var(--orange2));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+.price .unit{font-size: 14px; font-weight: 600; color: var(--muted); margin-left: 8px}
+.price-note{
+  margin-top: 12px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(255,255,255,.03);
+  padding: 12px 14px;
+  color: rgba(237,237,237,.9);
+}
+
 /* Section headings */
 .section-head{margin-bottom:18px}
 .h2{font-size:28px; margin:0 0 8px}

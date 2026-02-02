@@ -56,6 +56,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://plotperfectstudios.co.uk/monthly-web-development.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://plotperfectstudios.co.uk/vehicle-wrap-designs.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
