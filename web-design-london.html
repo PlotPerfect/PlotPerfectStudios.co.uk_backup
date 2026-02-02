@@ -40,6 +40,36 @@
       "provider": {"@id":"https://plotperfectstudios.co.uk/#org"},
       "areaServed":["London","United Kingdom"],
       "audience": {"@type":"Audience","audienceType":"Businesses"}
+    },
+    {
+      "@type":"FAQPage",
+      "@id":"https://plotperfectstudios.co.uk/web-design-london.html#faq",
+      "mainEntity":[
+        {
+          "@type":"Question",
+          "name":"Do you work with London businesses even if you’re Essex-based?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"Yes. We work with London businesses remotely and on-site when needed. The focus is the same: performance, clarity, and an SEO-first structure that supports growth."
+          }
+        },
+        {
+          "@type":"Question",
+          "name":"What’s the difference between a template site and a bespoke build?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"Bespoke builds are designed around your offer and audience, with clean structure, faster performance, and fewer constraints than templates."
+          }
+        },
+        {
+          "@type":"Question",
+          "name":"Can you optimise my site for conversions?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"Yes. We improve section flow, calls-to-action, trust blocks, and on-page messaging so visitors understand value and take action sooner."
+          }
+        }
+      ]
     }
   ]
 }
@@ -55,24 +85,32 @@
   <main>
     <section class="section">
       <div class="container reveal">
-        <p class="eyebrow">WEB DESIGN / LONDON</p>
-        <h1 class="h1">Web design in London for businesses that want results.</h1>
-        <p class="lead" style="max-width:92ch;">
-          London is competitive. Your site has to load fast, look premium, and communicate value instantly.
-          We build bespoke websites with SEO-first architecture and a conversion-focused structure that supports growth.
-        </p>
+        <div class="hero-grid">
+          <div>
+            <p class="eyebrow">WEB DESIGN / LONDON</p>
+            <h1 class="h1">Web design in London for businesses that want results.</h1>
+            <p class="lead" style="max-width:92ch;">
+              London is competitive. Your site has to load fast, look premium, and communicate value instantly.
+              We build bespoke websites with SEO-first architecture and a conversion-focused structure that supports growth.
+            </p>
 
-        <div style="margin-top:18px; display:flex; gap:12px; flex-wrap:wrap;">
-          <a class="btn primary" href="contact.html">Request a Quote</a>
-          <a class="btn ghost" href="services.html">Services</a>
-          <a class="btn ghost" href="work/index.html">Work</a>
-        </div>
+            <div style="margin-top:18px; display:flex; gap:12px; flex-wrap:wrap;">
+              <a class="btn primary" href="contact.html">Request a Quote</a>
+              <a class="btn ghost" href="services.html">Services</a>
+              <a class="btn ghost" href="work/index.html">Work</a>
+            </div>
 
-        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:18px;">
-          <span class="pill">Premium UI</span>
-          <span class="pill">SEO-first builds</span>
-          <span class="pill">Performance</span>
-          <span class="pill">Conversion</span>
+            <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:18px;">
+              <span class="pill">Premium UI</span>
+              <span class="pill">SEO-first builds</span>
+              <span class="pill">Performance</span>
+              <span class="pill">Conversion</span>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="particle-logo" data-image-url="/assets/images/areas/london-logo.png" data-alt="London area logo"></div>
+          </div>
         </div>
       </div>
     </section>
@@ -104,6 +142,54 @@
         </div>
       </div>
     </section>
+
+    <section class="section" style="padding-top:0;">
+      <div class="container">
+        <div class="card reveal" style="padding:18px;">
+          <p class="eyebrow">WHAT YOU GET</p>
+          <h2 class="h2">Built to win clicks and close enquiries</h2>
+          <p class="sub" style="max-width:92ch;">
+            For London builds, we focus on the fundamentals that matter: clarity in the first screen, proof throughout the page, and a structure Google can understand.
+          </p>
+
+          <ul class="ticks" style="margin-top:14px;">
+            <li>SEO-first page structure (services, intent-led headings, internal linking)</li>
+            <li>Premium UI system with conversion-first sections and CTAs</li>
+            <li>Fast, lightweight code designed to support Core Web Vitals</li>
+            <li>Schema-ready components (FAQs, services, website structure)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0;">
+      <div class="container">
+        <div class="card reveal" style="padding:18px;">
+          <p class="eyebrow">FAQ</p>
+          <h2 class="h2">Web design London: quick answers</h2>
+
+          <div class="faq" style="margin-top:14px;">
+            <details class="faq-item">
+              <summary>Can you help us compete in a crowded market?</summary>
+              <p>Yes. We tighten the offer, improve messaging clarity, add proof, and build a conversion-led page flow so visitors understand why you’re different.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Do you build landing pages for specific services?</summary>
+              <p>Yes. Service pages are one of the strongest long-term SEO assets, and they also convert better than generic “home page only” sites.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Can you work with our existing brand?</summary>
+              <p>Absolutely. We can build within your branding, or refine it to a more modern system while keeping it recognisably yours.</p>
+            </details>
+          </div>
+
+          <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:14px;">
+            <a class="btn primary" href="contact.html">Get a Quote</a>
+            <a class="btn ghost" href="services.html">See Services</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <div id="siteFooter"></div>
@@ -116,5 +202,6 @@
   <script src="assets/js/index.js"></script>
   <script src="assets/js/transition.js"></script>
   <script src="assets/js/cursor-glow.js"></script>
+  <script type="module" src="/assets/js/particle-logo.js"></script>
 </body>
 </html>

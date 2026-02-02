@@ -25,6 +25,12 @@ function prefersReducedMotion(){
   return window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 }
 
+function getContainerConfig(container){
+  const imageUrl = container.dataset.imageUrl || CONFIG.imageUrl;
+  const alt = container.dataset.alt || "Plot Perfect Studios Ltd logo";
+  return { imageUrl, alt };
+}
+
 async function loadImage(url){
   return new Promise((resolve, reject) => {
     const img = new Image();
@@ -93,13 +99,14 @@ function createGlowSprite(){
   return tex;
 }
 
-async function init(){
-  const container = document.getElementById("particleLogo");
+async function initContainer(container){
   if (!container) return;
+
+  const { imageUrl, alt } = getContainerConfig(container);
 
   // Reduced motion: just show the logo image (still looks premium)
   if (prefersReducedMotion()){
-    container.innerHTML = `<img src="${CONFIG.imageUrl}" alt="Plot Perfect Studios Ltd logo" />`;
+    container.innerHTML = `<img src="${imageUrl}" alt="${alt}" />`;
     return;
   }
 
@@ -116,7 +123,12 @@ async function init(){
   camera.position.z = 2;
 
   // Build particle positions from PNG
-  const img = await loadImage(CONFIG.imageUrl);
+  let img;
+  try{
+    img = await loadImage(imageUrl);
+  }catch{
+    img = await loadImage(CONFIG.imageUrl);
+  }
   const basePositions = sampleParticlesFromImage(
     img,
     CONFIG.particleStep,
@@ -272,11 +284,20 @@ async function init(){
   animate();
 }
 
-init().catch((err) => {
-  // Fallback to image if WebGL fails
-  const container = document.getElementById("particleLogo");
-  if (container){
-    container.innerHTML = `<img src="/assets/images/PlotPerfectLogoNew.png" alt="Plot Perfect Studios Ltd logo" />`;
+async function init(){
+  const containers = document.querySelectorAll(".particle-logo");
+  if (!containers.length) return;
+
+  for (const container of containers){
+    try{
+      await initContainer(container);
+    }catch (err){
+      const { imageUrl, alt } = getContainerConfig(container);
+      // Fallback to image if WebGL fails or logo can’t be sampled
+      container.innerHTML = `<img src="${imageUrl}" alt="${alt}" />`;
+      console.error("Particle logo init failed:", err);
+    }
   }
-  console.error("Particle logo init failed:", err);
-});
+}
+
+init();
