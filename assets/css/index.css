@@ -262,6 +262,12 @@ blockquote.instagram-media{
   margin:0 0 20px;
 }
 
+.hero-results{
+  margin:0 0 14px;
+  max-width: 58ch;
+}
+.hero-results li strong{font-weight:600}
+
 .hero-actions{display:flex; gap:12px; flex-wrap:wrap}
 
 .btn{
