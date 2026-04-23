@@ -35,103 +35,85 @@
 
   <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@graph":[
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@type":"Organization",
-      "@id":"https://www.plotperfectstudios.co.uk/#org",
-      "name":"Plot Perfect Studios Ltd",
-      "url":"https://www.plotperfectstudios.co.uk/",
-          "name":"How much does a website cost?",
-          "acceptedAnswer":{"@type":"Answer","text":"Most projects start from £895 depending on scope. You’ll always get a fixed price before work starts — no surprises."}
+      "@type": "Organization",
+      "@id": "https://www.plotperfectstudios.co.uk/#org",
+      "name": "Plot Perfect Studios",
+      "legalName": "Plot Perfect Studios Ltd",
+      "url": "https://www.plotperfectstudios.co.uk/",
+      "logo": "https://www.plotperfectstudios.co.uk/assets/images/PlotPerfectLogoNew.png"
     },
     {
-      "@type":"WebSite",
-      "@id":"https://www.plotperfectstudios.co.uk/#website",
-          "acceptedAnswer":{"@type":"Answer","text":"Yes. You can start with a FREE homepage design to see the direction before committing. If you proceed, we apply what’s created toward the full build."}
-        },
-        {
-          "@type":"Question",
-          "name":"Do you use WordPress or templates?",
-      "url":"https://www.plotperfectstudios.co.uk/",
-      "name":"Plot Perfect Studios Ltd",
-      "publisher":{"@id":"https://www.plotperfectstudios.co.uk/#org"},
-      "inLanguage":"en-GB"
+      "@type": "WebSite",
+      "@id": "https://www.plotperfectstudios.co.uk/#website",
+      "url": "https://www.plotperfectstudios.co.uk/",
+      "name": "Plot Perfect Studios",
+      "publisher": { "@id": "https://www.plotperfectstudios.co.uk/#org" },
+      "inLanguage": "en-GB"
     },
     {
-      "@type":"LocalBusiness",
-      "@id":"https://www.plotperfectstudios.co.uk/#local",
-      "name":"Plot Perfect Studios Ltd",
-          "name":"What makes your sites convert better?",
-          "acceptedAnswer":{"@type":"Answer","text":"We write and structure pages for decision-making: clear offer, proof, objection handling, and CTA flow. The goal is more enquiries from the same traffic."}
-      "telephone":"",
-      "email":"",
-      "areaServed":["Essex","Epping","London","United Kingdom"],
-      "address":{
-        "@type":"PostalAddress",
-        "addressCountry":"GB",
-        "addressRegion":"Essex",
-        "addressLocality":"Epping"
-      },
-      "parentOrganization":{"@id":"https://www.plotperfectstudios.co.uk/#org"}
+      "@type": "WebPage",
+      "@id": "https://www.plotperfectstudios.co.uk/#webpage",
+      "url": "https://www.plotperfectstudios.co.uk/",
+      "name": "Web Design Epping | Custom Sites from £895 + FREE Homepage Design",
+      "description": "Stop losing leads to slow templates. Get a hand-coded website built to rank and convert in Epping, Essex & London. Projects from £895 — start with a FREE homepage design (no risk).",
+      "isPartOf": { "@id": "https://www.plotperfectstudios.co.uk/#website" },
+      "about": { "@id": "https://www.plotperfectstudios.co.uk/#org" },
+      "inLanguage": "en-GB"
     },
     {
-      "@type":"Service",
-      "@id":"https://www.plotperfectstudios.co.uk/#service-web-design-epping",
-      "name":"Web design Epping",
-      "serviceType":"Web design and website development",
-      "provider":{"@id":"https://www.plotperfectstudios.co.uk/#local"},
-      "areaServed":{
-        "@type":"Place",
-        "name":"Epping, Essex"
-      },
-      "url":"https://www.plotperfectstudios.co.uk/web-design-epping.html"
-    },
-    {
-      "@type":"Service",
-      "@id":"https://www.plotperfectstudios.co.uk/#service-seo-epping",
-      "name":"SEO Epping",
-      "serviceType":"Search engine optimization (SEO)",
-      "provider":{"@id":"https://www.plotperfectstudios.co.uk/#local"},
-      "areaServed":{
-        "@type":"Place",
-        "name":"Epping, Essex"
-      },
-      "url":"https://www.plotperfectstudios.co.uk/services.html"
-    },
-    {
-      "@type":"FAQPage",
-      "@id":"https://www.plotperfectstudios.co.uk/#faq",
-      "mainEntity":[
+      "@type": "FAQPage",
+      "@id": "https://www.plotperfectstudios.co.uk/#faq",
+      "mainEntity": [
         {
-          "@type":"Question",
-          "name":"How much does a website cost?",
-          "acceptedAnswer":{"@type":"Answer","text":"Most projects start from £895 depending on scope. You’ll always get a fixed price before work starts — no surprises."}
+          "@type": "Question",
+          "name": "How much does a website cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most projects start from £895 depending on scope. You’ll always get a fixed price before work starts — no surprises."
+          }
         },
         {
-          "@type":"Question",
-          "name":"Can I start with a free homepage design?",
-          "acceptedAnswer":{"@type":"Answer","text":"Yes. You can start with a FREE homepage design to see the direction before committing. If you proceed, we carry that direction into the full build."}
+          "@type": "Question",
+          "name": "Can I start with a free homepage design?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. You can start with a FREE homepage design to see the direction before committing. If you proceed, we carry that direction into the full build."
+          }
         },
         {
-          "@type":"Question",
-          "name":"Do you use WordPress or templates?",
-          "acceptedAnswer":{"@type":"Answer","text":"No. Everything is hand-coded for performance, flexibility, and SEO. No unnecessary plugins or bloat."}
+          "@type": "Question",
+          "name": "Do you use WordPress or templates?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Everything is hand-coded for performance, flexibility, and SEO. No unnecessary plugins or bloat."
+          }
         },
         {
-          "@type":"Question",
-          "name":"How long does a build take?",
-          "acceptedAnswer":{"@type":"Answer","text":"Simple sites typically take 2–3 weeks. Larger or system-based builds are phased and agreed upfront."}
+          "@type": "Question",
+          "name": "How long does a build take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Simple sites typically take 2–3 weeks. Larger or system-based builds are phased and agreed upfront."
+          }
         },
         {
-          "@type":"Question",
-          "name":"What makes your websites convert better?",
-          "acceptedAnswer":{"@type":"Answer","text":"We structure pages for decision-making: a clear offer, proof, objection handling, and CTA flow. The goal is more enquiries from the same traffic."}
+          "@type": "Question",
+          "name": "What makes your websites convert better?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We structure pages for decision-making: a clear offer, proof, objection handling, and CTA flow. The goal is more enquiries from the same traffic."
+          }
         },
         {
-          "@type":"Question",
-          "name":"Can you help with SEO and Google setup?",
-          "acceptedAnswer":{"@type":"Answer","text":"Yes — on-site SEO, sitemap linking, indexing, and Google Business integration are part of our process."}
+          "@type": "Question",
+          "name": "Can you help with SEO and Google setup?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — on-site SEO, sitemap linking, indexing, and Google Business integration are part of our process."
+          }
         }
       ]
     }
