@@ -244,49 +244,18 @@
         free homepage design offer. Each one is tailored to the business — not a template.
       </p>
 
-      <div class="grid examples-grid" style="grid-template-columns:repeat(3,1fr); gap:14px; margin-top:16px;">
-        <!-- VIDEO 1 -->
+      <div class="grid examples-grid" style="grid-template-columns:minmax(0, 720px); gap:14px; margin-top:16px;">
         <div class="card" style="padding:12px;">
           <video
             controls
             preload="metadata"
-            poster="/assets/images/video-placeholder.jpg"
             style="width:100%; border-radius:12px; background:#0b0b0d;"
           >
-            <source src="/assets/videos/freeHomepage1.mp4" type="video/mp4" />
+            <source src="/assets/Videos/freeHomepage1.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
           </video>
           <p style="margin:10px 0 0; font-size:14px; opacity:.75;">
             K9 Paddocks homepage concept
-          </p>
-        </div>
-
-        <!-- VIDEO 2 -->
-        <div class="card" style="padding:12px;">
-          <video
-            controls
-            preload="metadata"
-            poster="/assets/images/video-placeholder.jpg"
-            style="width:100%; border-radius:12px; background:#0b0b0d;"
-          >
-            <!-- <source src="/assets/videos/free-homepage-02.mp4" type="video/mp4" /> -->
-          </video>
-          <p style="margin:10px 0 0; font-size:14px; opacity:.75;">
-            Coming Soon...
-          </p>
-        </div>
-
-        <!-- VIDEO 3 -->
-        <div class="card" style="padding:12px;">
-          <video
-            controls
-            preload="metadata"
-            poster="/assets/images/video-placeholder.jpg"
-            style="width:100%; border-radius:12px; background:#0b0b0d;"
-          >
-            <!-- <source src="/assets/videos/free-homepage-03.mp4" type="video/mp4" /> -->
-          </video>
-          <p style="margin:10px 0 0; font-size:14px; opacity:.75;">
-            Coming Soon...
           </p>
         </div>
       </div>
@@ -329,8 +298,6 @@
             with next steps.
           </p>
 
-          <!-- USE YOUR EXISTING EmailJS FORM HERE -->
-          <!-- Keep your wired form ID / fields -->
           <form class="form" id="freeHomepageForm" novalidate>
             <div class="row">
               <label>
@@ -366,13 +333,13 @@
 
             <label class="check">
               <input type="checkbox" name="consent" required>
-              <span>I agree to be contacted about my free homepage request.</span>
+              <span>I agree to be contacted about my request. My details will be used to respond to this enquiry.</span>
             </label>
             <small class="err" data-consent-error></small>
 
             <div class="form-actions">
               <button class="btn primary" type="submit" id="submitFreeBtn">Request Free Homepage</button>
-              <p class="micro" id="freeFormStatus">We'll review your request and get back within 24 hours.</p>
+              <p class="micro" id="freeFormStatus" role="status" aria-live="polite">Complete the form and we’ll reply with the next steps.</p>
             </div>
           </form>
         </div>
@@ -402,9 +369,9 @@
           <h3 style="margin:18px 0 6px;">What you get</h3>          <ul class="ticks" style="margin:0;">            <li>A conversion-led homepage layout with the right section order.</li>            <li>Suggested headline and subheadline options that match what people search for.</li>            <li>CTA direction (contact, quote request, booking, or enquiry form).</li>            <li>Guidance on service page structure if you want to grow SEO in Essex/London.</li>          </ul>
           <div class="card" style="padding:16px; margin-top:14px;">            <h3 style="margin:0 0 6px;">Ideal for</h3>            <p class="muted" style="margin:0;">              Startups, local service businesses, and established brands that want a premium homepage that converts — without wasting budget on the wrong direction.            </p>          </div>
           <div class="card" style="padding:16px; margin-top:14px;">            <h3 style="margin:0 0 6px;">FAQ</h3>            <div class="faq" style="margin-top:12px;">              <details class="faq-item"><summary>Is it really free?</summary><p>Yes — it’s designed to let you see direction and messaging before you commit to a full build.</p></details>              <details class="faq-item"><summary>What do you need from me?</summary><p>Your services, target customers, location coverage (e.g. Epping/Essex/London), and 1–3 example sites you like.</p></details>              <details class="faq-item"><summary>Will it be SEO-friendly?</summary><p>Yes. We structure the homepage with clear headings, intent-led sections and a conversion path that supports SEO and CRO.</p></details>              <details class="faq-item"><summary>Can you build the full site after?</summary><p>Absolutely — that’s the point. If it’s a fit, we expand into service pages, local pages and a full conversion-led site.</p></details>            </div>          </div>
-          <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:14px;">            <a class="btn primary" href="/contact.html">Request Your Free Homepage Design</a>            <a class="btn ghost" href="/work/index.html">See Work</a>            <a class="btn ghost" href="/services.html">See Services</a>          </div>        </div>      </div>    </section>
+          <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:14px;">            <a class="btn primary" href="#request">Request Your Free Homepage Design</a>            <a class="btn ghost" href="/work/index.html">See Work</a>            <a class="btn ghost" href="/services.html">See Services</a>          </div>        </div>      </div>    </section>
 
-    <section class="section" style="padding-top:0;">      <div class="container">        <div class="card reveal" style="padding:18px; display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap;">          <div>            <p class="eyebrow" style="margin-bottom:6px;">READY TO START?</p>            <h2 class="h2" style="margin:0;">Start with a free homepage design (no risk)</h2>            <p class="sub" style="margin:10px 0 0; max-width:90ch;">              See the direction and messaging first, then decide. If you proceed, website projects typically start from <strong>£895</strong> depending on scope.            </p>          </div>          <div style="display:flex; gap:12px; flex-wrap:wrap;">            <a class="btn primary" href="free-homepage-design.html">Free Homepage Design</a>            <a class="btn ghost" href="/contact.html">Get a Quote</a>            <a class="btn ghost" href="services.html">See Services</a>          </div>        </div>      </div>    </section>
+    <section class="section" style="padding-top:0;">      <div class="container">        <div class="card reveal" style="padding:18px; display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap;">          <div>            <p class="eyebrow" style="margin-bottom:6px;">READY TO START?</p>            <h2 class="h2" style="margin:0;">Start with a free homepage design (no risk)</h2>            <p class="sub" style="margin:10px 0 0; max-width:90ch;">              See the direction and messaging first, then decide. If you proceed, website projects typically start from <strong>£895</strong> depending on scope.            </p>          </div>          <div style="display:flex; gap:12px; flex-wrap:wrap;">            <a class="btn primary" href="#request">Request Your Free Homepage Design</a>            <a class="btn ghost" href="/contact.html">Get a Quote</a>            <a class="btn ghost" href="services.html">See Services</a>          </div>        </div>      </div>    </section>
 <!-- PPS:SEO-EXPANSION:END -->
 
 </main>
@@ -424,7 +391,6 @@
   <script src="assets/js/index.js"></script>
   <script src="assets/js/transition.js"></script>
   <script src="assets/js/cursor-glow.js"></script>
-  <script src="assets/js/emailjs.min.js"></script>
   <script src="assets/js/free-homepage.js"></script>
   <script async src="//www.instagram.com/embed.js"></script>
 </body>

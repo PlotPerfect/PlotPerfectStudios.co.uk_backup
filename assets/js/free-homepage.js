@@ -1,76 +1,121 @@
-// free-homepage.js - Handles the free homepage request form
+const EMAILJS_ENDPOINT = "https://api.emailjs.com/api/v1.0/email/send";
+const EMAILJS_PUBLIC_KEY = "a30FUWz1z6yJ3cxYW";
+const EMAILJS_SERVICE_ID = "service_mour8pj";
+const EMAILJS_TEMPLATE_ID = "template_3c0frgi";
+const REQUEST_TIMEOUT_MS = window.__FORM_TIMEOUT_MS__ || 15000;
 
-// Initialize EmailJS
-emailjs.init("a30FUWz1z6yJ3cxYW");
-
-function setError(field, msg) {
-  const wrap = field.closest("label") || field.closest(".form") || field.parentElement;
-  const err = wrap ? wrap.querySelector(".err") : null;
-  if (err) err.textContent = msg || "";
-  field.classList.toggle("input-bad", Boolean(msg));
+function setError(field, message) {
+  const wrap = field.closest("label") || field.parentElement;
+  const error = wrap ? wrap.querySelector(".err") : null;
+  if (error) {
+    if (!error.id) error.id = `free${field.name}Error`;
+    error.textContent = message || "";
+    field.setAttribute("aria-describedby", error.id);
+  }
+  field.setAttribute("aria-invalid", String(Boolean(message)));
+  field.classList.toggle("input-bad", Boolean(message));
 }
 
 function validateFreeForm(form) {
-  let ok = true;
+  const fields = {
+    name: form.elements.name,
+    email: form.elements.email,
+    business: form.elements.business,
+    goals: form.elements.goals,
+    consent: form.elements.consent,
+  };
+  const consentError = form.querySelector("[data-consent-error]");
+  let firstInvalid = null;
 
-  const name = form.elements["name"];
-  const email = form.elements["email"];
-  const business = form.elements["business"];
-  const goals = form.elements["goals"];
-  const consent = form.elements["consent"];
-  const consentErr = form.querySelector("[data-consent-error]");
+  [fields.name, fields.email, fields.business, fields.goals].forEach((field) => setError(field, ""));
+  fields.consent.setAttribute("aria-invalid", "false");
+  if (consentError) consentError.textContent = "";
 
-  [name, email, business, goals].forEach(f => setError(f, ""));
-  if (consentErr) consentErr.textContent = "";
+  const invalidate = (field, message) => {
+    setError(field, message);
+    if (!firstInvalid) firstInvalid = field;
+  };
 
-  if (!name.value.trim() || name.value.trim().length < 2) { setError(name, "Please enter your name."); ok = false; }
-  if (!email.value.trim() || !/^\S+@\S+\.\S+$/.test(email.value.trim())) { setError(email, "Please enter a valid email."); ok = false; }
-  if (!business.value.trim()) { setError(business, "Please enter your business type."); ok = false; }
-  if (!goals.value.trim() || goals.value.trim().length < 10) { setError(goals, "Please add at least 10 characters about your goals."); ok = false; }
-
-  if (!consent.checked) {
-    if (consentErr) consentErr.textContent = "Please tick the consent box to continue.";
-    ok = false;
+  if (fields.name.value.trim().length < 2) invalidate(fields.name, "Please enter your name.");
+  if (!/^\S+@\S+\.\S+$/.test(fields.email.value.trim())) invalidate(fields.email, "Please enter a valid email address.");
+  if (!fields.business.value.trim()) invalidate(fields.business, "Please enter your business type.");
+  if (fields.goals.value.trim().length < 10) invalidate(fields.goals, "Please add at least 10 characters about your goals.");
+  if (!fields.consent.checked) {
+    fields.consent.setAttribute("aria-invalid", "true");
+    if (consentError) consentError.textContent = "Please confirm that we may contact you about this request.";
+    if (!firstInvalid) firstInvalid = fields.consent;
   }
 
-  return ok;
+  return { valid: !firstInvalid, firstInvalid };
+}
+
+async function sendEmail(templateParams, signal) {
+  const response = await fetch(EMAILJS_ENDPOINT, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    signal,
+    body: JSON.stringify({
+      service_id: EMAILJS_SERVICE_ID,
+      template_id: EMAILJS_TEMPLATE_ID,
+      user_id: EMAILJS_PUBLIC_KEY,
+      template_params: templateParams,
+    }),
+  });
+  if (!response.ok) throw new Error(`Email service returned HTTP ${response.status}`);
 }
 
 function initFreeForm() {
   const form = document.getElementById("freeHomepageForm");
   const status = document.getElementById("freeFormStatus");
-  const btn = document.getElementById("submitFreeBtn");
-  if (!form || !status || !btn) return;
+  const button = document.getElementById("submitFreeBtn");
+  if (!form || !status || !button) return;
 
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
+  let submitting = false;
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    if (submitting) return;
 
-    if (!validateFreeForm(form)) return;
+    const result = validateFreeForm(form);
+    if (!result.valid) {
+      status.textContent = "Please check the highlighted fields.";
+      status.dataset.state = "error";
+      result.firstInvalid.focus();
+      return;
+    }
 
-    btn.disabled = true;
-    btn.textContent = "Sending…";
-    status.textContent = "";
+    submitting = true;
+    button.disabled = true;
+    button.setAttribute("aria-busy", "true");
+    button.textContent = "Sending…";
+    status.textContent = "Sending your request securely…";
+    status.dataset.state = "pending";
 
     const formData = new FormData(form);
-    const emailData = {
-      from_name: formData.get('name'),
-      from_email: formData.get('email'),
-      business: formData.get('business'),
-      website: formData.get('website') || 'Not provided',
-      goals: formData.get('goals')
-    };
+    const controller = new AbortController();
+    const timeout = window.setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
 
     try {
-      const response = await emailjs.send('service_mour8pj', 'template_3c0frgi', emailData);
-      status.textContent = "✅ Request sent! We'll review and get back to you within 24 hours.";
-      status.style.color = "var(--text)";
+      await sendEmail({
+        from_name: formData.get("name"),
+        from_email: formData.get("email"),
+        business: formData.get("business"),
+        website: formData.get("website") || "Not provided",
+        goals: formData.get("goals"),
+      }, controller.signal);
+      status.textContent = "Request sent. We’ll review it and reply with the next steps.";
+      status.dataset.state = "success";
       form.reset();
     } catch (error) {
-      status.textContent = "❌ Failed to send request. Please try again or email info@plotperfectstudios.co.uk directly.";
-      status.style.color = "#ff6b6b";
+      status.textContent = error.name === "AbortError"
+        ? "The request timed out and was not confirmed. Your details are still here—please check your connection and try again."
+        : "We couldn’t confirm delivery. Your details are still here, so you can try again shortly.";
+      status.dataset.state = "error";
     } finally {
-      btn.disabled = false;
-      btn.textContent = "Request Free Homepage";
+      window.clearTimeout(timeout);
+      submitting = false;
+      button.disabled = false;
+      button.removeAttribute("aria-busy");
+      button.textContent = "Request Free Homepage";
     }
   });
 }
