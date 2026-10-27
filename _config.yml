@@ -1,0 +1,8 @@
+# Keep build tooling and audit evidence out of the GitHub Pages website.
+exclude:
+  - tools
+  - review
+  - dist
+  - assets/data
+  - SEO_REPORT.md
+  - REDESIGN.md

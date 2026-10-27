@@ -10,7 +10,7 @@ from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 HTML_FILES = sorted(
-    path for path in ROOT.rglob("*.html") if "partials" not in path.parts
+    path for path in ROOT.rglob("*.html") if not any(part in path.relative_to(ROOT).parts for part in {"partials", "dist", "review", "node_modules"})
 )
 PUBLIC_ORIGIN = "https://www.plotperfectstudios.co.uk"
 

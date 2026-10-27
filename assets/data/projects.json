@@ -1,0 +1,77 @@
+[
+  {
+    "slug": "novara",
+    "name": "Novara Property Care",
+    "category": "websites",
+    "type": "Website design & development",
+    "url": "https://www.novarapropertycare.co.uk/",
+    "description": "A considered digital presence for property care across London and Essex.",
+    "scope": [
+      "Bespoke website design & development",
+      "Service-led content structure",
+      "Responsive desktop & mobile experience"
+    ],
+    "intro": "A calm, confident identity for a business built on attention to detail. The website brings cleaning, grounds maintenance and property care together with clear routes to each service.",
+    "focus": "Help managing agents and property owners understand the offer and make an enquiry with confidence."
+  },
+  {
+    "slug": "cdm",
+    "name": "CDM Capital",
+    "category": "websites",
+    "type": "Website & digital presence",
+    "url": "https://cdmcapital.co.uk/",
+    "description": "A refined investment-sector presence, built around clarity and confidence.",
+    "scope": [
+      "Website design & development",
+      "Investment-sector digital presentation",
+      "Clear navigation & enquiry journeys"
+    ],
+    "intro": "An editorial approach to a specialist investment-sector website. Restrained typography, considered spacing and a clear information hierarchy give a complex offering room to breathe.",
+    "focus": "Make specialist information easier to explore while giving the brand a coherent, professional presence."
+  },
+  {
+    "slug": "clearpath",
+    "name": "Clear Path Waste",
+    "category": "websites",
+    "type": "Website · local SEO · setup",
+    "url": "https://clearpathwaste.co.uk/",
+    "description": "A straightforward service website with a clear path from search to enquiry.",
+    "scope": [
+      "Website design & development",
+      "Local SEO foundations",
+      "Business website setup"
+    ],
+    "intro": "A direct, practical website for rubbish removal across East London and Essex. Services, coverage and the next step are easy to find, with a visual identity that feels approachable and distinctive.",
+    "focus": "Connect local service intent with useful information and a simple quote journey."
+  },
+  {
+    "slug": "knight",
+    "name": "Knight & Day Drainage & Plumbing",
+    "category": "websites",
+    "type": "Website design & development",
+    "url": "https://knightanddaydrainageandplumbinglimited.co.uk/",
+    "description": "A service-first website that makes urgent plumbing help easy to find.",
+    "scope": [
+      "Service-business website",
+      "Local service information architecture",
+      "Prominent callout & contact journeys"
+    ],
+    "intro": "For a drainage and plumbing business, speed of understanding matters. The site puts emergency help, service coverage and contact options within easy reach.",
+    "focus": "Give homeowners and businesses a direct route to the right service and the right conversation."
+  },
+  {
+    "slug": "f7-coaching",
+    "name": "F7 Coaching",
+    "category": "websites",
+    "type": "Website · bookings · admin",
+    "url": "https://f7coaching.com/",
+    "description": "A distinctive coaching website with bookings, schedules and admin tools.",
+    "scope": [
+      "Website design & development",
+      "Session booking & schedule journeys",
+      "Admin tools for managing the experience"
+    ],
+    "intro": "A digital experience for F7 Coaching that brings the football coaching offer, session information and booking journey together. The visual direction uses the brand’s energetic identity while making key actions easier to find.",
+    "focus": "Give players and parents a clear route to session information and booking, supported by tools for managing the experience."
+  }
+]

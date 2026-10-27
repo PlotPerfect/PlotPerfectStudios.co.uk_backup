@@ -1,94 +1,88 @@
-# Plot Perfect Studios SEO implementation report
+# Plot Perfect Studios — SEO and re-indexing readiness
 
-Implementation date: 13 October 2026
+Audit date: 27 October 2026. Preferred origin: https://www.plotperfectstudios.co.uk/
 
-Site: <https://www.plotperfectstudios.co.uk/>
+## Status
 
-Repository: `PlotPerfect/PlotPerfectStudios.co.uk_backup`
+The local source and packaged static release pass the checks below. The redesign has not been deployed, and no Search Console indexing request has been submitted. The existing Search Console connection and domain configuration have not been changed.
 
-Scope: local source changes only. Nothing was committed, pushed, deployed, submitted to Search Console or changed in DNS/hosting.
+A read-only live-domain check found the old design still being served. Its sitemap contains 38 URLs. The new release contains 44 canonical, indexable sitemap URLs. Re-indexing the new content must follow deployment and a successful live URL test.
 
-## Supplied Search Console baseline
+## Verified results
 
-The source audit used the verified Domain property `sc-domain:plotperfectstudios.co.uk`, Web search, with no country or device filter.
+| Check | Result |
+| --- | --- |
+| Whole source audit | 48 HTML pages; 0 errors; 0 warnings |
+| Packaged release audit | 48 HTML pages; 0 errors; 0 warnings |
+| Indexable pages and sitemap | 44 indexable pages; 44 canonical sitemap URLs |
+| Packaged HTTP checks | 50 checks; 0 failures |
+| Browser layout checks | 109 route/viewport combinations; 0 failures |
+| Updated project assets | 5 project pages with loaded desktop and mobile previews |
+| Device controls | 5 projects; both device modes passed on every page |
 
-| Period | Clicks | Impressions | CTR | Average position |
-| --- | ---: | ---: | ---: | ---: |
-| 14 Sep–11 Oct 2026 | 2 | 1,632 | 0.1225% | 27.7 |
-| 17 Aug–13 Sep 2026 | 7 | 9,460 | 0.0740% | 50.3 |
-| 12 Jul–11 Oct 2026 | 20 | 23,338 | — | — |
+All 48 routes were checked at desktop and phone widths. Thirteen priority routes were also checked at tablet width. The five changed project layouts were additionally checked at desktop width. Checks cover H1 count, current design styles, loaded-image failures and horizontal overflow. The homepage project selector and desktop/mobile mode were exercised separately after the rocky hero update.
 
-Important page and query observations from that audit:
+This is a technical release audit. It is not a production Core Web Vitals measurement or a guarantee of rankings, rich results, crawl timing or inclusion in Google's index.
 
-- The homepage held roughly steady on impressions (about 250 to 249), but clicks fell from 5 to 2. Over three months it produced 13 of the site's 20 clicks from 631 impressions (2.06% CTR, average position 6.48).
-- `/web-development.html` impressions rose from 187 to 255.
-- `/insights/seo-first-website-structure.html` rose from 16 to 94 impressions and average position improved from 20.12 to 8.82, but it still received no clicks.
-- Latest-period Epping queries showed useful visibility but no clicks: “web design company in epping” (47 impressions, position 8.43), “web design epping” (27, position 6), “website design epping” (22, position 12.82) and “seo epping” (43, position 19.44).
-- Hertfordshire impressions fell from 5,317 to 665 and Kent from 3,185 to 70; both segments had zero clicks in both compared periods. This made distinct usefulness and truthful service-area language a priority over adding more location pages.
-- Search Console reported 35 indexed and 35 excluded URLs. Exclusions comprised 25 redirects, 3 alternate canonicals, 5 crawled-not-indexed URLs and 2 canonical disagreements, with no reported 404s.
-- The submitted non-`www` sitemap was successful, contained 26 URLs, was submitted 30 December 2025 and last read 2 January 2026.
-- Breadcrumb enhancement reported 9 valid items and no invalid items. There was not enough Core Web Vitals field data for a conclusion.
+## Area pages
 
-## Implemented locally
+The existing Epping, Essex, London, Hertfordshire and Kent URLs are retained. Every page uses the new design, static navigation, a descriptive H1, a distinct title and description, a self-referencing canonical, OG/social metadata and useful service links.
 
-Directly changed public routes include `/`, `/contact.html`, `/free-homepage-design.html`, `/services.html`, `/web-development.html`, `/web-design-epping.html`, `/web-design-essex.html`, `/web-design-hertfordshire.html`, `/web-design-kent.html`, `/web-design-london.html`, `/monthly-web-development.html`, `/ui-ux-design.html`, `/vehicle-wrap-designs.html`, `/host-perfect.html`, `/send-perfect.html`, `/sitemap.html`, `/404.html`, `/insights/seo-first-website-structure.html`, `/insights/how-much-should-a-website-cost-uk.html`, `/insights/seo-isnt-dead-its-changing.html`, and the Bark Lane, Ewing Law, F7 Coaching and Corrigan & Chapman work pages. Shared header/footer changes affect every route that loads those partials. `sitemap.xml` was also updated.
+Each has a separate local brief, audience scenarios, coverage explanation, related reading and visible FAQs. Service schema identifies the specific service area, and FAQ schema matches the displayed answers. Breadcrumbs connect each page to Services. Copy identifies Epping, Essex as the studio base and describes wider locations as service areas, without invented offices, addresses, testimonials or local results.
 
-### Conversion and contact reliability
+The location pages link to detailed services, relevant insights, current project examples, contact and the free concept offer. They are substantial service destinations with their own useful content rather than lists of interchangeable place names. [Google's doorway-abuse guidance](https://developers.google.com/search/docs/essentials/spam-policies#doorway-abuse) informed this approach.
 
-- Rebuilt the quote and free-homepage form handlers around an acknowledged EmailJS REST response, with accessible field errors, first-invalid focus, pending/success/failure states, duplicate-submit protection and a 15-second timeout.
-- Form values are cleared only after a confirmed HTTP success. Failure and timeout states preserve the visitor's input and explicitly say delivery was not confirmed.
-- Removed console logging of enquiry details and ensured neither form puts personal data in the URL.
-- Removed the unneeded EmailJS SDK loads from both form pages; the existing public key, service ID and template IDs remain in local configuration.
-- Replaced the contact-page demo/placeholder journey with honest response copy and a real link to the free-homepage offer. Consent text now explains that submitted details are used to respond.
-- Made all primary free-homepage CTAs on that offer page jump to `#request` instead of reloading or diverting to a different form.
+## Other changes
 
-### Search intent, copy and trust
+- Host Perfect is removed from public pages, navigation, sitemaps and the packaged release. The retired URL returns an actual 404 in release HTTP checks. It remains crawlable so Google can observe the removal after deployment.
+- Fyndii has a new branded reference page, linked throughout the footer. Its description is grounded in the live [Fyndii platform](https://fyndii.com/): customer requirements connect with professionals by service and chosen working area.
+- Send Perfect and retained specialist pages now use the same design and server-readable content. Full navigation and footer content are present in HTML and do not depend on fetched partials.
+- F7 Coaching is restored to the selected-work grid and its original /work/f7-coaching.html URL. The five featured website projects have custom laptop/mobile presentations with actual device captures and accessible view controls.
+- Historical Ewing Law and Cre8 pages are labelled historical and noindex,follow. They are excluded from current work and the XML sitemap. The 404 page and unpublished article template are also noindex,follow.
+- The homepage keeps functional project switching and device controls, with a custom basalt/copper background optimised to about 105 KB in WebP. The image is decorative; copy and preview controls remain HTML.
+- Both branded QR contact flows remain static, direct email journeys. The real-logo QR assets previously passed decoding from desktop and phone screenshots.
 
-- Repositioned the homepage metadata around the overall Plot Perfect Studios brand and offer, kept the Epping page focused on “Web Design Epping”, and separated the services overview and web-development intent.
-- Shortened and clarified priority titles/descriptions for the homepage, Epping, Hertfordshire, Kent, web development, services and vehicle-wrap portfolio.
-- Replaced the repetitive Hertfordshire and Kent expansion blocks with distinct explanations of remote delivery from Epping, scope, pricing, deliverables and carefully labelled portfolio evidence. The copy does not invent local offices or local clients.
-- Removed public editorial residue from the vehicle-wrap gallery, web-development page and SEO-structure article. Replaced the unsupported “users leave, rankings suffer” shortcut with a qualified performance explanation.
-- Corrected the F7 logo alternative text and retained the earlier cleanup of unfinished case-study/media placeholders.
-- Retained the locally restored `/ui-ux-design.html` page rather than creating another new URL.
+## Technical checks
 
-### Technical SEO and internal consistency
+The audit checks unique titles/descriptions, one H1 and main element, UK language, self-canonicals, OG URL agreement, social metadata, valid JSON-LD, FAQ parity, local links/assets, fragment targets, image alternative text and dimensions, duplicate IDs, sitemap coverage, noindex exclusions and reachability from the homepage.
 
-- Synchronised every existing FAQPage JSON-LD object from the full visible FAQ content. The Epping, Hertfordshire, Kent and web-development schemas now contain every visible question and exactly matching answer text.
-- Extended `tools/validate_seo.py` so future changes fail validation when FAQ schema and visible FAQ content drift.
-- Standardised primary internal destinations to `/`, `/work/index.html` and `/insights/index.html`, preserving homepage anchors such as `/#process` and `/#contact`.
-- Updated the HTML and XML sitemaps to use the chosen Work and Insights canonical URLs. Existing alias/redirect handling was not changed locally because this static repository does not define the hosting redirects.
-- Constrained decorative background glows, added reduced-motion handling and made the two promotional footer widgets flow in normal document layout at 760px and below so they cannot cover form controls or mobile content.
-- Fixed the vehicle-wrap Instagram gallery's min-content grid overflow at 1366px and retained the general mobile grid/embed protections.
+robots.txt permits public pages, references the preferred HTTPS/www sitemap and excludes development tools, review captures, partials and source data. The XML sitemap lists only canonical indexable URLs. Content-hash revision records keep lastmod stable when unchanged pages are rebuilt; dates represent actual content changes, not crawl requests. [Google's sitemap guidance](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap) explains these signals.
 
-### Repeatable implementation tools
+The clean dist/ release excludes development files, reports, source-content caches, original screenshot PNGs and unused legacy assets. It includes the existing CNAME and a .nojekyll marker. The source project remains available separately.
 
-- `tools/validate_seo.py`: titles, descriptions, H1s, canonicals, robots, JSON-LD, FAQ parity and local links/assets.
-- `tools/sync_faq_schema.py`: regenerates FAQPage entities from visible FAQ items.
-- `tools/normalize_internal_links.py`: applies the selected canonical internal destinations.
-- `tools/update_location_pages.py`: reproducibly applies the distinct Hertfordshire/Kent content blocks.
-- `tools/form_qa.cjs`: mock-only browser tests for validation, success acknowledgement, duplicate prevention, failure, timeout, field preservation and URL privacy.
-- `tools/browser_qa.cjs`: responsive rendering, overflow, image and browser-error checks, with optional route/width targeting.
+## Existing live-site observations
 
-## Validation completed
+- HTTP/apex and HTTPS/apex homepage requests resolve to the preferred HTTPS/www homepage.
+- The live robots.txt and sitemap.xml return 200 and the sitemap is advertised.
+- The live homepage and checked area pages still serve the previous design.
+- The new Fyndii reference page currently returns 404 publicly; Host Perfect still returns 200 publicly. Both will change only after the release is deployed.
+- A deliberately missing public URL returns a real 404. No live response checked contained an X-Robots-Tag indexing block.
 
-- Static SEO/link validation: 40 HTML pages checked, **0 errors**. The 39 remaining warnings are advisory length checks on lower-priority legacy titles/descriptions, not broken links, invalid schema or crawl blockers.
-- `git diff --check`: passed; the output only noted expected LF/CRLF working-copy conversions.
-- Mock form QA: **14/14 checks passed**. No real EmailJS request was made.
-- Responsive headless-browser QA: representative routes passed at 360, 390, 412, 768 and 1366 pixels with 200 responses, one H1, no broken loaded images, no browser/page errors and no detected horizontal overflow.
-- A focused 1366px retest of the vehicle-wrap page passed after its Instagram grid fix.
-- The contact form was detected with seven required controls and its “Send Request” submit control; the submit focus indicator was visible in computed browser styles.
-- The homepage mobile-menu control passed its 390px interaction check (`aria-expanded=true`, menu exposed).
+These are public HTTP observations, not a fresh authenticated Search Console report. The older performance/indexing figures previously documented in this repository were not treated as current account state.
 
-## Owner actions still required
+## Re-indexing handoff for the connected Search Console property
 
-1. Review the diff, then commit, push and deploy through the normal GitHub Pages workflow when approved.
-2. Send controlled test enquiries after deployment and confirm both EmailJS templates deliver to the intended mailbox, reply-to values are correct, spam handling is acceptable and duplicate delivery does not occur. Local tests prove UI behaviour with mocked acknowledgements, not live mail delivery.
-3. Publish or link an approved privacy notice before collecting production enquiries. The forms now use honest consent wording, but the repository still has no privacy-policy page.
-4. Confirm the portfolio descriptions, starting-price statement, typical 2–3 week timeline and remote/on-site wording remain commercially accurate.
-5. Confirm the host's permanent apex/non-`www` to preferred `https://www` redirects preserve paths and query strings. Keep only the canonical Work and Insights URLs in navigation and sitemaps.
-6. After deployment and recrawl, compare complete Search Console periods against the baseline above. Prioritise homepage and Epping CTR, the SEO-structure article's zero-click first-page visibility, web-development growth, and whether Hertfordshire/Kent impressions recover without renewed thin-content patterns.
-7. Review the five crawled-not-indexed URLs and two canonical disagreements individually in Search Console. Do not request indexing repeatedly or change canonical targets without confirming the affected URLs.
+1. Publish the contents of dist/ using the site's existing hosting workflow, preserving the www custom domain and ownership verification. No new property or verification setup is needed for this work.
+2. Run the live check again after publication. Confirm the new HTML is visible, priority pages return 200, canonical URLs use the preferred origin, the 44-URL sitemap is served, and Host Perfect returns 404.
+3. In the existing Search Console property, inspect the homepage, the five area URLs, /fyndii.html and /work/f7-coaching.html. Use Test live URL and verify indexing is allowed and the rendered page contains the new content.
+4. Submit or resubmit https://www.plotperfectstudios.co.uk/sitemap.xml in the property's Sitemaps report. Request indexing for those priority changed pages once their live tests pass. Other pages can be discovered through the refreshed sitemap and internal links.
+5. Review the sitemap's last-read status, Page indexing report and Google's selected canonicals after recrawling. Keep the historical/template noindex pages out of indexing requests. Existing canonical exclusions should be reviewed against their exact URLs rather than removed indiscriminately.
 
-## Measurement note
+Google controls crawl/indexing decisions and applies indexing-request quotas; repeated requests do not make crawling faster. See [Google's recrawl documentation](https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl).
 
-Use the deployment date as the annotation point and compare complete periods only. Search Console changes will lag deployment and recrawl. The implementation should be judged first on successful delivery paths, clean indexing/canonical signals and improved CTR on already-visible queries—not on an immediate ranking claim.
+## Repeatable commands
+
+```powershell
+node tools/build-studio.cjs
+python tools/validate_seo.py
+python tools/audit_site.py
+node tools/package-site.cjs
+python tools/audit_site.py dist
+node tools/check-release-http.cjs
+node tools/check-live-seo.cjs
+node tools/write-seo-report.cjs
+```
+
+For a later substantive edit, set PPS_CONTENT_DATE to the actual change date before building. Local preview: node tools/preview-studio.cjs. Release preview: node tools/preview-studio.cjs --release, on port 4174. Read-only live checks require outbound network access; release HTTP checks use a temporary loopback server that shuts down after testing.
+
+Detailed machine-readable evidence is saved under review/: seo-audit.json, release-seo-audit.json, release-http-check.json, full-browser-audit.json, device-toggle-audit.json and live-seo-check.json.

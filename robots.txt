@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
+Disallow: /tools/
+Disallow: /review/
+Disallow: /partials/
+Disallow: /assets/data/
 
 Sitemap: https://www.plotperfectstudios.co.uk/sitemap.xml
